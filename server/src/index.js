@@ -36,6 +36,17 @@ app.use('/api/economy/purchase', actionLimiter);
 app.use('/api/ai/play-log', actionLimiter);
 app.use('/api/factions/contribute', actionLimiter);
 
+// Temporary Seed Endpoint
+app.get('/api/admin/seed', async (req, res) => {
+  try {
+    const seed = require('./seeds/seed');
+    await seed();
+    res.send('<h1>✅ Database Successfully Seeded!</h1><p>You can now go to <a href="https://agos-start-up.vercel.app">AGOS App</a> and login with <b>demo@agos.gg / demo123</b></p>');
+  } catch (err) {
+    res.status(500).send(`<h1>❌ Seeding Failed</h1><pre>${err.message}</pre>`);
+  }
+});
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/ai', require('./routes/ai'));
