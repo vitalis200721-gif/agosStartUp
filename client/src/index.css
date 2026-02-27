@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #0c0c18; }
+  ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 3px; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-agos-accent to-purple-500 text-white font-display font-bold text-sm uppercase tracking-wider rounded-lg shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply px-6 py-3 bg-agos-card border border-agos-border text-agos-text font-semibold text-sm rounded-lg transition-all hover:border-agos-accent hover:bg-agos-accent/10;
+  }
+  .card {
+    @apply bg-agos-card border border-agos-border rounded-xl transition-all hover:border-agos-accent/50;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-agos-surface border border-agos-border rounded-lg text-agos-text placeholder-agos-dim focus:border-agos-accent focus:ring-1 focus:ring-agos-accent/50 outline-none transition-all;
+  }
+
+  /* Reality Distortion Mode */
+  .reality-distortion * {
+    animation: reality-glitch 0.1s infinite;
+  }
+  .reality-distortion {
+    filter: hue-rotate(180deg) saturate(1.5);
+  }
+  @keyframes reality-glitch {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(-1px, 1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, -1px); }
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reality-distortion * { animation: none !important; }
+}

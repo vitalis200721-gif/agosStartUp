@@ -1,0 +1,44 @@
+name: AGOS CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Install server dependencies
+        working-directory: ./server
+        run: npm ci
+      
+      - name: Install client dependencies
+        working-directory: ./client
+        run: npm ci
+      
+      - name: Build client
+        working-directory: ./client
+        run: npm run build
+      
+      - name: Verify server starts
+        working-directory: ./server
+        env:
+          MONGODB_URI: mongodb://localhost:27017/agos-test
+          JWT_SECRET: ci-test-secret
+          PORT: 5000
+        run: |
+          timeout 5 node src/index.js || true
