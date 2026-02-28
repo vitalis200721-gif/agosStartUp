@@ -7,6 +7,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Layout from './components/Layout';
 import Toasts from './components/Toasts';
 import OnboardingModal from './components/OnboardingModal';
+import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -37,7 +38,7 @@ function PageLoader() {
 
 function ProtectedRoute({ children }) {
   const token = useAuthStore(s => s.token);
-  return token ? children : <Navigate to="/login" />;
+  return token ? children : <Navigate to="/welcome" />;
 }
 
 export default function App() {
@@ -76,6 +77,7 @@ export default function App() {
         <BrowserRouter>
           <Suspense fallback={<PageLoader />}>
             <Routes>
+              <Route path="/welcome" element={<LandingPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/privacy" element={<Privacy />} />
