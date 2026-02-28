@@ -62,19 +62,23 @@ export default function MultiverseMap() {
         </div>
       </div>
 
-      {/* Genre Cluster Map */}
-      <div className="card p-6">
-        <h2 className="font-display font-bold text-lg mb-4">Genre Clusters</h2>
-        <div className="flex flex-wrap gap-3">
+      {/* Genre Filters */}
+      <div className="bg-[#1e293b]/30 p-4 rounded-xl border border-agos-border mb-6">
+        <div className="flex flex-wrap gap-2">
           {clusters.map(c => {
             const color = CLUSTER_COLORS[c.genre] || CLUSTER_COLORS.default;
-            const size = Math.max(60, Math.min(120, c.count * 12));
+            const isSelected = selected === c.genre;
             return (
               <button key={c.genre} onClick={() => selectCluster(c)}
-                className={`rounded-full flex flex-col items-center justify-center transition-all hover:scale-110 hover:shadow-lg ${selected === c.genre ? 'ring-2 ring-white scale-105' : ''}`}
-                style={{ width: size, height: size, background: `${color}20`, border: `2px solid ${color}`, boxShadow: selected === c.genre ? `0 0 20px ${color}50` : 'none' }}>
-                <span className="text-xs font-bold" style={{ color }}>{c.genre}</span>
-                <span className="text-[10px] font-mono text-agos-dim">{c.count}</span>
+                className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 font-semibold text-sm hover:bg-white/5`}
+                style={{ 
+                  background: isSelected ? `${color}20` : 'transparent',
+                  borderColor: isSelected ? color : 'rgba(255,255,255,0.05)',
+                  color: isSelected ? '#fff' : 'rgba(255,255,255,0.6)',
+                  boxShadow: isSelected ? `0 0 20px ${color}30` : 'none'
+                }}>
+                <span style={{ color: isSelected ? color : 'inherit' }}>{c.genre}</span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-black/40 text-gray-400 font-mono">{c.count}</span>
               </button>
             );
           })}
