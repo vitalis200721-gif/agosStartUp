@@ -2,6 +2,75 @@ const User = require('../models/User');
 const GameProfile = require('../models/GameProfile');
 const { generateToken } = require('../middleware/auth');
 
+// Google OAuth: redirect user to Google
+exports.googleAuth = (req, res) => {
+  const params = new URLSearchParams({
+    client_id: process.env.GOOGLE_CLIENT_ID,
+    redirect_uri: process.env.GOOGLE_CALLBACK_URL,
+    response_type: 'code',
+    scope: 'openid email profile',
+    access_type: 'offline',
+    prompt: 'consent'
+  });
+  res.redirect(`https://accounts.google.com/o/oauth2/v2/auth?${params}`);
+};
+
+// Google OAuth callback: exchange code for tokens
+exports.googleCallback = async (req, res, next) => {
+  try {
+    const { code } = req.query;
+    if (!code) return res.redirect(`${process.env.CLIENT_URL}/login?error=no_code`);
+
+    // Exchange code for tokens
+    const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        code,
+        client_id: process.env.GOOGLE_CLIENT_ID,
+        client_secret: process.env.GOOGLE_CLIENT_SECRET,
+        redirect_uri: process.env.GOOGLE_CALLBACK_URL,
+        grant_type: 'authorization_code'
+      })
+    });
+    const tokens = await tokenRes.json();
+    if (!tokens.access_token) return res.redirect(`${process.env.CLIENT_URL}/login?error=token_failed`);
+
+    // Get user info from Google
+    const userRes = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
+      headers: { Authorization: `Bearer ${tokens.access_token}` }
+    });
+    const gUser = await userRes.json();
+    if (!gUser.email) return res.redirect(`${process.env.CLIENT_URL}/login?error=no_email`);
+
+    // Find or create user
+    let user = await User.findOne({ email: gUser.email });
+    if (!user) {
+      user = await User.create({
+        email: gUser.email,
+        password: `google_${Date.now()}_${Math.random().toString(36)}`,
+        displayName: gUser.name || gUser.email.split('@')[0],
+        googleId: gUser.id,
+        avatar: gUser.picture
+      });
+      await GameProfile.create({ user: user._id });
+    } else if (!user.googleId) {
+      user.googleId = gUser.id;
+      if (gUser.picture && !user.avatar) user.avatar = gUser.picture;
+      await user.save();
+    }
+
+    user.lastLogin = new Date();
+    await user.save();
+
+    const token = generateToken(user._id);
+    res.redirect(`${process.env.CLIENT_URL}/login?token=${token}`);
+  } catch (err) {
+    console.error('Google OAuth error:', err);
+    res.redirect(`${process.env.CLIENT_URL}/login?error=server_error`);
+  }
+};
+
 exports.register = async (req, res, next) => {
   try {
     const { email, password, displayName } = req.body;

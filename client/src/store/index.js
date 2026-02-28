@@ -7,6 +7,11 @@ export const useAuthStore = create((set, get) => ({
   loading: false,
   error: null,
 
+  setToken: (token) => {
+    localStorage.setItem('agos_token', token);
+    set({ token });
+  },
+
   login: async (email, password) => {
     set({ loading: true, error: null });
     try {
