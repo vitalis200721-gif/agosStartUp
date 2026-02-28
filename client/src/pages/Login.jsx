@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuthStore } from '../store';
 
-const API_URL = import.meta.env.VITE_API_URL || '/api';
-const GOOGLE_URL = API_URL.replace('/api', '') + '/api/auth/google';
+const GOOGLE_URL = 'https://agosstartup.onrender.com/api/auth/google';
 
 export default function Login() {
   const [email, setEmail] = useState('');

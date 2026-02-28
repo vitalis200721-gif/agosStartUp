@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store';
 
-const API_URL = import.meta.env.VITE_API_URL || '/api';
-const GOOGLE_URL = API_URL.replace('/api', '') + '/api/auth/google';
+const GOOGLE_URL = 'https://agosstartup.onrender.com/api/auth/google';
 
 export default function Register() {
   const [form, setForm] = useState({ displayName: '', email: '', password: '' });
