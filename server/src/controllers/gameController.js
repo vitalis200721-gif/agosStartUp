@@ -52,3 +52,22 @@ exports.getGenreClusters = async (req, res, next) => {
     res.json({ clusters: Object.values(clusters).sort((a, b) => b.count - a.count) });
   } catch (err) { next(err); }
 };
+
+exports.playGame = async (req, res, next) => {
+  try {
+    const User = require('../models/User');
+    const { checkAchievements } = require('../services/achievementEngine');
+    
+    // Find user and increment games played
+    const user = await User.findById(req.user.id);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+    
+    user.gamesPlayed = (user.gamesPlayed || 0) + 1;
+    await user.save();
+    
+    // Check for achievements related to playing games
+    const unlocked = await checkAchievements(user, 'games_played', user.gamesPlayed);
+    
+    res.json({ success: true, gamesPlayed: user.gamesPlayed, unlocked });
+  } catch (err) { next(err); }
+};
