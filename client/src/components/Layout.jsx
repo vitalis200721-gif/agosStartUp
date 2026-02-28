@@ -44,7 +44,7 @@ export default function Layout() {
     <div className="flex h-screen overflow-hidden">
       {/* Sidebar */}
       <aside className={`${sidebarOpen ? 'w-60' : 'w-16'} bg-agos-surface border-r border-agos-border flex flex-col transition-all duration-300 shrink-0 max-md:absolute max-md:z-40 max-md:h-full ${!sidebarOpen ? 'max-md:-translate-x-full' : ''}`}>
-        <div className="p-4 border-b border-agos-border flex items-center gap-3">
+        <div className="p-4 border-b border-agos-border flex items-center gap-3 cursor-pointer hover:bg-agos-accent/5 transition-colors" onClick={() => navigate('/')}>
           <span className="text-2xl text-agos-accent-light">⬡</span>
           {sidebarOpen && (
             <div>

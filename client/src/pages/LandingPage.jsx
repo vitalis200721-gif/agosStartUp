@@ -13,7 +13,7 @@ export default function LandingPage() {
       {/* ── NAV ── */}
       <nav className="fixed top-0 w-full z-50 bg-[#060610]/80 backdrop-blur-xl border-b border-white/[0.04]">
         <div className="max-w-[1100px] mx-auto px-6 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="w-7 h-7 rounded-md bg-gradient-to-br from-violet-500 to-violet-700 flex items-center justify-center text-[11px] font-bold">A</div>
             <span className="font-bold tracking-tight">AGOS</span>
           </div>
@@ -91,7 +91,7 @@ export default function LandingPage() {
                   <div className="w-[140px] shrink-0 bg-[#0c0c1a] border-r border-white/[0.04] p-3 hidden sm:flex flex-col gap-1">
                     <div className="flex items-center gap-2 px-2 py-1.5 rounded bg-violet-500/10 border border-violet-500/15"><div className="w-3 h-3 rounded bg-violet-500/30" /><span className="text-[10px] text-violet-300">Dashboard</span></div>
                     {['Multiverse', 'Factions', 'Market', 'Events', 'Hacking', 'Premium', 'Profile'].map(n => (
-                      <div key={n} className="flex items-center gap-2 px-2 py-1.5 rounded"><div className="w-3 h-3 rounded bg-white/5" /><span className="text-[10px] text-gray-600">{n}</span></div>
+                      <div key={n} className="flex items-center gap-2 px-2 py-1.5 rounded cursor-pointer hover:bg-white/[0.03] transition-colors" onClick={() => navigate('/register')}><div className="w-3 h-3 rounded bg-white/5" /><span className="text-[10px] text-gray-600 hover:text-gray-400">{n}</span></div>
                     ))}
                   </div>
                   {/* Main content */}
@@ -128,7 +128,7 @@ export default function LandingPage() {
                           <div className="flex items-center gap-2">
                             <span className="text-[9px] text-amber-400">{q.reward}</span>
                             {q.done && <span className="text-emerald-400 text-[10px]">&#10003;</span>}
-                            {!q.done && <span className="text-[8px] px-1.5 py-0.5 bg-violet-500 text-white rounded font-medium">Claim</span>}
+                            {!q.done && <span className="text-[8px] px-1.5 py-0.5 bg-violet-500 text-white rounded font-medium cursor-pointer hover:bg-violet-400 transition-colors" onClick={() => navigate('/register')}>Claim</span>}
                           </div>
                         </div>
                       ))}
@@ -165,7 +165,7 @@ export default function LandingPage() {
                       <span className={`text-[8px] font-mono px-1 rounded ${item.color}`}>{item.rarity}</span>
                       <div className="flex items-center justify-between mt-2">
                         <span className="text-[10px] text-amber-400 font-semibold">{item.price}</span>
-                        <span className="text-[8px] px-2 py-0.5 bg-violet-500 text-white rounded font-medium">Buy</span>
+                        <span className="text-[8px] px-2 py-0.5 bg-violet-500 text-white rounded font-medium cursor-pointer hover:bg-violet-400 transition-colors" onClick={() => navigate('/register')}>Buy</span>
                       </div>
                     </div>
                   ))}
@@ -194,7 +194,7 @@ export default function LandingPage() {
                     { rank: '#4', name: 'Frost Covenant', xp: '2,880', color: 'bg-white/[0.02] border-white/[0.04] text-gray-500' },
                     { rank: '#5', name: 'Emerald Syndicate', xp: '2,180', color: 'bg-white/[0.02] border-white/[0.04] text-gray-500' },
                   ].map((f, i) => (
-                    <div key={i} className={`flex items-center justify-between px-3 py-2 rounded-md border ${f.color}`}>
+                    <div key={i} className={`flex items-center justify-between px-3 py-2 rounded-md border cursor-pointer hover:bg-white/[0.03] transition-colors ${f.color}`} onClick={() => navigate('/register')}>
                       <div className="flex items-center gap-2">
                         <span className={`text-[10px] font-bold ${i === 0 ? 'text-amber-400' : 'text-gray-600'}`}>{f.rank}</span>
                         <span className="text-[11px]">{f.name}</span>
