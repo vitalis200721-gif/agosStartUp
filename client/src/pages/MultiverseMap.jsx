@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useUIStore } from '../store';
 import api from '../api/client';
 
@@ -18,7 +18,7 @@ export default function MultiverseMap() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
-  const canvasRef = useRef(null);
+  const [activeGame, setActiveGame] = useState(null);
 
   useEffect(() => {
     api.get('/games/clusters').then(r => {
@@ -77,29 +77,81 @@ export default function MultiverseMap() {
       </div>
 
       {/* Games Grid */}
-      {selected && (
+      {selected && !activeGame && (
         <div className="card p-6">
           <h2 className="font-display font-bold text-lg mb-4">
             {selected} <span className="text-sm font-normal text-agos-muted">({games.length} games)</span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {games.map(g => (
-              <a key={g.id} href={g.url} target="_blank" rel="noopener noreferrer"
-                className="card p-3 hover:border-agos-accent hover:shadow-[0_0_15px_rgba(124,58,237,0.15)] group cursor-pointer">
-                <div className="font-semibold text-sm mb-1 group-hover:text-agos-accent-light truncate">{g.title}</div>
-                <div className="flex gap-1 flex-wrap mb-2">
-                  {g.genres?.map(ge => (
-                    <span key={ge} className="text-[10px] font-mono px-1.5 py-0.5 rounded" style={{ background: `${CLUSTER_COLORS[ge] || CLUSTER_COLORS.default}20`, color: CLUSTER_COLORS[ge] || CLUSTER_COLORS.default }}>
-                      {ge}
-                    </span>
-                  ))}
+              <div key={g._id || g.id} onClick={() => setActiveGame(g)}
+                className="card border border-agos-border hover:border-agos-accent hover:shadow-[0_0_20px_rgba(124,58,237,0.2)] group cursor-pointer transition-all overflow-hidden flex flex-col h-full bg-[#1e293b]/50">
+                
+                {/* Thumbnail Image */}
+                <div className="w-full aspect-[16/9] bg-black overflow-hidden relative">
+                  {g.image ? (
+                    <img src={g.image} alt={g.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-3xl font-display opacity-30">{g.title.substring(0,2)}</div>
+                  )}
+                  {/* Play Overlay */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-agos-accent flex items-center justify-center shadow-lg transform scale-50 group-hover:scale-100 transition-transform">
+                      <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex justify-between text-xs text-agos-muted">
-                  <span>⭐ {g.rating}</span>
-                  <span>👥 {g.players?.toLocaleString()}</span>
+
+                <div className="p-3 flex flex-col flex-grow">
+                  <div className="font-semibold text-sm mb-1 group-hover:text-agos-accent-light truncate">{g.title}</div>
+                  <div className="flex gap-1 flex-wrap mb-2">
+                    {g.genres?.map(ge => (
+                      <span key={ge} className="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded" style={{ background: `${CLUSTER_COLORS[ge] || CLUSTER_COLORS.default}20`, color: CLUSTER_COLORS[ge] || CLUSTER_COLORS.default }}>
+                        {ge}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex justify-between items-end text-xs text-agos-muted mt-auto pt-2 border-t border-white/5">
+                    <span className="flex items-center gap-1">⭐ {g.rating || '4.5'}</span>
+                    <span className="flex items-center gap-1">👥 {g.players ? (g.players/1000).toFixed(1)+'k' : '5k'}</span>
+                  </div>
                 </div>
-              </a>
+              </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Embedded Game Player Modal */}
+      {activeGame && (
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex flex-col">
+          {/* Header Bar */}
+          <div className="h-14 bg-agos-bg border-b border-agos-border flex items-center justify-between px-6 shrink-0">
+            <div className="flex items-center gap-4">
+              <div className="font-display font-bold text-lg text-white">{activeGame.title}</div>
+              <div className="hidden md:flex gap-2">
+                {activeGame.genres?.map(ge => (
+                  <span key={ge} className="text-[10px] uppercase font-mono px-2 py-1 rounded-full border border-white/10 text-agos-muted">
+                    {ge}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <button onClick={() => setActiveGame(null)} 
+              className="px-4 py-2 rounded bg-red-500/20 text-red-400 hover:bg-red-500 hover:text-white transition-colors text-sm font-semibold flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              Exit Game
+            </button>
+          </div>
+          
+          {/* Iframe Container */}
+          <div className="flex-1 w-full bg-black relative">
+            <iframe 
+              src={`https://www.crazygames.com/embed/${activeGame.embedSlug || activeGame.id}`} 
+              style={{ width: '100%', height: '100%', border: 'none' }} 
+              allow="gamepad; microphone; camera; display-capture; midi; xr-spatial-tracking; fullscreen"
+              title={activeGame.title}
+            ></iframe>
           </div>
         </div>
       )}
