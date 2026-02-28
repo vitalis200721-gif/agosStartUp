@@ -1,24 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-const FEATURES = [
-  { icon: '🎮', title: 'AI Game Recommendations', desc: 'Get personalized game suggestions based on your mood, energy, and playstyle.' },
-  { icon: '⚔️', title: 'Faction Wars', desc: 'Join a faction, contribute resources, and compete for global dominance.' },
-  { icon: '💎', title: 'Dynamic Marketplace', desc: 'Buy and sell items with real-time dynamic pricing based on supply and demand.' },
-  { icon: '🔓', title: 'Cyber Hacking', desc: 'Risk your coins in our hacking mini-game. Higher risk = higher reward!' },
-  { icon: '🎯', title: 'Daily Quests', desc: 'Complete daily missions across 5 categories to earn coins and XP.' },
-  { icon: '💬', title: 'Live Multiplayer Chat', desc: 'Chat with other players in real-time via WebSockets.' },
-  { icon: '👑', title: 'Premium Store', desc: 'Purchase coin packages to accelerate your progress.' },
-  { icon: '🪐', title: 'Multiverse Map', desc: 'Explore an interactive game universe with faction territories.' },
-];
-
-const STATS = [
-  { value: '10+', label: 'Game Features' },
-  { value: '15', label: 'Daily Quests' },
-  { value: '4', label: 'Factions' },
-  { value: '∞', label: 'Possibilities' },
-];
-
 export default function LandingPage() {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
@@ -28,327 +10,271 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#06060d] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#06060d] text-white overflow-x-hidden" style={{ fontFamily: '"Inter", "Exo 2", system-ui, sans-serif' }}>
+
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 bg-[#06060d]/80 backdrop-blur-xl border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl text-purple-400">⬡</span>
-            <span className="font-bold text-lg tracking-wider" style={{ fontFamily: '"Exo 2", sans-serif' }}>AGOS</span>
-            <span className="text-[9px] font-mono text-gray-600 ml-1">v2.0</span>
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-sm">A</div>
+            <span className="font-bold text-lg tracking-tight">AGOS</span>
           </div>
           <div className="flex items-center gap-3">
             <button onClick={() => navigate('/login')}
-              className="px-5 py-2 text-sm text-gray-300 hover:text-white transition-colors">
-              Log In
+              className="px-5 py-2 text-sm text-gray-400 hover:text-white transition-colors">
+              Log in
             </button>
             <button onClick={() => navigate('/register')}
-              className="px-5 py-2 text-sm bg-gradient-to-r from-purple-600 to-purple-500 text-white font-bold rounded-lg shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] hover:-translate-y-0.5 transition-all">
-              Sign Up Free
+              className="px-5 py-2 text-sm bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all">
+              Create Free Account
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        {/* Background glow effects */}
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute top-40 right-0 w-[300px] h-[300px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* ─── HERO ─── */}
+      <section className="relative pt-36 pb-24 px-6">
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-purple-600/8 rounded-full blur-[180px] pointer-events-none" />
 
-        <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs text-purple-300 mb-6">
-            <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-            Now live — V2.0 with Multiplayer & Mini-Games
-          </div>
+        <div className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="text-xs uppercase tracking-[0.2em] text-purple-400 font-medium mb-6">
+            AI-Powered Gaming Platform
+          </p>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6" style={{ fontFamily: '"Exo 2", sans-serif' }}>
-            The Ultimate
+          <h1 className="text-5xl sm:text-6xl lg:text-[68px] font-bold leading-[1.08] tracking-tight mb-6">
+            Stop guessing.
             <br />
-            <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
-              Gaming Operating System
+            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Start playing smarter.
             </span>
           </h1>
 
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            AI-powered game recommendations, real-time multiplayer, faction wars, daily quests,
-            and a cyberpunk marketplace — all in one platform.
+          <p className="text-lg text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
+            AGOS learns what you like, recommends what you'll love, and gives you a reason to keep playing — with quests, rewards, and a live community.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <button onClick={() => navigate('/register')}
-              className="px-8 py-4 text-lg bg-gradient-to-r from-purple-600 to-purple-500 text-white font-bold rounded-xl shadow-[0_0_30px_rgba(124,58,237,0.4)] hover:shadow-[0_0_50px_rgba(124,58,237,0.6)] hover:scale-105 transition-all active:scale-95"
-              style={{ fontFamily: '"Exo 2", sans-serif' }}>
-              🚀 Get Started — It's Free
+              className="px-8 py-4 text-base bg-white text-black font-semibold rounded-xl hover:bg-gray-100 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(255,255,255,0.08)]">
+              Create Free Account
             </button>
-            <button onClick={() => navigate('/login')}
-              className="px-8 py-4 text-lg border border-white/10 text-gray-300 rounded-xl hover:bg-white/5 hover:border-white/20 transition-all">
-              I have an account →
-            </button>
+            <a href="#trailer"
+              className="px-8 py-4 text-base text-gray-400 border border-white/10 rounded-xl hover:bg-white/5 hover:text-white transition-all">
+              Watch Demo
+            </a>
           </div>
 
-          {/* Demo credentials hint */}
-          <div className="mt-6 text-xs text-gray-600">
-            Demo: <span className="text-gray-500 font-mono">demo@agos.gg</span> / <span className="text-gray-500 font-mono">demo123</span>
-          </div>
+          <p className="mt-5 text-xs text-gray-600">Free to start. No credit card required.</p>
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section className="border-y border-white/5 bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {STATS.map((s, i) => (
+      {/* ─── SOCIAL PROOF ─── */}
+      <section className="border-y border-white/5 bg-white/[0.015]">
+        <div className="max-w-4xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: '30,000+', label: 'Games indexed' },
+            { value: '8', label: 'AI-driven features' },
+            { value: '4', label: 'Competing factions' },
+            { value: '<10s', label: 'To your first recommendation' },
+          ].map((s, i) => (
             <div key={i} className="text-center">
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent" style={{ fontFamily: '"Exo 2", sans-serif' }}>
-                {s.value}
-              </div>
+              <div className="text-2xl font-bold text-white tracking-tight">{s.value}</div>
               <div className="text-xs text-gray-500 mt-1">{s.label}</div>
             </div>
           ))}
         </div>
+        <div className="text-center pb-6">
+          <p className="text-[11px] text-gray-600">Built on data from CrazyGames, one of the largest browser gaming platforms.</p>
+        </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ fontFamily: '"Exo 2", sans-serif' }}>
-              Everything a Gamer Needs
+      {/* ─── FEATURES ─── */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs uppercase tracking-[0.2em] text-purple-400 font-medium mb-3">Core Platform</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Six systems. One platform.
             </h2>
-            <p className="text-gray-500 max-w-lg mx-auto">
-              From AI-driven personalization to real-time combat — AGOS redefines how you experience gaming.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {FEATURES.map((f, i) => (
-              <div key={i} className="group p-5 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-purple-500/5 hover:border-purple-500/20 transition-all duration-300 hover:-translate-y-1">
-                <div className="text-3xl mb-3">{f.icon}</div>
-                <h3 className="font-bold text-sm mb-1 group-hover:text-purple-300 transition-colors">{f.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{f.desc}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { icon: (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
+              ), title: 'AI That Knows You', desc: 'Tell us your mood. Get games you actually want to play — not random lists.' },
+              { icon: (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+              ), title: 'Daily Quests That Pay', desc: 'Four new missions every day. Complete them, earn coins and XP. Simple loop, real progress.' },
+              { icon: (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+              ), title: 'Factions With Stakes', desc: 'Join one of four factions. Contribute resources. Compete for weekly dominance.' },
+              { icon: (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+              ), title: 'Live Multiplayer Chat', desc: 'Real-time global chat. See who is online. No page refresh needed.' },
+              { icon: (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.15c0 .415.336.75.75.75z" /></svg>
+              ), title: 'Marketplace Economy', desc: 'Buy items, open mystery boxes, equip themes. Prices shift based on demand.' },
+              { icon: (
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+              ), title: 'Hacking Mini-Game', desc: 'Stake your coins. Crack the code. Walk away with up to 10x — or lose it all.' },
+            ].map((f, i) => (
+              <div key={i} className="p-6 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300 group">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/15 flex items-center justify-center text-purple-400 mb-4 group-hover:bg-purple-500/15 transition-colors">
+                  {f.icon}
+                </div>
+                <h3 className="font-semibold text-[15px] mb-1.5">{f.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 px-6 bg-white/[0.01] border-y border-white/5">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ fontFamily: '"Exo 2", sans-serif' }}>
-            How It Works
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* ─── HOW IT WORKS ─── */}
+      <section className="py-24 px-6 border-y border-white/5 bg-white/[0.01]">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs uppercase tracking-[0.2em] text-purple-400 font-medium mb-3">Get Started</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Playing in under a minute.
+            </h2>
+          </div>
+          <div className="space-y-0">
             {[
-              { step: '01', title: 'Create Account', desc: 'Sign up for free in 10 seconds. No credit card required.', icon: '🧬' },
-              { step: '02', title: 'Set Your Mood', desc: 'Tell us how you feel and our AI recommends the perfect games.', icon: '🧠' },
-              { step: '03', title: 'Play & Earn', desc: 'Complete quests, hack systems, trade items, and climb the ranks.', icon: '🏆' },
+              { step: '01', title: 'Create your account', desc: 'One form. No credit card. You are in.' },
+              { step: '02', title: 'Set your mood', desc: 'Our AI recommends games based on how you actually feel right now.' },
+              { step: '03', title: 'Play, earn, compete', desc: 'Complete quests. Climb the ranks. Join a faction. Make it yours.' },
             ].map((s, i) => (
-              <div key={i} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-3xl">
-                  {s.icon}
+              <div key={i} className="flex gap-6 py-6 border-b border-white/5 last:border-b-0 group">
+                <div className="w-10 h-10 shrink-0 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-xs font-mono text-gray-500 group-hover:text-purple-400 group-hover:border-purple-500/20 transition-colors">
+                  {s.step}
                 </div>
-                <div className="text-xs text-purple-400 font-mono mb-2">STEP {s.step}</div>
-                <h3 className="font-bold mb-2">{s.title}</h3>
-                <p className="text-xs text-gray-500">{s.desc}</p>
+                <div>
+                  <h3 className="font-semibold text-[15px] mb-1">{s.title}</h3>
+                  <p className="text-sm text-gray-500">{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CrazyGames Partner Section */}
-      <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none" />
-        <div className="max-w-6xl mx-auto relative">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-xs text-cyan-300 mb-4">
-              🤝 Official Partner
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3" style={{ fontFamily: '"Exo 2", sans-serif' }}>
-              Powered by{' '}
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">CrazyGames</span>
+      {/* ─── COMPETITIVE ADVANTAGE ─── */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs uppercase tracking-[0.2em] text-purple-400 font-medium mb-3">Why AGOS</p>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Not another game launcher.
             </h2>
-            <p className="text-gray-500 max-w-lg mx-auto text-sm">
-              Discover and play 30,000+ free browser games. Our AI analyzes your playstyle to find your perfect match from the CrazyGames library.
-            </p>
           </div>
 
-          {/* Featured Games Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-            {[
-              { title: 'Bullet Force', genre: 'Shooter', players: '12M+', rating: '4.7', color: 'from-red-500/20 to-orange-500/20', border: 'border-red-500/20', img: '🔫' },
-              { title: 'Moto X3M', genre: 'Racing', players: '25M+', rating: '4.8', color: 'from-green-500/20 to-emerald-500/20', border: 'border-green-500/20', img: '🏍️' },
-              { title: 'Shell Shockers', genre: 'Multiplayer', players: '18M+', rating: '4.5', color: 'from-yellow-500/20 to-amber-500/20', border: 'border-yellow-500/20', img: '🥚' },
-              { title: 'Basketball Stars', genre: 'Sports', players: '15M+', rating: '4.6', color: 'from-orange-500/20 to-red-500/20', border: 'border-orange-500/20', img: '🏀' },
-              { title: 'Subway Surfers', genre: 'Runner', players: '50M+', rating: '4.9', color: 'from-purple-500/20 to-pink-500/20', border: 'border-purple-500/20', img: '🏃' },
-              { title: 'Among Us', genre: 'Social', players: '30M+', rating: '4.7', color: 'from-cyan-500/20 to-blue-500/20', border: 'border-cyan-500/20', img: '🚀' },
-              { title: 'Temple Run 2', genre: 'Adventure', players: '20M+', rating: '4.6', color: 'from-teal-500/20 to-green-500/20', border: 'border-teal-500/20', img: '🏛️' },
-              { title: 'Stickman Hook', genre: 'Casual', players: '22M+', rating: '4.8', color: 'from-pink-500/20 to-rose-500/20', border: 'border-pink-500/20', img: '🪝' },
-            ].map((game, i) => (
-              <a key={i} href="https://www.crazygames.com" target="_blank" rel="noopener noreferrer"
-                className={`group p-4 rounded-xl border ${game.border} bg-gradient-to-br ${game.color} hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
-                <div className="text-3xl mb-2">{game.img}</div>
-                <h4 className="font-bold text-sm group-hover:text-cyan-300 transition-colors">{game.title}</h4>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="text-[10px] px-1.5 py-0.5 bg-white/5 rounded text-gray-400 font-mono">{game.genre}</span>
-                </div>
-                <div className="flex items-center justify-between mt-2 text-[10px] text-gray-500">
-                  <span>⭐ {game.rating}</span>
-                  <span>👥 {game.players}</span>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          {/* CrazyGames CTA */}
-          <div className="text-center">
-            <a href="https://www.crazygames.com" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl text-sm text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-400/40 hover:scale-105 transition-all">
-              <span className="font-bold">🎮 Explore 30,000+ Games on CrazyGames</span>
-              <span className="text-lg">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Gaming Trailer Section */}
-      <section className="py-20 px-6 relative">
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Text Side */}
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-pink-500/10 border border-pink-500/20 rounded-full text-[10px] text-pink-300 uppercase tracking-wider font-bold">
-                🎬 Featured</div>
-              <h2 className="text-3xl sm:text-4xl font-bold leading-tight" style={{ fontFamily: '"Exo 2", sans-serif' }}>
-                Experience the
-                <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent"> Next Generation </span>
-                of Gaming
-              </h2>
-              <p className="text-gray-400 leading-relaxed">
-                AGOS brings the future of gaming platforms to life. Watch the trailer and discover
-                a universe where AI meets multiplayer, where every action matters, and every
-                player writes their own story.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {['AI-Powered', 'Real-Time', 'Competitive', 'Cyberpunk'].map(tag => (
-                  <span key={tag} className="px-3 py-1 text-[10px] font-mono border border-white/10 rounded-full text-gray-400">
-                    {tag}
-                  </span>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-white/10">
+                  <th className="text-left py-4 px-4 text-gray-500 font-medium"></th>
+                  <th className="py-4 px-4 text-center">
+                    <span className="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-300 text-xs font-semibold">AGOS</span>
+                  </th>
+                  <th className="py-4 px-4 text-center text-gray-500 font-medium">Steam</th>
+                  <th className="py-4 px-4 text-center text-gray-500 font-medium">Discord</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { feature: 'AI game recommendations', agos: true, steam: false, discord: false },
+                  { feature: 'Mood-based matching', agos: true, steam: false, discord: false },
+                  { feature: 'Built-in progression (XP, levels)', agos: true, steam: true, discord: false },
+                  { feature: 'Live multiplayer chat', agos: true, steam: true, discord: true },
+                  { feature: 'Faction competition', agos: true, steam: false, discord: false },
+                  { feature: 'Daily quests with rewards', agos: true, steam: false, discord: false },
+                  { feature: 'In-app economy & marketplace', agos: true, steam: true, discord: false },
+                  { feature: 'Free browser games', agos: true, steam: false, discord: false },
+                ].map((row, i) => (
+                  <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                    <td className="py-3 px-4 text-gray-400">{row.feature}</td>
+                    <td className="py-3 px-4 text-center">
+                      {row.agos ? (
+                        <span className="inline-block w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs leading-5">&#10003;</span>
+                      ) : (
+                        <span className="text-gray-700">—</span>
+                      )}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      {row.steam ? <span className="text-gray-500 text-xs">&#10003;</span> : <span className="text-gray-700">—</span>}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      {row.discord ? <span className="text-gray-500 text-xs">&#10003;</span> : <span className="text-gray-700">—</span>}
+                    </td>
+                  </tr>
                 ))}
-              </div>
-            </div>
-            {/* Video Side */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-lg group-hover:blur-xl transition-all" />
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black aspect-video shadow-[0_0_40px_rgba(124,58,237,0.15)]">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/X8pHiCV1w9o?rel=0&showinfo=0&controls=1&modestbranding=1"
-                  title="AGOS Gaming Trailer"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#06060d] border border-white/10 rounded-full text-[10px] text-gray-500 font-mono">
-                ▶ Watch Trailer
-              </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── DEMO / TRAILER ─── */}
+      <section id="trailer" className="py-24 px-6 border-y border-white/5 bg-white/[0.01]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs uppercase tracking-[0.2em] text-purple-400 font-medium mb-3">See It In Action</p>
+            <h2 className="text-3xl font-bold tracking-tight">
+              Built for players who want more.
+            </h2>
+          </div>
+          <div className="relative group max-w-3xl mx-auto">
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/X8pHiCV1w9o?rel=0&showinfo=0&controls=1&modestbranding=1"
+                title="AGOS Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/5 to-transparent pointer-events-none" />
-        <div className="max-w-3xl mx-auto text-center relative">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: '"Exo 2", sans-serif' }}>
-            Ready to Enter the
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> Multiverse</span>?
+      {/* ─── FINAL CTA ─── */}
+      <section className="py-28 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/[0.03] to-transparent pointer-events-none" />
+        <div className="max-w-2xl mx-auto text-center relative">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-5 leading-tight">
+            Your next favorite game
+            <br />
+            <span className="text-gray-500">is waiting.</span>
           </h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-            Join AGOS today. Free forever. No credit card needed. Your gaming adventure starts now.
+          <p className="text-gray-500 mb-8 text-base">
+            Join AGOS. Set your mood. Let the AI do the rest.
           </p>
           <button onClick={() => navigate('/register')}
-            className="px-10 py-4 text-lg bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 text-white font-bold rounded-xl shadow-[0_0_40px_rgba(124,58,237,0.4)] hover:shadow-[0_0_60px_rgba(124,58,237,0.6)] hover:scale-105 transition-all active:scale-95"
-            style={{ fontFamily: '"Exo 2", sans-serif' }}>
-            ⬡ Create Your Free Account
+            className="px-10 py-4 text-base bg-white text-black font-semibold rounded-xl hover:bg-gray-100 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_40px_rgba(255,255,255,0.06)]">
+            Create Free Account
           </button>
+          <p className="mt-4 text-xs text-gray-700">Free to start. Setup takes 10 seconds.</p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/5 bg-white/[0.01]">
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-            {/* Brand */}
-            <div className="md:col-span-2 space-y-4">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl text-purple-400">⬡</span>
-                <span className="font-bold text-lg" style={{ fontFamily: '"Exo 2", sans-serif' }}>AGOS</span>
-              </div>
-              <p className="text-xs text-gray-500 leading-relaxed max-w-sm">
-                Autonomous Gaming Operating System — the next-generation platform where AI meets gaming.
-                Join thousands of players in the multiverse.
-              </p>
-              {/* Social Media Links */}
-              <div className="flex gap-3">
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-purple-500/20 hover:border-purple-500/30 transition-all hover:-translate-y-0.5">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://discord.gg" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-500/20 hover:border-indigo-500/30 transition-all hover:-translate-y-0.5">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
-                </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-500/20 hover:border-red-500/30 transition-all hover:-translate-y-0.5">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink-500/20 hover:border-pink-500/30 transition-all hover:-translate-y-0.5">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                </a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-teal-500/20 hover:border-teal-500/30 transition-all hover:-translate-y-0.5">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Links Column 1 */}
-            <div className="space-y-3">
-              <h4 className="font-bold text-xs uppercase tracking-wider text-gray-400">Platform</h4>
-              <div className="space-y-2">
-                <a href="/login" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Dashboard</a>
-                <a href="/login" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Marketplace</a>
-                <a href="/login" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Hacking Arena</a>
-                <a href="/login" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Premium Store</a>
-              </div>
-            </div>
-
-            {/* Links Column 2 */}
-            <div className="space-y-3">
-              <h4 className="font-bold text-xs uppercase tracking-wider text-gray-400">Company</h4>
-              <div className="space-y-2">
-                <a href="/privacy" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Privacy Policy</a>
-                <a href="/terms" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Terms of Service</a>
-                <a href="/register" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Create Account</a>
-                <a href="/login" className="block text-xs text-gray-600 hover:text-purple-400 transition-colors">Log In</a>
-              </div>
-            </div>
+      {/* ─── FOOTER ─── */}
+      <footer className="border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2.5">
+            <div className="w-6 h-6 rounded bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-[10px]">A</div>
+            <span className="text-sm font-semibold text-gray-400">AGOS</span>
+            <span className="text-[10px] text-gray-700 hidden sm:inline">Autonomous Gaming Operating System</span>
           </div>
-
-          {/* Bottom bar */}
-          <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <span className="text-[10px] text-gray-700">© 2026 AGOS. All rights reserved. Built with ❤️</span>
-            <span className="text-[10px] text-gray-700 font-mono">v2.0 · Autonomous Gaming Operating System</span>
+          <div className="flex items-center gap-6 text-xs text-gray-600">
+            <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-gray-400 transition-colors">Terms</a>
+            <span className="text-gray-800">© 2026</span>
           </div>
         </div>
       </footer>
