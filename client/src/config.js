@@ -21,6 +21,7 @@ export const FEATURES = {
   feedbackButton: true,
   whatsNew: true,
   hacking: true,
+  premium: true,
 };
 
 // Helper to check feature

@@ -14,6 +14,7 @@ const NAV = [
   { to: '/marketplace', icon: '💎', label: 'Market', feature: 'marketplace' },
   { to: '/events', icon: '🌠', label: 'Events', feature: 'events' },
   { to: '/hacking', icon: '🔓', label: 'Hacking', feature: 'hacking' },
+  { to: '/premium', icon: '👑', label: 'Premium', feature: 'premium' },
   { to: '/profile', icon: '🧬', label: 'Profile', feature: 'profile' },
 ];
 
