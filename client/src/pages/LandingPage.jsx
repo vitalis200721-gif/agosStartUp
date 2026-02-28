@@ -192,7 +192,7 @@ export default function LandingPage() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&showinfo=0&controls=1&modestbranding=1"
+                  src="https://www.youtube.com/embed/X8pHiCV1w9o?rel=0&showinfo=0&controls=1&modestbranding=1"
                   title="AGOS Gaming Trailer"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
