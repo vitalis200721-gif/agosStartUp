@@ -16,9 +16,12 @@ export default function Login() {
     const token = searchParams.get('token');
     const err = searchParams.get('error');
     if (token) {
-      localStorage.setItem('token', token);
       setToken(token);
-      fetchMe().then(() => navigate('/'));
+      fetchMe().then(() => {
+        // Clean URL and navigate to dashboard
+        window.history.replaceState({}, '', '/login');
+        navigate('/');
+      });
     }
     if (err) {
       clearError();
