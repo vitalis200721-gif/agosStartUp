@@ -154,8 +154,12 @@ export default function MultiverseMap() {
             <iframe 
               src={`https://www.crazygames.com/embed/${activeGame.embedSlug || activeGame.id}`} 
               style={{ width: '100%', height: '100%', border: 'none' }} 
-              allow="gamepad; microphone; camera; display-capture; midi; xr-spatial-tracking; fullscreen"
+              sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation allow-pointer-lock allow-downloads"
+              allow="gamepad; microphone; camera; display-capture; midi; xr-spatial-tracking; fullscreen; autoplay; payment; pointer-lock"
               title={activeGame.title}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen
             ></iframe>
           </div>
         </div>
