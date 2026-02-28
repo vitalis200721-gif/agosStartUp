@@ -1,5 +1,7 @@
 const User = require('../models/User');
 const GameProfile = require('../models/GameProfile');
+const Faction = require('../models/Faction');
+const Achievement = require('../models/Achievement');
 const { generateToken } = require('../middleware/auth');
 
 // Google OAuth: redirect user to Google
