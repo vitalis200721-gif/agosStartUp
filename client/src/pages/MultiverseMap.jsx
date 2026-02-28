@@ -152,7 +152,7 @@ export default function MultiverseMap() {
           {/* Iframe Container */}
           <div className="flex-1 w-full bg-black relative">
             <iframe 
-              src={`https://www.crazygames.com/embed/${activeGame.embedSlug || activeGame.id}`} 
+              src={activeGame.embedUrl || `https://www.crazygames.com/embed/${activeGame.embedSlug || activeGame.id}`} 
               style={{ width: '100%', height: '100%', border: 'none' }} 
               sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation allow-pointer-lock allow-downloads"
               allow="gamepad; microphone; camera; display-capture; midi; xr-spatial-tracking; fullscreen; autoplay; payment; pointer-lock"
