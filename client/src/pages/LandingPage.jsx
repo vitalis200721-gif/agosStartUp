@@ -157,6 +157,62 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* CrazyGames Partner Section */}
+      <section className="py-20 px-6 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="max-w-6xl mx-auto relative">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-xs text-cyan-300 mb-4">
+              🤝 Official Partner
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3" style={{ fontFamily: '"Exo 2", sans-serif' }}>
+              Powered by{' '}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">CrazyGames</span>
+            </h2>
+            <p className="text-gray-500 max-w-lg mx-auto text-sm">
+              Discover and play 30,000+ free browser games. Our AI analyzes your playstyle to find your perfect match from the CrazyGames library.
+            </p>
+          </div>
+
+          {/* Featured Games Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            {[
+              { title: 'Bullet Force', genre: 'Shooter', players: '12M+', rating: '4.7', color: 'from-red-500/20 to-orange-500/20', border: 'border-red-500/20', img: '🔫' },
+              { title: 'Moto X3M', genre: 'Racing', players: '25M+', rating: '4.8', color: 'from-green-500/20 to-emerald-500/20', border: 'border-green-500/20', img: '🏍️' },
+              { title: 'Shell Shockers', genre: 'Multiplayer', players: '18M+', rating: '4.5', color: 'from-yellow-500/20 to-amber-500/20', border: 'border-yellow-500/20', img: '🥚' },
+              { title: 'Basketball Stars', genre: 'Sports', players: '15M+', rating: '4.6', color: 'from-orange-500/20 to-red-500/20', border: 'border-orange-500/20', img: '🏀' },
+              { title: 'Subway Surfers', genre: 'Runner', players: '50M+', rating: '4.9', color: 'from-purple-500/20 to-pink-500/20', border: 'border-purple-500/20', img: '🏃' },
+              { title: 'Among Us', genre: 'Social', players: '30M+', rating: '4.7', color: 'from-cyan-500/20 to-blue-500/20', border: 'border-cyan-500/20', img: '🚀' },
+              { title: 'Temple Run 2', genre: 'Adventure', players: '20M+', rating: '4.6', color: 'from-teal-500/20 to-green-500/20', border: 'border-teal-500/20', img: '🏛️' },
+              { title: 'Stickman Hook', genre: 'Casual', players: '22M+', rating: '4.8', color: 'from-pink-500/20 to-rose-500/20', border: 'border-pink-500/20', img: '🪝' },
+            ].map((game, i) => (
+              <a key={i} href="https://www.crazygames.com" target="_blank" rel="noopener noreferrer"
+                className={`group p-4 rounded-xl border ${game.border} bg-gradient-to-br ${game.color} hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 cursor-pointer`}>
+                <div className="text-3xl mb-2">{game.img}</div>
+                <h4 className="font-bold text-sm group-hover:text-cyan-300 transition-colors">{game.title}</h4>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-[10px] px-1.5 py-0.5 bg-white/5 rounded text-gray-400 font-mono">{game.genre}</span>
+                </div>
+                <div className="flex items-center justify-between mt-2 text-[10px] text-gray-500">
+                  <span>⭐ {game.rating}</span>
+                  <span>👥 {game.players}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* CrazyGames CTA */}
+          <div className="text-center">
+            <a href="https://www.crazygames.com" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl text-sm text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-400/40 hover:scale-105 transition-all">
+              <span className="font-bold">🎮 Explore 30,000+ Games on CrazyGames</span>
+              <span className="text-lg">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Gaming Trailer Section */}
       <section className="py-20 px-6 relative">
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[120px] pointer-events-none" />
