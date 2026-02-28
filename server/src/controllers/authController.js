@@ -3,6 +3,7 @@ const GameProfile = require('../models/GameProfile');
 const Faction = require('../models/Faction');
 const Achievement = require('../models/Achievement');
 const { generateToken } = require('../middleware/auth');
+const { sendWelcomeEmail } = require('../services/emailService');
 
 // Google OAuth: redirect user to Google
 exports.googleAuth = (req, res) => {
@@ -66,6 +67,8 @@ exports.googleCallback = async (req, res, next) => {
         avatar: gUser.picture
       });
       await GameProfile.create({ user: user._id });
+      // Send welcome email asynchronously so we don't block the redirect
+      sendWelcomeEmail(user.email, user.displayName).catch(console.error);
     } else if (!user.googleId) {
       user.googleId = gUser.id;
       if (gUser.picture && !user.avatar) user.avatar = gUser.picture;
@@ -96,6 +99,10 @@ exports.register = async (req, res, next) => {
     }
     const user = await User.create({ email, password, displayName });
     await GameProfile.create({ user: user._id });
+    
+    // Send welcome email asynchronously
+    sendWelcomeEmail(user.email, user.displayName).catch(console.error);
+
     const token = generateToken(user._id);
     res.status(201).json({
       token,
