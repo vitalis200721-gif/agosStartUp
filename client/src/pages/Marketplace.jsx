@@ -38,6 +38,18 @@ export default function Marketplace() {
     } catch (err) { addToast(err.response?.data?.error || 'Purchase failed', 'error'); }
   };
 
+  const useItem = async (itemId) => {
+    try {
+      const { data } = await api.post(`/economy/use/${itemId}`);
+      // Show success celebration toast
+      addToast(`✨ ${data.message}`, 'success');
+      // Refresh user to get new coins/theme
+      await fetchMe();
+      // Reload inventory
+      load();
+    } catch (err) { addToast(err.response?.data?.error || 'Failed to use item', 'error'); }
+  };
+
   const categories = ['', 'avatar', 'badge', 'theme', 'boost', 'cosmetic', 'special'];
 
   return (
@@ -103,12 +115,20 @@ export default function Marketplace() {
           {inventory.length === 0 ? (
             <div className="col-span-full text-center py-12 text-agos-muted">Your inventory is empty. Visit the shop to buy items!</div>
           ) : inventory.map((inv, i) => (
-            <div key={i} className="card p-4 flex items-center gap-3">
-              <span className="text-2xl">{inv.itemId?.icon || '📦'}</span>
-              <div className="flex-1">
-                <div className="font-semibold text-sm">{inv.itemId?.name || 'Unknown Item'}</div>
-                <div className="text-xs text-agos-muted">Qty: {inv.quantity}</div>
+            <div key={i} className="card p-4 flex items-center justify-between gap-3 group hover:shadow-[0_0_15px_rgba(124,58,237,0.2)] transition-all">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl drop-shadow-md">{inv.itemId?.icon || '📦'}</span>
+                <div>
+                  <div className="font-semibold text-sm">{inv.itemId?.name || 'Unknown Item'}</div>
+                  <div className="text-xs text-agos-muted">Qty: {inv.quantity}</div>
+                </div>
               </div>
+              <button 
+                onClick={() => useItem(inv.itemId?._id)}
+                className="px-4 py-1.5 rounded-lg text-xs font-bold bg-agos-current text-white hover:bg-agos-accent-light hover:scale-105 transition-all shadow-lg active:scale-95"
+              >
+                Use
+              </button>
             </div>
           ))}
         </div>

@@ -36,6 +36,7 @@ const userSchema = new mongoose.Schema({
   achievements: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Achievement' }],
 
   // Metadata
+  profileTheme: { type: String, default: 'default' },
   lastLogin: { type: Date, default: Date.now },
   gamesPlayed: { type: Number, default: 0 },
   totalPlaytime: { type: Number, default: 0 } // minutes

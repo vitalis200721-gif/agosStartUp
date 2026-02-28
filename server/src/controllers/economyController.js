@@ -1,4 +1,4 @@
-const { purchaseItem, getMarketplace } = require('../services/economyEngine');
+const { purchaseItem, getMarketplace, useItem } = require('../services/economyEngine');
 
 exports.getMarketplace = async (req, res, next) => {
   try {
@@ -16,6 +16,18 @@ exports.purchase = async (req, res, next) => {
       item: result.item.name,
       spent: result.totalCost,
       remainingCoins: result.user.coins
+    });
+  } catch (err) { next(err); }
+};
+
+exports.use = async (req, res, next) => {
+  try {
+    const result = await useItem(req.user._id, req.params.itemId);
+    res.json({
+      message: result.message,
+      remainingCoins: result.user.coins,
+      profileTheme: result.user.profileTheme,
+      avatar: result.user.avatar
     });
   } catch (err) { next(err); }
 };

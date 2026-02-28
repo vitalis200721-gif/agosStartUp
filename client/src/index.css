@@ -47,3 +47,37 @@
   }
   .reality-distortion * { animation: none !important; }
 }
+
+/* Theme Overrides */
+[data-theme="cyber-theme"] {
+  background-color: #05051a !important;
+}
+[data-theme="cyber-theme"] .bg-agos-bg {
+  background-color: #05051a !important;
+}
+[data-theme="cyber-theme"] .bg-agos-card {
+  background-color: #0b1021 !important;
+  border-color: rgba(0, 255, 204, 0.3) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.05) !important;
+}
+[data-theme="cyber-theme"] .text-agos-accent, 
+[data-theme="cyber-theme"] .text-agos-accent-light {
+  color: #00ffcc !important;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5) !important;
+}
+[data-theme="cyber-theme"] .border-agos-accent {
+  border-color: #00ffcc !important;
+}
+[data-theme="cyber-theme"] .bg-agos-accent {
+  background-color: #00ffcc !important;
+  color: #05051a !important;
+}
+[data-theme="cyber-theme"] .from-agos-accent {
+  --tw-gradient-from: #00ffcc var(--tw-gradient-from-position) !important;
+}
+[data-theme="cyber-theme"] .to-purple-500 {
+  --tw-gradient-to: #0088ff var(--tw-gradient-to-position) !important;
+}
+[data-theme="cyber-theme"] * {
+  font-family: 'JetBrains Mono', monospace !important;
+}

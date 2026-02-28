@@ -4,6 +4,7 @@ const { protect } = require('../middleware/auth');
 
 router.get('/marketplace', ctrl.getMarketplace);
 router.post('/purchase/:itemId', protect, ctrl.purchase);
+router.post('/use/:itemId', protect, ctrl.use);
 router.get('/inventory', protect, ctrl.getInventory);
 router.get('/balance', protect, ctrl.getBalance);
 

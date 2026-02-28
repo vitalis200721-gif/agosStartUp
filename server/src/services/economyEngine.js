@@ -90,4 +90,46 @@ async function getMarketplace(filters = {}) {
   }));
 }
 
-module.exports = { calculateDynamicPrice, purchaseItem, getMarketplace };
+/**
+ * Use an item from inventory
+ */
+async function useItem(userId, itemId) {
+  const user = await User.findById(userId);
+  const item = await MarketItem.findById(itemId);
+
+  if (!user) throw Object.assign(new Error('User not found'), { statusCode: 404 });
+  if (!item) throw Object.assign(new Error('Item not found'), { statusCode: 404 });
+
+  const inventoryIndex = user.inventory.findIndex(i => i.itemId?.toString() === itemId);
+  if (inventoryIndex === -1 || user.inventory[inventoryIndex].quantity < 1) {
+    throw Object.assign(new Error('You do not own this item'), { statusCode: 400 });
+  }
+
+  let resultMessage = `Used ${item.name}!`;
+
+  // Apply item effects based on category or name
+  if (item.category === 'special' || item.name.toLowerCase().includes('mystery box')) {
+    const randomCoins = Math.floor(Math.random() * 251) + 50; // 50 to 300 coins
+    user.coins += randomCoins;
+    resultMessage = `You opened the ${item.name} and found ${randomCoins} coins!`;
+  } else if (item.category === 'theme') {
+    user.profileTheme = item.name.toLowerCase().replace(/\s+/g, '-');
+    resultMessage = `Theme changed to ${item.name}!`;
+  } else if (item.category === 'avatar') {
+    user.avatar = item.icon;
+    resultMessage = `Avatar updated to ${item.icon}!`;
+  } else {
+    resultMessage = `You used ${item.name}.`;
+  }
+
+  // Deduct from inventory
+  user.inventory[inventoryIndex].quantity -= 1;
+  if (user.inventory[inventoryIndex].quantity <= 0) {
+    user.inventory.splice(inventoryIndex, 1);
+  }
+
+  await user.save();
+  return { message: resultMessage, user };
+}
+
+module.exports = { calculateDynamicPrice, purchaseItem, getMarketplace, useItem };
