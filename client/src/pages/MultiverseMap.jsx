@@ -22,8 +22,13 @@ export default function MultiverseMap() {
 
   useEffect(() => {
     api.get('/games/clusters').then(r => {
-      setClusters(r.data.clusters);
+      const loadedClusters = r.data.clusters;
+      setClusters(loadedClusters);
       setLoading(false);
+      // Auto-select the first cluster if none is selected so the grid isn't empty
+      if (loadedClusters.length > 0 && !selected && !search) {
+        selectCluster(loadedClusters[0]);
+      }
     }).catch(() => { addToast('Failed to load map data', 'error'); setLoading(false); });
   }, []);
 
