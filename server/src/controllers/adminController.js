@@ -23,8 +23,32 @@ exports.getStats = async (req, res, next) => {
 
 exports.getUsers = async (req, res, next) => {
   try {
-    const users = await User.find().sort({ createdAt: -1 }).select('displayName email level xp coins faction createdAt').lean();
+    const users = await User.find().sort({ createdAt: -1 }).select('displayName email level xp coins faction createdAt role isBanned').lean();
     res.json({ users });
+  } catch (err) { next(err); }
+};
+
+exports.updateUser = async (req, res, next) => {
+  try {
+    const { xp, coins, role, isBanned } = req.body;
+    const user = await User.findById(req.params.id);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+    
+    if (xp !== undefined) user.xp = Number(xp);
+    if (coins !== undefined) user.coins = Number(coins);
+    if (role !== undefined) user.role = role;
+    if (isBanned !== undefined) user.isBanned = Boolean(isBanned);
+    
+    await user.save();
+    res.json({ success: true, user });
+  } catch (err) { next(err); }
+};
+
+exports.deleteUser = async (req, res, next) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+    res.json({ success: true, message: 'User permanently deleted' });
   } catch (err) { next(err); }
 };
 

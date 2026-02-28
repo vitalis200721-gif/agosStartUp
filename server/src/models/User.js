@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   avatar: { type: String, default: '' },
   googleId: { type: String, default: null },
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
+  isBanned: { type: Boolean, default: false },
 
   // Economy
   coins: { type: Number, default: 500 },

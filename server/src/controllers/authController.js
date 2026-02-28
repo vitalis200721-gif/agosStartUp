@@ -58,6 +58,11 @@ exports.googleCallback = async (req, res, next) => {
 
     // Find or create user
     let user = await User.findOne({ email: gUser.email });
+    
+    // Check ban status
+    if (user && user.isBanned) {
+      return htmlRedirect(`${CLIENT}/login?error=account_banned`);
+    }
     if (!user) {
       user = await User.create({
         email: gUser.email,
@@ -121,6 +126,12 @@ exports.login = async (req, res, next) => {
     if (!user || !(await user.comparePassword(password))) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+    
+    // Check ban status
+    if (user.isBanned) {
+      return res.status(403).json({ error: 'Your account has been permanently banned from the AGOS network.' });
+    }
+    
     user.lastLogin = new Date();
     await user.save();
     const token = generateToken(user._id);
