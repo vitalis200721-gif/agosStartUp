@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const http = require('http');
 const cors = require('cors');
 const helmet = require('helmet');
 const cron = require('node-cron');
@@ -7,12 +8,14 @@ const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 const requestLogger = require('./middleware/requestLogger');
 const { apiLimiter, authLimiter, actionLimiter } = require('./middleware/rateLimiter');
+const { initSocket } = require('./socket');
 
 // Services
 const { weeklyReset } = require('./services/factionEngine');
 const { updateEventStatuses, scheduleEventGeneration } = require('./services/eventEngine');
 
 const app = express();
+const server = http.createServer(app);
 
 // Security middleware
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
@@ -84,10 +87,14 @@ cron.schedule('*/30 * * * *', async () => {
 const PORT = process.env.PORT || 5000;
 
 connectDB().then(() => {
-  app.listen(PORT, () => {
+  // Initialize WebSocket BEFORE starting the server
+  initSocket(server);
+
+  server.listen(PORT, () => {
     console.log(`\n🚀 AGOS API v1.0.0 running on http://localhost:${PORT}`);
     console.log(`📡 Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log(`🔒 Helmet: enabled | Rate limiting: enabled`);
+    console.log(`⚡ WebSockets: enabled (Socket.io)`);
     console.log(`📊 Request logging: enabled\n`);
   });
 });

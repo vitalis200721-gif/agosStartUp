@@ -52,9 +52,11 @@ export const useAuthStore = create((set, get) => ({
 export const useUIStore = create((set) => ({
   sidebarOpen: true,
   realityDistortion: false,
+  onlineUsers: 0,
   toasts: [],
   toggleSidebar: () => set(s => ({ sidebarOpen: !s.sidebarOpen })),
   toggleReality: () => set(s => ({ realityDistortion: !s.realityDistortion })),
+  setOnlineUsers: (count) => set({ onlineUsers: count }),
   addToast: (msg, type = 'info') => {
     const id = Date.now();
     set(s => ({ toasts: [...s.toasts, { id, msg, type }] }));

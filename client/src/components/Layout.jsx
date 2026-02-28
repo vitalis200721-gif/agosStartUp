@@ -4,6 +4,7 @@ import { useAuthStore, useUIStore } from '../store';
 import { APP_VERSION, isEnabled } from '../config';
 import { track, Events } from '../analytics';
 import FeedbackModal from './FeedbackModal';
+import GlobalChat from './GlobalChat';
 import api from '../api/client';
 
 const NAV = [
@@ -18,7 +19,7 @@ const NAV = [
 export default function Layout() {
   const user = useAuthStore(s => s.user);
   const logout = useAuthStore(s => s.logout);
-  const { sidebarOpen, toggleSidebar, realityDistortion, toggleReality } = useUIStore();
+  const { sidebarOpen, toggleSidebar, realityDistortion, toggleReality, onlineUsers } = useUIStore();
   const navigate = useNavigate();
   const [showFeedback, setShowFeedback] = useState(false);
   const [apiStatus, setApiStatus] = useState('checking');
@@ -107,6 +108,13 @@ export default function Layout() {
             <div className={`w-1.5 h-1.5 rounded-full ${apiStatus === 'online' ? 'bg-agos-green' : apiStatus === 'offline' ? 'bg-agos-red animate-pulse' : 'bg-agos-amber'}`} />
             {apiStatus === 'offline' && <span className="text-[10px] text-agos-red">Offline</span>}
           </div>
+          {/* Online Users */}
+          {onlineUsers > 0 && (
+            <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-agos-green/10 border border-agos-green/20">
+              <div className="w-1.5 h-1.5 rounded-full bg-agos-green animate-pulse" />
+              <span className="text-[10px] font-mono text-agos-green">{onlineUsers} online</span>
+            </div>
+          )}
           <div className="flex-1" />
           {user && (
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/profile')}>
@@ -132,6 +140,7 @@ export default function Layout() {
       </div>
 
       {showFeedback && <FeedbackModal onClose={() => setShowFeedback(false)} />}
+      <GlobalChat />
     </div>
   );
 }
