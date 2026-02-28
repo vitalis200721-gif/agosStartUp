@@ -79,8 +79,13 @@ async function resolveHack(userId, difficulty, betAmount) {
   if (won) {
     const winnings = Math.floor(betAmount * config.multiplier);
     user.coins += winnings;
+    user.hackingWins = (user.hackingWins || 0) + 1;
     // Also give some XP for playing
     await user.addXP(10 + Math.floor(winnings * 0.05));
+
+    const { checkAchievements } = require('./achievementEngine');
+    checkAchievements(user._id, 'hacking_wins', user.hackingWins).catch(console.error);
+    checkAchievements(user._id, 'coins_earned', user.coins).catch(console.error);
 
     return {
       won: true,

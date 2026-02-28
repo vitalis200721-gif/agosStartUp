@@ -41,6 +41,9 @@ exports.join = async (req, res, next) => {
     user.factionJoinedAt = new Date();
     await user.save();
 
+    const { checkAchievements } = require('../services/achievementEngine');
+    await checkAchievements(user._id, 'faction_joined', 1);
+
     res.json({ message: `Joined ${faction.name}!`, faction });
   } catch (err) { next(err); }
 };

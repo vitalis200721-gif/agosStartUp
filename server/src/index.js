@@ -68,6 +68,7 @@ app.use('/api/premium', require('./routes/premium'));
 app.use('/api/leaderboard', require('./routes/leaderboard'));
 app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/admin', require('./routes/admin'));
+app.use('/api/achievements', require('./routes/achievements'));
 
 // Health check
 app.get('/api/health', (req, res) => {

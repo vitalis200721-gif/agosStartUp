@@ -9,9 +9,11 @@ export default function Profile() {
   const fetchMe = useAuthStore(s => s.fetchMe);
   const addToast = useUIStore(s => s.addToast);
   const [analysis, setAnalysis] = useState(null);
+  const [allAchievements, setAllAchievements] = useState([]);
 
   useEffect(() => {
     api.get('/ai/profile-analysis').then(r => setAnalysis(r.data)).catch(() => {});
+    api.get('/achievements').then(r => setAllAchievements(r.data.achievements)).catch(console.error);
   }, []);
 
   const allocateSkill = async (skill) => {
@@ -92,18 +94,29 @@ export default function Profile() {
 
       {/* Achievements */}
       <div className="card p-6">
-        <h2 className="font-display font-bold text-lg mb-4">🏆 Achievements ({user.achievements?.length || 0})</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {user.achievements?.length > 0 ? user.achievements.map(a => (
-            <div key={a._id} className="p-3 bg-agos-surface rounded-lg border border-agos-border flex items-center gap-2">
-              <span className="text-2xl">{a.icon}</span>
-              <div>
-                <div className="text-sm font-semibold">{a.title}</div>
-                <div className="text-[10px] text-agos-muted">{a.description}</div>
+        <h2 className="font-display font-bold text-lg mb-4">🏆 Achievements ({user.achievements?.length || 0} / {allAchievements.length})</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {allAchievements.length > 0 ? allAchievements.map(a => {
+            const isUnlocked = user.achievements?.some(ua => ua._id === a._id);
+            return (
+              <div key={a._id} className={`p-4 rounded-lg border transition-all duration-300 flex items-center gap-3 ${
+                isUnlocked 
+                  ? 'bg-agos-accent/10 border-agos-accent/50 shadow-[0_0_15px_rgba(124,58,237,0.15)] opacity-100' 
+                  : 'bg-agos-surface border-agos-border opacity-40 grayscale hover:grayscale-0 hover:opacity-100 cursor-help'
+              }`} title={!isUnlocked ? `Condition: ${a.condition?.type.replace('_', ' ')} x${a.condition?.value}` : 'Unlocked!'}>
+                <div className="text-3xl relative">
+                  {a.icon}
+                  {!isUnlocked && <div className="absolute -bottom-1 -right-1 text-sm bg-black rounded-full p-0.5">🔒</div>}
+                </div>
+                <div className="flex-1">
+                  <div className={`text-sm font-bold ${isUnlocked ? 'text-white' : 'text-gray-400'}`}>{a.title}</div>
+                  <div className="text-[10px] text-agos-muted leading-tight mt-0.5">{a.description}</div>
+                  <div className="text-[9px] font-mono text-agos-dim mt-1 uppercase">Reward: {a.xpReward} XP / {a.coinReward} Coins</div>
+                </div>
               </div>
-            </div>
-          )) : (
-            <div className="col-span-full text-center py-6 text-agos-muted text-sm">No achievements yet. Keep playing!</div>
+            );
+          }) : (
+            <div className="col-span-full text-center py-6 text-agos-muted text-sm">Loading achievements database...</div>
           )}
         </div>
       </div>

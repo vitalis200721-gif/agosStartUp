@@ -35,7 +35,7 @@ export default function MultiverseMap() {
   const selectCluster = async (cluster) => {
     setSelected(cluster.genre);
     try {
-      const { data } = await api.get('/games', { params: { genre: cluster.genre, limit: 12 } });
+      const { data } = await api.get('/games', { params: { genre: cluster.genre, limit: 40 } });
       setGames(data.games);
     } catch { addToast('Failed to load games', 'error'); }
   };
@@ -43,10 +43,18 @@ export default function MultiverseMap() {
   const searchGames = async () => {
     if (!search.trim()) return;
     try {
-      const { data } = await api.get('/games', { params: { search, limit: 12 } });
+      const { data } = await api.get('/games', { params: { search, limit: 40 } });
       setGames(data.games);
       setSelected(`Search: ${search}`);
     } catch { addToast('Search failed', 'error'); }
+  };
+
+  const handlePlayGame = async (g) => {
+    setActiveGame(g);
+    try {
+      // Notify backend we are playing this game, so we get 'games_played' achievements
+      await api.post(`/games/play/${g.id || g._id}`);
+    } catch (e) { console.error('Failed to log game play', e); }
   };
 
   if (loading) return <div className="flex items-center justify-center py-20"><div className="w-8 h-8 border-2 border-agos-accent border-t-transparent rounded-full animate-spin" /></div>;
@@ -93,7 +101,7 @@ export default function MultiverseMap() {
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {games.map(g => (
-              <div key={g._id || g.id} onClick={() => setActiveGame(g)}
+              <div key={g._id || g.id} onClick={() => handlePlayGame(g)}
                 className="card border border-agos-border hover:border-agos-accent hover:shadow-[0_0_20px_rgba(124,58,237,0.2)] group cursor-pointer transition-all overflow-hidden flex flex-col h-full bg-[#1e293b]/50">
                 
                 {/* Thumbnail Image */}

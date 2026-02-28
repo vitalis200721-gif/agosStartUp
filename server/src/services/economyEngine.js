@@ -61,7 +61,11 @@ async function purchaseItem(userId, itemId, quantity = 1) {
     user.inventory.push({ itemId, quantity });
   }
 
+  user.itemsBought = (user.itemsBought || 0) + quantity;
   await user.save();
+
+  const { checkAchievements } = require('./achievementEngine');
+  checkAchievements(user._id, 'items_bought', user.itemsBought).catch(console.error);
 
   // Update item stats
   if (item.stock > 0) item.stock -= quantity;

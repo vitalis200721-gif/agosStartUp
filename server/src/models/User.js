@@ -40,7 +40,9 @@ const userSchema = new mongoose.Schema({
   profileTheme: { type: String, default: 'default' },
   lastLogin: { type: Date, default: Date.now },
   gamesPlayed: { type: Number, default: 0 },
-  totalPlaytime: { type: Number, default: 0 } // minutes
+  totalPlaytime: { type: Number, default: 0 }, // minutes
+  hackingWins: { type: Number, default: 0 },
+  itemsBought: { type: Number, default: 0 }
 }, { timestamps: true });
 
 // Hash password
@@ -69,6 +71,9 @@ userSchema.methods.addXP = async function(amount) {
   this.calculateLevel();
   if (this.level > oldLevel) {
     this.skillPoints += (this.level - oldLevel) * 2;
+    // Check level achievements
+    const { checkAchievements } = require('../services/achievementEngine');
+    checkAchievements(this._id, 'level_reached', this.level).catch(console.error);
   }
   return this.save();
 };
