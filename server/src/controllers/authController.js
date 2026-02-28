@@ -17,9 +17,10 @@ exports.googleAuth = (req, res) => {
 
 // Google OAuth callback: exchange code for tokens
 exports.googleCallback = async (req, res, next) => {
+  const CLIENT = process.env.CLIENT_URL || 'https://agos-start-up-zcd0.vercel.app';
   try {
     const { code } = req.query;
-    if (!code) return res.redirect(`${process.env.CLIENT_URL}/login?error=no_code`);
+    if (!code) return res.redirect(`${CLIENT}/login?error=no_code`);
 
     // Exchange code for tokens
     const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
@@ -29,19 +30,21 @@ exports.googleCallback = async (req, res, next) => {
         code,
         client_id: process.env.GOOGLE_CLIENT_ID,
         client_secret: process.env.GOOGLE_CLIENT_SECRET,
-        redirect_uri: process.env.GOOGLE_CALLBACK_URL,
+        redirect_uri: process.env.GOOGLE_CALLBACK_URL || 'https://agosstartup.onrender.com/api/auth/google/callback',
         grant_type: 'authorization_code'
       })
     });
     const tokens = await tokenRes.json();
-    if (!tokens.access_token) return res.redirect(`${process.env.CLIENT_URL}/login?error=token_failed`);
+    console.log('Google tokens response:', JSON.stringify(tokens).substring(0, 200));
+    if (!tokens.access_token) return res.redirect(`${CLIENT}/login?error=token_failed`);
 
     // Get user info from Google
     const userRes = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
       headers: { Authorization: `Bearer ${tokens.access_token}` }
     });
     const gUser = await userRes.json();
-    if (!gUser.email) return res.redirect(`${process.env.CLIENT_URL}/login?error=no_email`);
+    console.log('Google user:', gUser.email, gUser.name);
+    if (!gUser.email) return res.redirect(`${CLIENT}/login?error=no_email`);
 
     // Find or create user
     let user = await User.findOne({ email: gUser.email });
@@ -64,10 +67,11 @@ exports.googleCallback = async (req, res, next) => {
     await user.save();
 
     const token = generateToken(user._id);
-    res.redirect(`${process.env.CLIENT_URL}/login?token=${token}`);
+    console.log('Redirecting to:', `${CLIENT}/login?token=${token.substring(0,20)}...`);
+    return res.redirect(`${CLIENT}/login?token=${token}`);
   } catch (err) {
     console.error('Google OAuth error:', err);
-    res.redirect(`${process.env.CLIENT_URL}/login?error=server_error`);
+    return res.redirect(`${CLIENT}/login?error=server_error`);
   }
 };
 
