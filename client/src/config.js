@@ -20,6 +20,7 @@ export const FEATURES = {
   analytics: true,
   feedbackButton: true,
   whatsNew: true,
+  hacking: true,
 };
 
 // Helper to check feature

@@ -18,6 +18,7 @@ const Events_ = lazy(() => import('./pages/Events'));
 const Profile = lazy(() => import('./pages/Profile'));
 const MultiverseMap = lazy(() => import('./pages/MultiverseMap'));
 const AdminPanel = lazy(() => import('./pages/AdminPanel'));
+const HackingGame = lazy(() => import('./pages/HackingGame'));
 const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
@@ -85,6 +86,7 @@ export default function App() {
                 {isEnabled('events') && <Route path="events" element={<Events_ />} />}
                 {isEnabled('multiverse') && <Route path="map" element={<MultiverseMap />} />}
                 {isEnabled('profile') && <Route path="profile" element={<Profile />} />}
+                {isEnabled('hacking') && <Route path="hacking" element={<HackingGame />} />}
                 <Route path="about" element={<About />} />
                 <Route path="admin" element={<AdminPanel />} />
               </Route>

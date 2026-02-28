@@ -57,6 +57,7 @@ app.use('/api/factions', require('./routes/factions'));
 app.use('/api/economy', require('./routes/economy'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api/games', require('./routes/games'));
+app.use('/api/hacking', require('./routes/hacking'));
 
 // Health check
 app.get('/api/health', (req, res) => {

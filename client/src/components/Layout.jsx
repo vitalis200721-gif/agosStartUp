@@ -13,6 +13,7 @@ const NAV = [
   { to: '/factions', icon: '⚔️', label: 'Factions', feature: 'factions' },
   { to: '/marketplace', icon: '💎', label: 'Market', feature: 'marketplace' },
   { to: '/events', icon: '🌠', label: 'Events', feature: 'events' },
+  { to: '/hacking', icon: '🔓', label: 'Hacking', feature: 'hacking' },
   { to: '/profile', icon: '🧬', label: 'Profile', feature: 'profile' },
 ];
 
