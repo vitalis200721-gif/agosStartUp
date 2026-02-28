@@ -17,7 +17,7 @@ export default function Login() {
     const err = searchParams.get('error');
     if (token) {
       setToken(token);
-      fetchMe().then(() => {
+      fetchMe(token).then(() => {
         // Clean URL and navigate to dashboard
         window.history.replaceState({}, '', '/login');
         navigate('/');

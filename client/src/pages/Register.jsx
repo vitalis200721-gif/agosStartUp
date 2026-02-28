@@ -1,13 +1,30 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuthStore } from '../store';
 
 const GOOGLE_URL = 'https://agosstartup.onrender.com/api/auth/google';
 
 export default function Register() {
   const [form, setForm] = useState({ displayName: '', email: '', password: '' });
-  const { register, loading, error, clearError } = useAuthStore();
+  const { register, loading, error, clearError, setToken, fetchMe } = useAuthStore();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  // Handle Google OAuth callback token
+  useEffect(() => {
+    const token = searchParams.get('token');
+    const err = searchParams.get('error');
+    if (token) {
+      setToken(token);
+      fetchMe().then(() => {
+        window.history.replaceState({}, '', '/register');
+        navigate('/');
+      });
+    }
+    if (err) {
+      clearError();
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

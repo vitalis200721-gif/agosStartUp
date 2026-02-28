@@ -38,12 +38,17 @@ export const useAuthStore = create((set, get) => ({
     }
   },
 
-  fetchMe: async () => {
-    if (!get().token) return;
+  fetchMe: async (overrideToken) => {
+    const currentToken = overrideToken || get().token;
+    if (!currentToken) return;
     try {
-      const { data } = await api.get('/auth/me');
-      set({ user: data.user });
-    } catch { set({ user: null, token: null }); localStorage.removeItem('agos_token'); }
+      const config = overrideToken ? { headers: { Authorization: `Bearer ${overrideToken}` } } : {};
+      const { data } = await api.get('/auth/me', config);
+      set({ user: data.user, token: currentToken });
+    } catch { 
+      set({ user: null, token: null }); 
+      localStorage.removeItem('agos_token'); 
+    }
   },
 
   logout: () => {
