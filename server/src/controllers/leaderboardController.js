@@ -7,11 +7,13 @@ exports.getLeaderboard = async (req, res, next) => {
     if (type === 'xp') sort = { xp: -1 };
     else if (type === 'coins') sort = { coins: -1 };
     else if (type === 'level') sort = { level: -1, xp: -1 };
+    else if (type === 'hackingWins') sort = { hackingWins: -1 };
     else sort = { xp: -1 };
 
-    const players = await User.find({}, 'displayName level xp coins faction')
+    const players = await User.find({}, 'displayName level xp coins hackingWins faction')
       .sort(sort)
-      .limit(20)
+      .limit(50)
+      .populate('faction', 'name color')
       .lean();
 
     // Find requesting user's rank

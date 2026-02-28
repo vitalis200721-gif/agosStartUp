@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 import api from '../api/client';
+import { useAuthStore } from '../store';
 
 const TABS = [
-  { key: 'xp', label: 'XP', icon: '⚡' },
-  { key: 'coins', label: 'Coins', icon: '🪙' },
-  { key: 'level', label: 'Level', icon: '🎖️' },
+  { key: 'xp', label: 'Top Explorers (XP)', icon: '⭐' },
+  { key: 'coins', label: 'Wealthiest (Coins)', icon: '💰' },
+  { key: 'hackingWins', label: 'Best Hackers', icon: '💻' }
 ];
-
-const MEDALS = ['🥇', '🥈', '🥉'];
 
 export default function Leaderboard() {
   const [tab, setTab] = useState('xp');
   const [data, setData] = useState({ players: [], myRank: null });
   const [loading, setLoading] = useState(true);
+  const user = useAuthStore(s => s.user);
 
   useEffect(() => {
     setLoading(true);
@@ -22,70 +22,153 @@ export default function Leaderboard() {
     }).catch(() => setLoading(false));
   }, [tab]);
 
+  const getValueLabel = (player) => {
+    if (tab === 'xp') return `${player.xp?.toLocaleString() || 0} XP`;
+    if (tab === 'coins') return `${player.coins?.toLocaleString() || 0} Coins`;
+    if (tab === 'hackingWins') return `${player.hackingWins || 0} Wins`;
+    return '';
+  };
+
+  const getValueColor = () => {
+    if (tab === 'xp') return 'text-violet-400';
+    if (tab === 'coins') return 'text-amber-400';
+    if (tab === 'hackingWins') return 'text-emerald-400';
+    return 'text-white';
+  };
+
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
+    <div className="max-w-4xl mx-auto space-y-6 animate-fade-in p-4 lg:p-0">
       {/* Header */}
-      <div className="bg-gradient-to-r from-agos-surface via-agos-accent/5 to-agos-surface rounded-xl p-6 border border-agos-border">
-        <h1 className="text-2xl font-display font-bold flex items-center gap-2"><span className="text-3xl">🏆</span> Leaderboard</h1>
-        <p className="text-agos-dim text-sm mt-1">Top players across the AGOS ecosystem</p>
+      <div className="bg-gradient-to-r from-agos-surface via-agos-accent/10 to-transparent rounded-xl p-6 border border-agos-border">
+        <h1 className="text-3xl font-display font-bold flex items-center gap-3">
+          <span className="text-4xl drop-shadow-[0_0_10px_rgba(168,85,247,0.5)]">🏆</span> 
+          Global <span className="text-agos-accent">Leaderboard</span>
+        </h1>
+        <p className="text-agos-dim mt-2">The highest-ranking operators in the AGOS ecosystem.</p>
         {data.myRank && (
-          <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 bg-agos-accent/10 rounded-full text-sm">
-            <span className="text-agos-accent-light">Your Rank:</span>
-            <span className="font-bold text-agos-accent">#{data.myRank}</span>
+          <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 bg-agos-accent/10 border border-agos-accent/30 rounded-full text-sm">
+            <span className="text-agos-muted">Your Global Rank:</span>
+            <span className="font-bold font-mono text-agos-accent-light">#{data.myRank}</span>
           </div>
         )}
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-2">
+      <div className="flex gap-2 p-1 bg-black/40 rounded-xl overflow-x-auto border border-agos-border scrollbar-hide">
         {TABS.map(t => (
-          <button key={t.key} onClick={() => setTab(t.key)}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-all ${tab === t.key ? 'bg-agos-accent text-white shadow-lg shadow-agos-accent/20' : 'bg-agos-surface border border-agos-border text-agos-dim hover:text-white hover:border-agos-accent/30'}`}>
-            <span>{t.icon}</span> {t.label}
+          <button 
+            key={t.key} 
+            onClick={() => setTab(t.key)}
+            className={`flex-1 flex justify-center items-center gap-2 py-3 px-4 rounded-lg font-mono text-xs uppercase tracking-wider transition-all whitespace-nowrap ${
+              tab === t.key 
+                ? 'bg-agos-accent/20 text-agos-accent-light border border-agos-accent/50 shadow-[0_0_15px_rgba(168,85,247,0.15)]' 
+                : 'text-agos-muted hover:bg-white/5 border border-transparent hover:text-white hover:border-white/10'
+            }`}
+          >
+            <span className="text-lg">{t.icon}</span> <span className="font-bold">{t.label}</span>
           </button>
         ))}
       </div>
 
       {/* Table */}
-      <div className="bg-agos-surface rounded-xl border border-agos-border overflow-hidden">
+      <div className="bg-agos-surface rounded-xl border border-agos-border overflow-hidden min-h-[400px] relative">
         {loading ? (
-          <div className="p-8 text-center text-agos-dim animate-pulse">Loading leaderboard...</div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-8 h-8 border-2 border-agos-accent border-t-transparent rounded-full animate-spin"></div>
+          </div>
         ) : data.players.length === 0 ? (
-          <div className="p-8 text-center text-agos-dim">No players yet. Be the first!</div>
+          <div className="p-12 text-center text-agos-dim flex flex-col items-center gap-3">
+            <span className="text-4xl opacity-50">👻</span>
+            <p>The leaderboard is currently empty.</p>
+          </div>
         ) : (
-          <div className="divide-y divide-agos-border">
-            {data.players.map((p, i) => (
-              <div key={i} className={`flex items-center gap-4 px-5 py-3.5 transition-colors hover:bg-agos-accent/5 ${i < 3 ? 'bg-agos-accent/[0.03]' : ''}`}>
-                {/* Rank */}
-                <div className="w-10 text-center">
-                  {i < 3 ? (
-                    <span className="text-2xl">{MEDALS[i]}</span>
-                  ) : (
-                    <span className="text-agos-dim font-mono text-sm">#{i + 1}</span>
-                  )}
-                </div>
-                {/* Avatar */}
-                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm ${i === 0 ? 'bg-gradient-to-br from-yellow-400 to-orange-500 text-black' : i === 1 ? 'bg-gradient-to-br from-gray-300 to-gray-400 text-black' : i === 2 ? 'bg-gradient-to-br from-amber-600 to-amber-700 text-white' : 'bg-agos-accent/20 text-agos-accent-light'}`}>
-                  {p.displayName?.charAt(0).toUpperCase() || '?'}
-                </div>
-                {/* Name */}
-                <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-sm truncate">{p.displayName}</div>
-                  <div className="text-[10px] text-agos-dim">
-                    {p.faction && <span className="px-1.5 py-0.5 bg-agos-accent/10 rounded-full text-agos-accent-light">{p.faction}</span>}
-                  </div>
-                </div>
-                {/* Stats */}
-                <div className="text-right">
-                  <div className="font-bold text-sm">
-                    {tab === 'xp' && <span className="text-violet-400">{p.xp?.toLocaleString()} XP</span>}
-                    {tab === 'coins' && <span className="text-amber-400">{p.coins?.toLocaleString()} 🪙</span>}
-                    {tab === 'level' && <span className="text-emerald-400">Lvl {p.level}</span>}
-                  </div>
-                  <div className="text-[10px] text-agos-dim">Lvl {p.level}</div>
-                </div>
-              </div>
-            ))}
+          <div className="overflow-x-auto">
+             <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-black/40 border-b border-white/5 text-xs uppercase tracking-wider text-agos-muted font-mono">
+                    <th className="py-4 px-6 w-16 text-center">Rank</th>
+                    <th className="py-4 px-6">Operator</th>
+                    <th className="py-4 px-6">Faction</th>
+                    <th className="py-4 px-6 text-right">Score</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/5">
+                  {data.players.map((p, i) => {
+                    const rank = i + 1;
+                    const isMe = user && p._id === user.id;
+
+                    // Medals & Coloring
+                    let rankDisplay = `#${rank}`;
+                    let rankColor = 'text-agos-dim font-mono';
+                    let rowBg = 'hover:bg-white/5 transition-colors';
+                    let avatarBg = 'bg-agos-accent/20 text-agos-accent-light border-white/10';
+
+                    if (rank === 1) {
+                      rankDisplay = '🥇';
+                      rankColor = 'text-2xl drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]';
+                      rowBg = 'bg-gradient-to-r from-yellow-500/10 to-transparent border-l-4 border-yellow-400 hover:from-yellow-500/20';
+                      avatarBg = 'bg-gradient-to-br from-yellow-400 to-orange-500 text-black border-yellow-300 shadow-[0_0_10px_rgba(250,204,21,0.5)]';
+                    } else if (rank === 2) {
+                      rankDisplay = '🥈';
+                      rankColor = 'text-2xl drop-shadow-[0_0_8px_rgba(156,163,175,0.5)]';
+                      rowBg = 'bg-gradient-to-r from-gray-400/10 to-transparent border-l-4 border-gray-400 hover:from-gray-400/20';
+                      avatarBg = 'bg-gradient-to-br from-gray-300 to-gray-400 text-black border-gray-300 shadow-[0_0_10px_rgba(156,163,175,0.5)]';
+                    } else if (rank === 3) {
+                      rankDisplay = '🥉';
+                      rankColor = 'text-2xl drop-shadow-[0_0_8px_rgba(217,119,6,0.5)]';
+                      rowBg = 'bg-gradient-to-r from-amber-600/10 to-transparent border-l-4 border-amber-600 hover:from-amber-600/20';
+                      avatarBg = 'bg-gradient-to-br from-amber-600 to-amber-700 text-white border-amber-500 shadow-[0_0_10px_rgba(217,119,6,0.5)]';
+                    } else {
+                      rowBg += ' border-l-4 border-transparent hover:border-white/20';
+                    }
+
+                    if (isMe && rank > 3) {
+                      rowBg = 'bg-agos-accent/10 border-l-4 border-agos-accent hover:bg-agos-accent/20';
+                    }
+
+                    return (
+                      <tr key={p._id} className={rowBg}>
+                        <td className={`py-4 px-6 text-center ${rankColor}`}>
+                          {rankDisplay}
+                        </td>
+                        <td className="py-4 px-6">
+                           <div className="flex items-center gap-3">
+                              <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg overflow-hidden shrink-0 border ${avatarBg}`}>
+                                {p.avatar ? (
+                                  <img src={p.avatar} alt={p.displayName} className="w-full h-full object-cover" />
+                                ) : (
+                                  p.displayName?.charAt(0).toUpperCase() || '?'
+                                )}
+                              </div>
+                              <div>
+                                <div className="font-bold text-white flex items-center gap-2">
+                                  {p.displayName}
+                                  {isMe && <span className="text-[9px] bg-agos-accent text-white px-1.5 py-0.5 rounded uppercase tracking-wider">You</span>}
+                                </div>
+                                <div className="text-xs text-agos-muted font-mono">Level {p.level || 1}</div>
+                              </div>
+                           </div>
+                        </td>
+                        <td className="py-4 px-6">
+                          {p.faction ? (
+                            <div className="flex items-center gap-2 text-sm">
+                              <span>{p.faction.icon}</span>
+                              <span style={{ color: p.faction.color }} className="font-medium">
+                                {p.faction.name}
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="text-agos-dim text-xs italic">Unaffiliated</span>
+                          )}
+                        </td>
+                        <td className={`py-4 px-6 text-right font-mono font-bold ${getValueColor()}`}>
+                          {getValueLabel(p)}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+             </table>
           </div>
         )}
       </div>
