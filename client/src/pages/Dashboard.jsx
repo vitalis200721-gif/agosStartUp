@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuthStore, useUIStore } from '../store';
 import api from '../api/client';
+import QuestsWidget from '../components/QuestsWidget';
 
 const MOODS = [
   { id: 'excited', icon: '🔥', label: 'Excited' },
@@ -47,6 +48,9 @@ export default function Dashboard() {
         <h1 className="font-display font-bold text-2xl mb-1">Welcome back, <span className="text-agos-accent-light">{user?.displayName}</span> 👋</h1>
         <p className="text-agos-muted">Level {user?.level} · {user?.xp} XP · {user?.coins} 🪙 · {user?.gamesPlayed || 0} games played</p>
       </div>
+
+      {/* Daily Quests */}
+      <QuestsWidget />
 
       {/* Mood Selector */}
       <div className="card p-6">

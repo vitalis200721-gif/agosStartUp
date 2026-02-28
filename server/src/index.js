@@ -58,6 +58,7 @@ app.use('/api/economy', require('./routes/economy'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api/games', require('./routes/games'));
 app.use('/api/hacking', require('./routes/hacking'));
+app.use('/api/quests', require('./routes/quests'));
 
 // Health check
 app.get('/api/health', (req, res) => {
