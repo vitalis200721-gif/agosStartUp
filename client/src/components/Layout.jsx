@@ -5,6 +5,7 @@ import { APP_VERSION, isEnabled } from '../config';
 import { track, Events } from '../analytics';
 import FeedbackModal from './FeedbackModal';
 import GlobalChat from './GlobalChat';
+import NotificationBell from './NotificationBell';
 import api from '../api/client';
 
 const NAV = [
@@ -15,6 +16,7 @@ const NAV = [
   { to: '/events', icon: '🌠', label: 'Events', feature: 'events' },
   { to: '/hacking', icon: '🔓', label: 'Hacking', feature: 'hacking' },
   { to: '/premium', icon: '👑', label: 'Premium', feature: 'premium' },
+  { to: '/leaderboard', icon: '🏆', label: 'Leaderboard', feature: 'leaderboard' },
   { to: '/profile', icon: '🧬', label: 'Profile', feature: 'profile' },
 ];
 
@@ -118,6 +120,7 @@ export default function Layout() {
             </div>
           )}
           <div className="flex-1" />
+          {isEnabled('notifications') && <NotificationBell />}
           {user && (
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/profile')}>
               <div className="text-right hidden sm:block">

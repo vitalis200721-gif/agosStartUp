@@ -21,6 +21,8 @@ const MultiverseMap = lazy(() => import('./pages/MultiverseMap'));
 const AdminPanel = lazy(() => import('./pages/AdminPanel'));
 const HackingGame = lazy(() => import('./pages/HackingGame'));
 const PremiumStore = lazy(() => import('./pages/PremiumStore'));
+const Leaderboard = lazy(() => import('./pages/Leaderboard'));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
@@ -91,8 +93,10 @@ export default function App() {
                 {isEnabled('profile') && <Route path="profile" element={<Profile />} />}
                 {isEnabled('hacking') && <Route path="hacking" element={<HackingGame />} />}
                 {isEnabled('premium') && <Route path="premium" element={<PremiumStore />} />}
+                {isEnabled('leaderboard') && <Route path="leaderboard" element={<Leaderboard />} />}
                 <Route path="about" element={<About />} />
-                <Route path="admin" element={<AdminPanel />} />
+                {isEnabled('admin') && <Route path="admin" element={<AdminDashboard />} />}
+                <Route path="admin-panel" element={<AdminPanel />} />
               </Route>
             </Routes>
           </Suspense>

@@ -22,6 +22,9 @@ export const FEATURES = {
   whatsNew: true,
   hacking: true,
   premium: true,
+  leaderboard: true,
+  admin: true,
+  notifications: true,
 };
 
 // Helper to check feature

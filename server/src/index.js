@@ -60,6 +60,9 @@ app.use('/api/games', require('./routes/games'));
 app.use('/api/hacking', require('./routes/hacking'));
 app.use('/api/quests', require('./routes/quests'));
 app.use('/api/premium', require('./routes/premium'));
+app.use('/api/leaderboard', require('./routes/leaderboard'));
+app.use('/api/notifications', require('./routes/notifications'));
+app.use('/api/admin', require('./routes/admin'));
 
 // Health check
 app.get('/api/health', (req, res) => {

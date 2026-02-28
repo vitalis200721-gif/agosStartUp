@@ -298,6 +298,56 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── CRAZYGAMES PARTNER ── */}
+      <section className="py-20 px-6 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/25 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/[0.03] rounded-full blur-[150px] pointer-events-none" />
+        <div className="max-w-[1000px] mx-auto relative">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/15 rounded-full text-[11px] text-cyan-300 font-semibold mb-4 shadow-[0_0_12px_rgba(34,211,238,0.1)]">
+              Official Gaming Partner
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
+              Powered by <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">CrazyGames</span>
+            </h2>
+            <p className="text-gray-500 max-w-md mx-auto text-sm">
+              30,000+ free browser games. Our AI scans the full library to find your perfect match.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            {[
+              { title: 'Bullet Force', cat: 'Shooter', players: '12M+', rating: '4.7', grad: 'from-red-500/15 to-orange-500/8', border: 'border-red-500/15 hover:border-red-500/30' },
+              { title: 'Moto X3M', cat: 'Racing', players: '25M+', rating: '4.8', grad: 'from-emerald-500/15 to-teal-500/8', border: 'border-emerald-500/15 hover:border-emerald-500/30' },
+              { title: 'Shell Shockers', cat: 'Multiplayer', players: '18M+', rating: '4.5', grad: 'from-amber-500/15 to-yellow-500/8', border: 'border-amber-500/15 hover:border-amber-500/30' },
+              { title: 'Basketball Stars', cat: 'Sports', players: '15M+', rating: '4.6', grad: 'from-orange-500/15 to-red-500/8', border: 'border-orange-500/15 hover:border-orange-500/30' },
+              { title: 'Subway Surfers', cat: 'Runner', players: '50M+', rating: '4.9', grad: 'from-violet-500/15 to-fuchsia-500/8', border: 'border-violet-500/15 hover:border-violet-500/30' },
+              { title: 'Among Us', cat: 'Social', players: '30M+', rating: '4.7', grad: 'from-cyan-500/15 to-blue-500/8', border: 'border-cyan-500/15 hover:border-cyan-500/30' },
+              { title: 'Temple Run 2', cat: 'Adventure', players: '20M+', rating: '4.6', grad: 'from-teal-500/15 to-emerald-500/8', border: 'border-teal-500/15 hover:border-teal-500/30' },
+              { title: 'Stickman Hook', cat: 'Casual', players: '22M+', rating: '4.8', grad: 'from-fuchsia-500/15 to-pink-500/8', border: 'border-fuchsia-500/15 hover:border-fuchsia-500/30' },
+            ].map((g, i) => (
+              <a key={i} href="https://www.crazygames.com" target="_blank" rel="noopener noreferrer"
+                className={`group p-4 rounded-xl border bg-gradient-to-br hover:scale-[1.03] hover:-translate-y-0.5 transition-all duration-300 ${g.grad} ${g.border}`}>
+                <h4 className="font-semibold text-[13px] mb-1 group-hover:text-cyan-300 transition-colors">{g.title}</h4>
+                <span className="text-[9px] font-mono px-1.5 py-0.5 bg-white/5 rounded-full text-gray-400 border border-white/5">{g.cat}</span>
+                <div className="flex items-center justify-between mt-2.5 text-[10px] text-gray-500">
+                  <span className="text-amber-400/70">{g.rating}</span>
+                  <span>{g.players}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a href="https://www.crazygames.com" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/15 rounded-xl text-sm text-cyan-300 font-semibold hover:bg-cyan-500/15 hover:border-cyan-400/30 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] hover:scale-[1.02] transition-all">
+              Explore 30,000+ Games on CrazyGames
+              <span className="text-lg">&#8594;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── DEMO ── */}
       <section id="demo" className="py-20 px-6 relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-fuchsia-500/20 to-transparent" />
