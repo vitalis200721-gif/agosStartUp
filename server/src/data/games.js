@@ -1,2203 +1,2132 @@
 const GAMES = [
   {
-    "id": "380a1a96d7744c9b8ce28fd0e7eceaa2",
-    "title": "Bubble classic",
-    "embedSlug": "bubble-classic",
-    "embedUrl": "https://html5.gamedistribution.com/380a1a96d7744c9b8ce28fd0e7eceaa2/",
-    "genres": [
-      "Bubble Shooter"
-    ],
-    "players": 16586,
-    "rating": 3.6
-  },
-  {
-    "id": "1412394a892d49f5a41763899ca6354e",
-    "title": "Dart Hero",
-    "embedSlug": "dart-hero",
-    "embedUrl": "https://html5.gamedistribution.com/1412394a892d49f5a41763899ca6354e/",
-    "genres": [
-      "Agility"
-    ],
-    "players": 20932,
-    "rating": 4.4
-  },
-  {
-    "id": "b9238092e03340e395f3985be2fadba1",
-    "title": "Obby Parkour Racing",
-    "embedSlug": "obby-parkour-racing",
-    "embedUrl": "https://html5.gamedistribution.com/b9238092e03340e395f3985be2fadba1/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 2248,
-    "rating": 3.6
-  },
-  {
-    "id": "f6b0a5be74774454854a7df21a56f1a2",
-    "title": "Tower Stack 2026",
-    "embedSlug": "tower-stack-2026",
-    "embedUrl": "https://html5.gamedistribution.com/f6b0a5be74774454854a7df21a56f1a2/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 18721,
-    "rating": 5
-  },
-  {
-    "id": "29ed04525754464cba3edc1e921cf51d",
-    "title": "Otu",
-    "embedSlug": "otu",
-    "embedUrl": "https://html5.gamedistribution.com/29ed04525754464cba3edc1e921cf51d/",
-    "genres": [
-      "Agility"
-    ],
-    "players": 21113,
-    "rating": 3.7
-  },
-  {
-    "id": "4c35db256f3c4f5bbf041169c0465a3c",
-    "title": "Draw One Part Brain Puzzle",
-    "embedSlug": "draw-one-part-brain-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/4c35db256f3c4f5bbf041169c0465a3c/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 5721,
-    "rating": 4.8
-  },
-  {
-    "id": "bd03a8447d8b45078037b50a0d1a536e",
-    "title": "Football Kick 3D",
-    "embedSlug": "football-kick-3d",
-    "embedUrl": "https://html5.gamedistribution.com/bd03a8447d8b45078037b50a0d1a536e/",
-    "genres": [
-      "Football"
-    ],
-    "players": 10154,
-    "rating": 4.4
-  },
-  {
-    "id": "87950d31e22149b0a7ad8abd27832778",
-    "title": "Number Place Travel",
-    "embedSlug": "number-place-travel",
-    "embedUrl": "https://html5.gamedistribution.com/87950d31e22149b0a7ad8abd27832778/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 14524,
-    "rating": 4.1
-  },
-  {
-    "id": "f4cf848dffd54e94832f2810618a17e1",
-    "title": "Soda Block Jam",
-    "embedSlug": "soda-block-jam",
-    "embedUrl": "https://html5.gamedistribution.com/f4cf848dffd54e94832f2810618a17e1/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 15293,
-    "rating": 3.9
-  },
-  {
-    "id": "308f223eb05e4b7597ba5adb96701277",
-    "title": "Bloom Within: A life simulator",
-    "embedSlug": "bloom-within-a-life-simulator",
-    "embedUrl": "https://html5.gamedistribution.com/308f223eb05e4b7597ba5adb96701277/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 5219,
-    "rating": 4.9
-  },
-  {
-    "id": "9fd0bb2225334fc69d2ae8d5aa953096",
-    "title": "Pool Merge",
-    "embedSlug": "pool-merge",
-    "embedUrl": "https://html5.gamedistribution.com/9fd0bb2225334fc69d2ae8d5aa953096/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 20609,
-    "rating": 3.5
-  },
-  {
-    "id": "0b2abc29bd9c400cb7a7dce4a8a79d44",
-    "title": "Arrow Tap Puzzle",
-    "embedSlug": "arrow-tap-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/0b2abc29bd9c400cb7a7dce4a8a79d44/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 1821,
-    "rating": 3.8
-  },
-  {
-    "id": "659090e00bfc4650899550d63f8a130d",
-    "title": "Tank Stars",
-    "embedSlug": "tank-stars",
-    "embedUrl": "https://html5.gamedistribution.com/659090e00bfc4650899550d63f8a130d/",
-    "genres": [
-      "Battle"
-    ],
-    "players": 5702,
-    "rating": 5
-  },
-  {
-    "id": "df725a3a7e6143529417611af41098cb",
-    "title": "Sophie's Farm",
-    "embedSlug": "sophie-s-farm",
-    "embedUrl": "https://html5.gamedistribution.com/df725a3a7e6143529417611af41098cb/",
-    "genres": [
-      "Merge"
-    ],
-    "players": 5549,
-    "rating": 4.8
-  },
-  {
-    "id": "1d8cf03d22f94c20935c164a9d6adf88",
-    "title": "Guns vs Magic",
-    "embedSlug": "guns-vs-magic",
-    "embedUrl": "https://html5.gamedistribution.com/1d8cf03d22f94c20935c164a9d6adf88/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 12778,
-    "rating": 4.9
-  },
-  {
-    "id": "29aa4ec2a3f44acd9935beb82393f5e0",
-    "title": "Slingshot Chicken",
-    "embedSlug": "slingshot-chicken",
-    "embedUrl": "https://html5.gamedistribution.com/29aa4ec2a3f44acd9935beb82393f5e0/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 13729,
-    "rating": 4.9
-  },
-  {
-    "id": "1eabbe506bb743b48cda0dd4d7eef627",
-    "title": "Cake Merge",
-    "embedSlug": "cake-merge",
-    "embedUrl": "https://html5.gamedistribution.com/1eabbe506bb743b48cda0dd4d7eef627/",
-    "genres": [
-      "Merge"
-    ],
-    "players": 10544,
-    "rating": 3.9
-  },
-  {
-    "id": "ce70177ea1894fcb9421898b1e56a290",
-    "title": "M5 City Driver",
-    "embedSlug": "m5-city-driver",
-    "embedUrl": "https://html5.gamedistribution.com/ce70177ea1894fcb9421898b1e56a290/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 8610,
-    "rating": 4.1
-  },
-  {
-    "id": "a8cc299a420147c08986ee18db66ca58",
-    "title": "No Pain No Gain - Ragdoll Sandbox",
-    "embedSlug": "no-pain-no-gain-ragdoll-sandbox",
-    "embedUrl": "https://html5.gamedistribution.com/a8cc299a420147c08986ee18db66ca58/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 17575,
-    "rating": 3.7
-  },
-  {
-    "id": "81dc902b25bb48589f7018b00fe5d68d",
-    "title": "Scala 40",
-    "embedSlug": "scala-40",
-    "embedUrl": "https://html5.gamedistribution.com/81dc902b25bb48589f7018b00fe5d68d/",
-    "genres": [
-      "Boardgames"
-    ],
-    "players": 20172,
-    "rating": 4.5
-  },
-  {
-    "id": "ac6a598abb184816af3be3acec546fb5",
-    "title": "TapKO",
-    "embedSlug": "tapko",
-    "embedUrl": "https://html5.gamedistribution.com/ac6a598abb184816af3be3acec546fb5/",
-    "genres": [
-      "Sports"
-    ],
-    "players": 8305,
-    "rating": 4.1
-  },
-  {
-    "id": "f312653358ec4c959a68e43bef2b72c6",
-    "title": "Slippery Drift Racing",
-    "embedSlug": "slippery-drift-racing",
-    "embedUrl": "https://html5.gamedistribution.com/f312653358ec4c959a68e43bef2b72c6/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 5271,
-    "rating": 4.7
-  },
-  {
-    "id": "e842fa22ef0e4801840db85cbeba72d7",
-    "title": "My Cat Restaurant",
-    "embedSlug": "my-cat-restaurant",
-    "embedUrl": "https://html5.gamedistribution.com/e842fa22ef0e4801840db85cbeba72d7/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 13090,
-    "rating": 3.9
-  },
-  {
-    "id": "fdbf380d1035480482a3133391a6360d",
-    "title": "Arrow Escape: Puzzle",
-    "embedSlug": "arrow-escape-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/fdbf380d1035480482a3133391a6360d/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 15385,
-    "rating": 3.8
-  },
-  {
-    "id": "516ceca89758466fa613fa96980eef76",
-    "title": "Draw Bridge Puzzle",
-    "embedSlug": "draw-bridge-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/516ceca89758466fa613fa96980eef76/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 10731,
-    "rating": 3.9
-  },
-  {
-    "id": "f21bb49bbea446af8dbbfc3d61d2ee14",
-    "title": "Cubica",
-    "embedSlug": "cubica",
-    "embedUrl": "https://html5.gamedistribution.com/f21bb49bbea446af8dbbfc3d61d2ee14/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 20066,
-    "rating": 4.1
-  },
-  {
-    "id": "360e8d8783d7468ea79e578bf996d328",
-    "title": "Key Quest",
-    "embedSlug": "key-quest",
-    "embedUrl": "https://html5.gamedistribution.com/360e8d8783d7468ea79e578bf996d328/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 2836,
-    "rating": 3.6
-  },
-  {
-    "id": "ac68d9febcb949afbe11a2db8a47e5e1",
-    "title": "Grenade Simulator",
-    "embedSlug": "grenade-simulator",
-    "embedUrl": "https://html5.gamedistribution.com/ac68d9febcb949afbe11a2db8a47e5e1/",
-    "genres": [
-      "Simulation"
-    ],
-    "players": 15593,
-    "rating": 4.4
-  },
-  {
-    "id": "005de4e1a9064e4191b9cd1aec496550",
-    "title": "School simulator: My school",
-    "embedSlug": "school-simulator-my-school",
-    "embedUrl": "https://html5.gamedistribution.com/005de4e1a9064e4191b9cd1aec496550/",
-    "genres": [
-      "Simulation"
-    ],
-    "players": 17065,
-    "rating": 3.9
-  },
-  {
-    "id": "62a5bfd927984c9a85f01314a21442d9",
-    "title": "Beat The Zombies",
-    "embedSlug": "beat-the-zombies",
-    "embedUrl": "https://html5.gamedistribution.com/62a5bfd927984c9a85f01314a21442d9/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 19047,
-    "rating": 3.8
-  },
-  {
-    "id": "334b4139271f4f84853307086906a805",
-    "title": "Wood Screw Puzzle",
-    "embedSlug": "wood-screw-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/334b4139271f4f84853307086906a805/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 19739,
-    "rating": 3.5
-  },
-  {
-    "id": "8350949cfc924ff0be5d0ea5cad716bf",
-    "title": "Pyramidz",
-    "embedSlug": "pyramidz",
-    "embedUrl": "https://html5.gamedistribution.com/8350949cfc924ff0be5d0ea5cad716bf/",
-    "genres": [
-      "Match-3"
-    ],
-    "players": 8023,
-    "rating": 4.1
-  },
-  {
-    "id": "2a0f90bb34f544549563c05346d8c057",
-    "title": "Zombies Weapon Merge 4",
-    "embedSlug": "zombies-weapon-merge-4",
-    "embedUrl": "https://html5.gamedistribution.com/2a0f90bb34f544549563c05346d8c057/",
-    "genres": [
-      "Strategy"
-    ],
-    "players": 8805,
-    "rating": 3.5
-  },
-  {
-    "id": "280e627746f74fc6aabc06fcf57aeb84",
-    "title": "Xytrian Runner",
-    "embedSlug": "xytrian-runner",
-    "embedUrl": "https://html5.gamedistribution.com/280e627746f74fc6aabc06fcf57aeb84/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 19839,
-    "rating": 3.6
-  },
-  {
-    "id": "92245cd524f44468bffc0b790f855e80",
-    "title": "Obby Yard Sale",
-    "embedSlug": "obby-yard-sale",
-    "embedUrl": "https://html5.gamedistribution.com/92245cd524f44468bffc0b790f855e80/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 9579,
-    "rating": 3.8
-  },
-  {
-    "id": "bc1f30dfe09445d7846658feaeaacb4d",
-    "title": "Fish Love Pins",
-    "embedSlug": "fish-love-pins",
-    "embedUrl": "https://html5.gamedistribution.com/bc1f30dfe09445d7846658feaeaacb4d/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 15421,
-    "rating": 3.8
-  },
-  {
-    "id": "29de0276f9474d58a609a813e9a81cdd",
-    "title": "Escape School Duel",
-    "embedSlug": "escape-school-duel",
-    "embedUrl": "https://html5.gamedistribution.com/29de0276f9474d58a609a813e9a81cdd/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 20667,
-    "rating": 3.5
-  },
-  {
-    "id": "19558675273b4c0c92bb03c9cfd2d4f4",
-    "title": "Slinky Color Sort",
-    "embedSlug": "slinky-color-sort",
-    "embedUrl": "https://html5.gamedistribution.com/19558675273b4c0c92bb03c9cfd2d4f4/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 20232,
-    "rating": 4.6
-  },
-  {
-    "id": "8e9f68b6765f4c39a4c243c4dc6a4ec5",
-    "title": "Farm Blast",
-    "embedSlug": "farm-blast",
-    "embedUrl": "https://html5.gamedistribution.com/8e9f68b6765f4c39a4c243c4dc6a4ec5/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 7036,
-    "rating": 4.9
-  },
-  {
-    "id": "ddb44f5a2ab242969f0e5df218cb0640",
-    "title": "Racing Ball Adventure",
-    "embedSlug": "racing-ball-adventure",
-    "embedUrl": "https://html5.gamedistribution.com/ddb44f5a2ab242969f0e5df218cb0640/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 3747,
-    "rating": 3.9
-  },
-  {
-    "id": "54794eb4734d4c0cb480bc876a5851cf",
-    "title": "Fruit Sort Logic",
-    "embedSlug": "fruit-sort-logic",
-    "embedUrl": "https://html5.gamedistribution.com/54794eb4734d4c0cb480bc876a5851cf/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 2879,
-    "rating": 4.6
-  },
-  {
-    "id": "c89b6590d54245c390eb27cc7d8048c9",
-    "title": "Avenger Guard",
-    "embedSlug": "avenger-guard",
-    "embedUrl": "https://html5.gamedistribution.com/c89b6590d54245c390eb27cc7d8048c9/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 20247,
-    "rating": 3.5
-  },
-  {
-    "id": "28cddc44643242c49335fbe7dbd4354d",
-    "title": "Accurate 2D",
-    "embedSlug": "accurate-2d",
-    "embedUrl": "https://html5.gamedistribution.com/28cddc44643242c49335fbe7dbd4354d/",
-    "genres": [
-      "Shooter"
-    ],
-    "players": 4369,
-    "rating": 4.8
-  },
-  {
-    "id": "55785052e82e4de482f84cdccc1be4bb",
-    "title": "Italian Brainrot Drag Merge Puzzle",
-    "embedSlug": "italian-brainrot-drag-merge-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/55785052e82e4de482f84cdccc1be4bb/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 9229,
-    "rating": 3.7
-  },
-  {
-    "id": "f1f71329bb6e4fbb97bfdc0ad14edafe",
-    "title": "Bowmasters",
-    "embedSlug": "bowmasters",
-    "embedUrl": "https://html5.gamedistribution.com/f1f71329bb6e4fbb97bfdc0ad14edafe/",
-    "genres": [
-      "Shooter"
-    ],
-    "players": 14744,
-    "rating": 4.4
-  },
-  {
-    "id": "64f303f9d8fa4d34ae962b82d4f78af3",
-    "title": "2048 Block Fusion",
-    "embedSlug": "2048-block-fusion",
-    "embedUrl": "https://html5.gamedistribution.com/64f303f9d8fa4d34ae962b82d4f78af3/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 21190,
-    "rating": 3.6
-  },
-  {
-    "id": "0f634eda6eca481da60fb7d2204a4a1d",
-    "title": "Icebound Secrets 2: Soul Hunter",
-    "embedSlug": "icebound-secrets-2-soul-hunter",
-    "embedUrl": "https://html5.gamedistribution.com/0f634eda6eca481da60fb7d2204a4a1d/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 17451,
-    "rating": 4.8
-  },
-  {
-    "id": "da1d6ef1acf94b6b814e29e415666d49",
-    "title": "Word Cross",
-    "embedSlug": "word-cross",
-    "embedUrl": "https://html5.gamedistribution.com/da1d6ef1acf94b6b814e29e415666d49/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 14988,
-    "rating": 4.8
-  },
-  {
-    "id": "197d1fd19c3c40a0b72aca3f14a5ee79",
-    "title": "Neon Dash: Cyber Run",
-    "embedSlug": "neon-dash-cyber-run",
-    "embedUrl": "https://html5.gamedistribution.com/197d1fd19c3c40a0b72aca3f14a5ee79/",
-    "genres": [
-      "Agility"
-    ],
-    "players": 12454,
-    "rating": 3.8
-  },
-  {
-    "id": "380aeec3d95c4aaebfef99add92dc387",
-    "title": "Brainrot World Hole.io",
-    "embedSlug": "brainrot-world-hole-io",
-    "embedUrl": "https://html5.gamedistribution.com/380aeec3d95c4aaebfef99add92dc387/",
-    "genres": [
-      ".IO"
-    ],
-    "players": 10542,
-    "rating": 4.6
-  },
-  {
-    "id": "c946bbe80d5247fdb1f87ad49abbe3b1",
-    "title": "Nubik: Create Your Place",
-    "embedSlug": "nubik-create-your-place",
-    "embedUrl": "https://html5.gamedistribution.com/c946bbe80d5247fdb1f87ad49abbe3b1/",
-    "genres": [
-      "Agility"
-    ],
-    "players": 17250,
-    "rating": 4.5
-  },
-  {
-    "id": "39c6c9c678644d1e89eba1c9188ecb05",
-    "title": "Stardom Alt-Girls Fashion Duel",
-    "embedSlug": "stardom-alt-girls-fashion-duel",
-    "embedUrl": "https://html5.gamedistribution.com/39c6c9c678644d1e89eba1c9188ecb05/",
-    "genres": [
-      "Dress-up"
-    ],
-    "players": 7173,
-    "rating": 4.1
-  },
-  {
-    "id": "7cc51214cfd74d40b405013d0f8eda6c",
-    "title": "Shadowman Runner",
-    "embedSlug": "shadowman-runner",
-    "embedUrl": "https://html5.gamedistribution.com/7cc51214cfd74d40b405013d0f8eda6c/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 17249,
-    "rating": 4.7
-  },
-  {
-    "id": "193427c7c07b4ef3a1d43e7fd7fd901d",
-    "title": "Rainbow Friends Hide And Seek",
-    "embedSlug": "rainbow-friends-hide-and-seek",
-    "embedUrl": "https://html5.gamedistribution.com/193427c7c07b4ef3a1d43e7fd7fd901d/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 12741,
-    "rating": 4.3
-  },
-  {
-    "id": "9b9fe715b48c419da0a62ad5af3edc73",
-    "title": "Blockibo: Color Blocks",
-    "embedSlug": "blockibo-color-blocks",
-    "embedUrl": "https://html5.gamedistribution.com/9b9fe715b48c419da0a62ad5af3edc73/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 19892,
-    "rating": 3.9
-  },
-  {
-    "id": "44e03386976c4d77959367c30af0fce9",
-    "title": "Color Wood Animal Jam",
-    "embedSlug": "color-wood-animal-jam",
-    "embedUrl": "https://html5.gamedistribution.com/44e03386976c4d77959367c30af0fce9/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 8655,
-    "rating": 4.8
-  },
-  {
-    "id": "af6c85172b47439689a66aed12d3a8c2",
-    "title": "Stand on the Right Color, Robby!",
-    "embedSlug": "stand-on-the-right-color-robby-",
-    "embedUrl": "https://html5.gamedistribution.com/af6c85172b47439689a66aed12d3a8c2/",
-    "genres": [
-      "Agility"
-    ],
-    "players": 13422,
-    "rating": 4.9
-  },
-  {
-    "id": "172e0bd0c40442dbae3d4adb42a98433",
-    "title": "Find the Vampire",
-    "embedSlug": "find-the-vampire",
-    "embedUrl": "https://html5.gamedistribution.com/172e0bd0c40442dbae3d4adb42a98433/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 1838,
-    "rating": 3.9
-  },
-  {
-    "id": "c00a2f81678f4497948836ac0e48fa7a",
-    "title": "Idle PinBall - Merge Clicker",
-    "embedSlug": "idle-pinball-merge-clicker",
-    "embedUrl": "https://html5.gamedistribution.com/c00a2f81678f4497948836ac0e48fa7a/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 12697,
-    "rating": 4.8
-  },
-  {
-    "id": "bbb134e346924f8ba823e5a674a3e0aa",
-    "title": "Obby vs Zombies",
-    "embedSlug": "obby-vs-zombies",
-    "embedUrl": "https://html5.gamedistribution.com/bbb134e346924f8ba823e5a674a3e0aa/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 12855,
-    "rating": 3.7
-  },
-  {
-    "id": "41fb9c32a74c4068acf0a04d08b36fd6",
-    "title": "Valentines Hidden Alphawords",
-    "embedSlug": "valentines-hidden-alphawords",
-    "embedUrl": "https://html5.gamedistribution.com/41fb9c32a74c4068acf0a04d08b36fd6/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 16390,
-    "rating": 4.9
-  },
-  {
-    "id": "1d74e75b8da74767938d3310255b4bd3",
-    "title": "Snow Rider Obby Parkour",
-    "embedSlug": "snow-rider-obby-parkour",
-    "embedUrl": "https://html5.gamedistribution.com/1d74e75b8da74767938d3310255b4bd3/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 10174,
-    "rating": 4.4
-  },
-  {
-    "id": "8748f54767044b99bc5373fc61596123",
-    "title": "Police Traffic Racer",
-    "embedSlug": "police-traffic-racer",
-    "embedUrl": "https://html5.gamedistribution.com/8748f54767044b99bc5373fc61596123/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 5973,
-    "rating": 4.4
-  },
-  {
-    "id": "58e78963f24c4305931be1bffa305a19",
-    "title": "Thread Match 2",
-    "embedSlug": "thread-match-2",
-    "embedUrl": "https://html5.gamedistribution.com/58e78963f24c4305931be1bffa305a19/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 1673,
-    "rating": 4.6
-  },
-  {
-    "id": "53f75279264b4a6484601a99be7aef87",
-    "title": "Gas Station: Junkyard Tycoon",
-    "embedSlug": "gas-station-junkyard-tycoon",
-    "embedUrl": "https://html5.gamedistribution.com/53f75279264b4a6484601a99be7aef87/",
-    "genres": [
-      "Simulation"
-    ],
-    "players": 6639,
-    "rating": 4.5
-  },
-  {
-    "id": "24d7669bb0fe4da18c4c6ce661201ff4",
-    "title": "Valentines Love Link",
-    "embedSlug": "valentines-love-link",
-    "embedUrl": "https://html5.gamedistribution.com/24d7669bb0fe4da18c4c6ce661201ff4/",
-    "genres": [
-      "Mahjong & Connect"
-    ],
-    "players": 20226,
-    "rating": 4
-  },
-  {
-    "id": "36cb9c95a60244d4899f6d79210e7f4d",
-    "title": "Jewels Blitz Legends",
-    "embedSlug": "jewels-blitz-legends",
-    "embedUrl": "https://html5.gamedistribution.com/36cb9c95a60244d4899f6d79210e7f4d/",
-    "genres": [
-      "Match-3"
-    ],
-    "players": 8379,
-    "rating": 4
-  },
-  {
-    "id": "a523b0c0ab444333b57347b6604f10c6",
-    "title": "Daily Match",
-    "embedSlug": "daily-match",
-    "embedUrl": "https://html5.gamedistribution.com/a523b0c0ab444333b57347b6604f10c6/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 2371,
-    "rating": 4.9
-  },
-  {
-    "id": "59d85983ebf14a37944e13672cb28b76",
-    "title": "Penguin Farm - Ice Merge",
-    "embedSlug": "penguin-farm-ice-merge",
-    "embedUrl": "https://html5.gamedistribution.com/59d85983ebf14a37944e13672cb28b76/",
-    "genres": [
-      "Merge"
-    ],
-    "players": 6633,
-    "rating": 4.6
-  },
-  {
-    "id": "43f18d2061fb44b58971b70842a6e45d",
-    "title": "Cute cat's adventures",
-    "embedSlug": "cute-cat-s-adventures",
-    "embedUrl": "https://html5.gamedistribution.com/43f18d2061fb44b58971b70842a6e45d/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 5746,
-    "rating": 5
-  },
-  {
-    "id": "58381eb3053846bc8d44cce5a7a5de88",
-    "title": "VR World",
-    "embedSlug": "vr-world",
-    "embedUrl": "https://html5.gamedistribution.com/58381eb3053846bc8d44cce5a7a5de88/",
-    "genres": [
-      "Simulation"
-    ],
-    "players": 2008,
-    "rating": 4.4
-  },
-  {
-    "id": "3c231026237f4b9db10cce6ef0914124",
-    "title": "Nautilus Spaceship Escape",
-    "embedSlug": "nautilus-spaceship-escape",
-    "embedUrl": "https://html5.gamedistribution.com/3c231026237f4b9db10cce6ef0914124/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 11094,
-    "rating": 4.6
-  },
-  {
-    "id": "f18ca724486f4049a8f92ce7387f7826",
-    "title": "Italian Animals: Create Your Own Brainrot!",
-    "embedSlug": "italian-animals-create-your-own-brainrot-",
-    "embedUrl": "https://html5.gamedistribution.com/f18ca724486f4049a8f92ce7387f7826/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 14915,
-    "rating": 3.7
-  },
-  {
-    "id": "a0e71a6336ed4173b09cc76d1a3ef4a2",
-    "title": "Superheroes and the Wand",
-    "embedSlug": "superheroes-and-the-wand",
-    "embedUrl": "https://html5.gamedistribution.com/a0e71a6336ed4173b09cc76d1a3ef4a2/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 8117,
-    "rating": 4.9
-  },
-  {
-    "id": "43a1c23743184ec8befbb7a221c87c93",
-    "title": "Super Brain",
-    "embedSlug": "super-brain",
-    "embedUrl": "https://html5.gamedistribution.com/43a1c23743184ec8befbb7a221c87c93/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 8091,
-    "rating": 3.8
-  },
-  {
-    "id": "d8819c05f45b46a7980cf7fce4114a02",
-    "title": "Italian Animal Alchemy - Brainrot",
-    "embedSlug": "italian-animal-alchemy-brainrot",
-    "embedUrl": "https://html5.gamedistribution.com/d8819c05f45b46a7980cf7fce4114a02/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 16292,
-    "rating": 4
-  },
-  {
-    "id": "789ee491ecd94e05b58b0b6a4ce45083",
-    "title": "Taylor Dress Studio Preppy & Wild West & Glam",
-    "embedSlug": "taylor-dress-studio-preppy-wild-west-glam",
-    "embedUrl": "https://html5.gamedistribution.com/789ee491ecd94e05b58b0b6a4ce45083/",
-    "genres": [
-      "Dress-up"
-    ],
-    "players": 14610,
-    "rating": 4
-  },
-  {
-    "id": "1b51fe92070b442c94733486154b4ab5",
-    "title": "Fruit Jam Master",
-    "embedSlug": "fruit-jam-master",
-    "embedUrl": "https://html5.gamedistribution.com/1b51fe92070b442c94733486154b4ab5/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 11852,
-    "rating": 3.7
-  },
-  {
-    "id": "d6dda2e0655f45e98bd7863f68498f47",
-    "title": "Besties Chinese New Year Celebration",
-    "embedSlug": "besties-chinese-new-year-celebration",
-    "embedUrl": "https://html5.gamedistribution.com/d6dda2e0655f45e98bd7863f68498f47/",
-    "genres": [
-      "Dress-up"
-    ],
-    "players": 7350,
-    "rating": 4.7
-  },
-  {
-    "id": "5ec9e8ec63514f8482ddb37be8774851",
-    "title": "Summon Tribe",
-    "embedSlug": "summon-tribe",
-    "embedUrl": "https://html5.gamedistribution.com/5ec9e8ec63514f8482ddb37be8774851/",
-    "genres": [
-      "Battle"
-    ],
-    "players": 12926,
-    "rating": 4.3
-  },
-  {
-    "id": "79a0fe62ed874a58903a9bc33aab2136",
-    "title": "Obby Prison Run",
-    "embedSlug": "obby-prison-run",
-    "embedUrl": "https://html5.gamedistribution.com/79a0fe62ed874a58903a9bc33aab2136/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 3486,
-    "rating": 4.5
-  },
-  {
-    "id": "8cdc5472b94c4fe9a8c092bec1d0c18e",
-    "title": "Prison Master: Escape Journey",
-    "embedSlug": "prison-master-escape-journey",
-    "embedUrl": "https://html5.gamedistribution.com/8cdc5472b94c4fe9a8c092bec1d0c18e/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 9521,
-    "rating": 4.8
-  },
-  {
-    "id": "6cd9e7deccb74f84a53a78f02c94a028",
-    "title": "Remove The Blocks",
-    "embedSlug": "remove-the-blocks",
-    "embedUrl": "https://html5.gamedistribution.com/6cd9e7deccb74f84a53a78f02c94a028/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 13293,
-    "rating": 4.6
-  },
-  {
-    "id": "87f052f266fe4ebdb89c1841bc2c5ad6",
-    "title": "Steal Brainrot Original 3D",
-    "embedSlug": "steal-brainrot-original-3d",
-    "embedUrl": "https://html5.gamedistribution.com/87f052f266fe4ebdb89c1841bc2c5ad6/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 15688,
-    "rating": 3.6
-  },
-  {
-    "id": "b1b399e2218a45a8b7550b8e91347ae3",
-    "title": "Hook Pin Jam",
-    "embedSlug": "hook-pin-jam",
-    "embedUrl": "https://html5.gamedistribution.com/b1b399e2218a45a8b7550b8e91347ae3/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 10055,
-    "rating": 3.6
-  },
-  {
-    "id": "7a301d8024744929b8e71eb961e1f356",
-    "title": "Color Nuts",
-    "embedSlug": "color-nuts",
-    "embedUrl": "https://html5.gamedistribution.com/7a301d8024744929b8e71eb961e1f356/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 13873,
-    "rating": 4.9
-  },
-  {
-    "id": "f3a9542e779b426799867918b11fd70b",
-    "title": "Crazy Bar Brawl",
-    "embedSlug": "crazy-bar-brawl",
-    "embedUrl": "https://html5.gamedistribution.com/f3a9542e779b426799867918b11fd70b/",
-    "genres": [
-      "Shooter"
-    ],
-    "players": 21154,
-    "rating": 3.6
-  },
-  {
-    "id": "05a321e4c0324e64ad9b6d1ec02c65aa",
-    "title": "K-Pop Hunters Valentine Style",
-    "embedSlug": "k-pop-hunters-valentine-style",
-    "embedUrl": "https://html5.gamedistribution.com/05a321e4c0324e64ad9b6d1ec02c65aa/",
-    "genres": [
-      "Dress-up"
-    ],
-    "players": 19511,
-    "rating": 4.5
-  },
-  {
-    "id": "b57c15d037024b798c2e80efbca087cc",
-    "title": "Two Stunt Supercars",
-    "embedSlug": "two-stunt-supercars",
-    "embedUrl": "https://html5.gamedistribution.com/b57c15d037024b798c2e80efbca087cc/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 20842,
-    "rating": 4.4
-  },
-  {
-    "id": "e344e37a4df544f7b196caf0f624acac",
-    "title": "Hot & Cold Winter Style",
-    "embedSlug": "hot-cold-winter-style",
-    "embedUrl": "https://html5.gamedistribution.com/e344e37a4df544f7b196caf0f624acac/",
-    "genres": [
-      "Dress-up"
-    ],
-    "players": 4537,
-    "rating": 4.5
-  },
-  {
-    "id": "cd86994bb8a44da48354779bdc56e8f8",
-    "title": "Sudoku Brain Blocks",
-    "embedSlug": "sudoku-brain-blocks",
-    "embedUrl": "https://html5.gamedistribution.com/cd86994bb8a44da48354779bdc56e8f8/",
-    "genres": [
-      "Match-3"
-    ],
-    "players": 11926,
+    "id": "smash-karts",
+    "title": "Smash Karts",
+    "embedSlug": "smash-karts",
+    "genres": [
+      "Racing",
+      "Multiplayer",
+      ".io"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Smash%20Karts%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6042,
     "rating": 4.2
   },
   {
-    "id": "fae39128b95549389ad487f668c0a74c",
-    "title": "Scary Shawarma Kiosk: The Anomaly",
-    "embedSlug": "scary-shawarma-kiosk-the-anomaly",
-    "embedUrl": "https://html5.gamedistribution.com/fae39128b95549389ad487f668c0a74c/",
+    "id": "shell-shockers",
+    "title": "Shell Shockers",
+    "embedSlug": "shellshockersio",
     "genres": [
-      "Simulation"
+      "Shooter",
+      "Multiplayer"
     ],
-    "players": 7128,
-    "rating": 5
-  },
-  {
-    "id": "6f599a127fc14957b282b0c1e594358a",
-    "title": "Mojo Emoji",
-    "embedSlug": "mojo-emoji",
-    "embedUrl": "https://html5.gamedistribution.com/6f599a127fc14957b282b0c1e594358a/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 6086,
-    "rating": 4.8
-  },
-  {
-    "id": "be82b0f4cedc4f8aa41e186e90449296",
-    "title": "Mahjong Solitaire Zodiac",
-    "embedSlug": "mahjong-solitaire-zodiac",
-    "embedUrl": "https://html5.gamedistribution.com/be82b0f4cedc4f8aa41e186e90449296/",
-    "genres": [
-      "Mahjong & Connect"
-    ],
-    "players": 13037,
-    "rating": 4.8
-  },
-  {
-    "id": "3bfa9e2ebbab4259a9799be4b00a5dae",
-    "title": "Cookie monster",
-    "embedSlug": "cookie-monster",
-    "embedUrl": "https://html5.gamedistribution.com/3bfa9e2ebbab4259a9799be4b00a5dae/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 10999,
-    "rating": 4.7
-  },
-  {
-    "id": "c22dd33f66654986bf42e494c5934308",
-    "title": "Jixora – Jigsaw Solitaire Puzzle",
-    "embedSlug": "jixora-jigsaw-solitaire-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/c22dd33f66654986bf42e494c5934308/",
-    "genres": [
-      "Cards"
-    ],
-    "players": 20636,
-    "rating": 4.4
-  },
-  {
-    "id": "bf627763f84546df90b07a3379ab6902",
-    "title": "Fashion Stylist Salon Makeover",
-    "embedSlug": "fashion-stylist-salon-makeover",
-    "embedUrl": "https://html5.gamedistribution.com/bf627763f84546df90b07a3379ab6902/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 12047,
-    "rating": 4.8
-  },
-  {
-    "id": "4584cc228f514e2d92af7c7c855f1c79",
-    "title": "Russian Derby Crash",
-    "embedSlug": "russian-derby-crash",
-    "embedUrl": "https://html5.gamedistribution.com/4584cc228f514e2d92af7c7c855f1c79/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 14983,
-    "rating": 4.4
-  },
-  {
-    "id": "cdadc98c441c4c5bbc017428d304d158",
-    "title": "Tiny Farm",
-    "embedSlug": "tiny-farm",
-    "embedUrl": "https://html5.gamedistribution.com/cdadc98c441c4c5bbc017428d304d158/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 20132,
-    "rating": 4
-  },
-  {
-    "id": "bb07040d2f294226bd3af9c86a67bd89",
-    "title": "FreeCell",
-    "embedSlug": "freecell",
-    "embedUrl": "https://html5.gamedistribution.com/bb07040d2f294226bd3af9c86a67bd89/",
-    "genres": [
-      "Cards"
-    ],
-    "players": 17310,
-    "rating": 3.8
-  },
-  {
-    "id": "9101fea0805544d3aa15f794af37622b",
-    "title": "Super Football Fever",
-    "embedSlug": "super-football-fever",
-    "embedUrl": "https://html5.gamedistribution.com/9101fea0805544d3aa15f794af37622b/",
-    "genres": [
-      "Football"
-    ],
-    "players": 21405,
-    "rating": 4.3
-  },
-  {
-    "id": "1b50250704e04f2bad5717d2704e8535",
-    "title": "Maze Escape Challenge",
-    "embedSlug": "maze-escape-challenge",
-    "embedUrl": "https://html5.gamedistribution.com/1b50250704e04f2bad5717d2704e8535/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 19184,
-    "rating": 4.7
-  },
-  {
-    "id": "538349ea1a3744acae7e0e029c844ce2",
-    "title": "People Playground: Ragdoll Battle",
-    "embedSlug": "people-playground-ragdoll-battle",
-    "embedUrl": "https://html5.gamedistribution.com/538349ea1a3744acae7e0e029c844ce2/",
-    "genres": [
-      "Battle"
-    ],
-    "players": 2162,
-    "rating": 4.5
-  },
-  {
-    "id": "84f7b1f56d9c49f79934e47a2464f388",
-    "title": "Screw Color Sorting Master",
-    "embedSlug": "screw-color-sorting-master",
-    "embedUrl": "https://html5.gamedistribution.com/84f7b1f56d9c49f79934e47a2464f388/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 2708,
-    "rating": 3.6
-  },
-  {
-    "id": "933b1b935b9e422b9ca4fd279455b924",
-    "title": "Pickle Ball Clash",
-    "embedSlug": "pickle-ball-clash",
-    "embedUrl": "https://html5.gamedistribution.com/933b1b935b9e422b9ca4fd279455b924/",
-    "genres": [
-      "Sports"
-    ],
-    "players": 5146,
-    "rating": 4.6
-  },
-  {
-    "id": "e540aa25578f40c6ba8b73614ddb7e5d",
-    "title": "Happy Jump",
-    "embedSlug": "happy-jump",
-    "embedUrl": "https://html5.gamedistribution.com/e540aa25578f40c6ba8b73614ddb7e5d/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 10129,
-    "rating": 3.7
-  },
-  {
-    "id": "cbffbdc249f24f6486c7363fee067c71",
-    "title": "Human Leap Evolution",
-    "embedSlug": "human-leap-evolution",
-    "embedUrl": "https://html5.gamedistribution.com/cbffbdc249f24f6486c7363fee067c71/",
-    "genres": [
-      "Battle"
-    ],
-    "players": 6716,
-    "rating": 3.5
-  },
-  {
-    "id": "3b80180a914c4db699ee0e0b8840d620",
-    "title": "Flag Master: World Flags Quiz",
-    "embedSlug": "flag-master-world-flags-quiz",
-    "embedUrl": "https://html5.gamedistribution.com/3b80180a914c4db699ee0e0b8840d620/",
-    "genres": [
-      "Quiz"
-    ],
-    "players": 4589,
-    "rating": 4.2
-  },
-  {
-    "id": "2fcadc3ab4b74db989c0fa852d4f23aa",
-    "title": "Max Crusher 2 - Destruction, Drift, and Racing!",
-    "embedSlug": "max-crusher-2-destruction-drift-and-racing-",
-    "embedUrl": "https://html5.gamedistribution.com/2fcadc3ab4b74db989c0fa852d4f23aa/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 4834,
-    "rating": 4.3
-  },
-  {
-    "id": "83310a1bca264cfd8d1284b7d94b7adb",
-    "title": "Little Bugs",
-    "embedSlug": "little-bugs",
-    "embedUrl": "https://html5.gamedistribution.com/83310a1bca264cfd8d1284b7d94b7adb/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 2386,
+    "image": "https://tse2.mm.bing.net/th?q=%22Shell%20Shockers%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8987,
     "rating": 4.9
   },
   {
-    "id": "a82b5b9d46604486b03d45e1363d72ea",
-    "title": "Cozy Kitchen Merge",
-    "embedSlug": "cozy-kitchen-merge",
-    "embedUrl": "https://html5.gamedistribution.com/a82b5b9d46604486b03d45e1363d72ea/",
+    "id": "ev-io",
+    "title": "Ev.io",
+    "embedSlug": "ev-io",
     "genres": [
-      "Cooking"
+      "Shooter",
+      "Multiplayer",
+      ".io"
     ],
-    "players": 13496,
-    "rating": 3.7
+    "image": "https://tse2.mm.bing.net/th?q=%22Ev.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 2112,
+    "rating": 4.9
   },
   {
-    "id": "7c03475573ec4a31b3926cc32b29bff1",
-    "title": "Obby Football Soccer 3D",
-    "embedSlug": "obby-football-soccer-3d",
-    "embedUrl": "https://html5.gamedistribution.com/7c03475573ec4a31b3926cc32b29bff1/",
+    "id": "bloxdhop-io",
+    "title": "Bloxd.io",
+    "embedSlug": "bloxdhop-io",
     "genres": [
-      "Football"
+      "Action",
+      "Multiplayer",
+      "Building"
     ],
-    "players": 5045,
-    "rating": 5
+    "image": "https://tse2.mm.bing.net/th?q=%22Bloxd.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 1703,
+    "rating": 4.9
   },
   {
-    "id": "87cb43c5492049b49b01491248d9ced1",
-    "title": "Tap It Away 3D",
-    "embedSlug": "tap-it-away-3d",
-    "embedUrl": "https://html5.gamedistribution.com/87cb43c5492049b49b01491248d9ced1/",
+    "id": "buildnow-gg",
+    "title": "BuildNow GG",
+    "embedSlug": "buildnow-gg",
     "genres": [
-      "Puzzle"
+      "Shooter",
+      "Building"
     ],
-    "players": 2683,
+    "image": "https://tse2.mm.bing.net/th?q=%22BuildNow%20GG%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4673,
     "rating": 4.3
   },
   {
-    "id": "38380fc2f11e45a48c9b3809293438a5",
-    "title": "Bouncy Bomb Buddies",
-    "embedSlug": "bouncy-bomb-buddies",
-    "embedUrl": "https://html5.gamedistribution.com/38380fc2f11e45a48c9b3809293438a5/",
+    "id": "bullet-force",
+    "title": "Bullet Force",
+    "embedSlug": "bullet-force-multiplayer",
     "genres": [
-      "Agility"
+      "Shooter",
+      "Action"
     ],
-    "players": 9519,
-    "rating": 4.2
-  },
-  {
-    "id": "804c1f61fc954b56a6c436ed60441897",
-    "title": "Transform Car Battle",
-    "embedSlug": "transform-car-battle",
-    "embedUrl": "https://html5.gamedistribution.com/804c1f61fc954b56a6c436ed60441897/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 12067,
-    "rating": 4.7
-  },
-  {
-    "id": "931dfd68632142c7b3e882009866d288",
-    "title": "Goods Triple Match 3D",
-    "embedSlug": "goods-triple-match-3d",
-    "embedUrl": "https://html5.gamedistribution.com/931dfd68632142c7b3e882009866d288/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 4192,
-    "rating": 4.7
-  },
-  {
-    "id": "53960bf6471b4d1cb2a987b5d458a123",
-    "title": "Food Jam",
-    "embedSlug": "food-jam",
-    "embedUrl": "https://html5.gamedistribution.com/53960bf6471b4d1cb2a987b5d458a123/",
-    "genres": [
-      "Match-3"
-    ],
-    "players": 5528,
-    "rating": 4.6
-  },
-  {
-    "id": "7493d2deadd944e7a4c268203e29903d",
-    "title": "Monster Slayers",
-    "embedSlug": "monster-slayers",
-    "embedUrl": "https://html5.gamedistribution.com/7493d2deadd944e7a4c268203e29903d/",
-    "genres": [
-      "Battle"
-    ],
-    "players": 10658,
-    "rating": 4.4
-  },
-  {
-    "id": "1ae04723ea2f42bab930af8997f01e72",
-    "title": "Xeno Defense Protocol",
-    "embedSlug": "xeno-defense-protocol",
-    "embedUrl": "https://html5.gamedistribution.com/1ae04723ea2f42bab930af8997f01e72/",
-    "genres": [
-      "Shooter"
-    ],
-    "players": 12633,
-    "rating": 4.7
-  },
-  {
-    "id": "ac49fb65363b4f39b79f1c9476e365f3",
-    "title": "School Escape: Obbie Run!",
-    "embedSlug": "school-escape-obbie-run-",
-    "embedUrl": "https://html5.gamedistribution.com/ac49fb65363b4f39b79f1c9476e365f3/",
-    "genres": [
-      "Simulation"
-    ],
-    "players": 15792,
-    "rating": 4.4
-  },
-  {
-    "id": "f26fa8d6c54345afa7fe11ddbdc1e270",
-    "title": "Goo Slime Jump",
-    "embedSlug": "goo-slime-jump",
-    "embedUrl": "https://html5.gamedistribution.com/f26fa8d6c54345afa7fe11ddbdc1e270/",
-    "genres": [
-      "Agility"
-    ],
-    "players": 10783,
+    "image": "https://tse2.mm.bing.net/th?q=%22Bullet%20Force%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3180,
     "rating": 4.1
   },
   {
-    "id": "c68deacab2474d72adeb8a1d7fb23828",
-    "title": "Marshmallow Rush",
-    "embedSlug": "marshmallow-rush",
-    "embedUrl": "https://html5.gamedistribution.com/c68deacab2474d72adeb8a1d7fb23828/",
+    "id": "rocket-bot-royale",
+    "title": "Rocket Bot Royale",
+    "embedSlug": "rocket-bot-royale",
     "genres": [
-      "Casual"
+      "Shooter",
+      "Multiplayer"
     ],
-    "players": 11039,
-    "rating": 3.6
-  },
-  {
-    "id": "8f137bff27e24f159677fcba28b2d2f4",
-    "title": "Clicker Hero",
-    "embedSlug": "clicker-hero",
-    "embedUrl": "https://html5.gamedistribution.com/8f137bff27e24f159677fcba28b2d2f4/",
-    "genres": [
-      "Merge"
-    ],
-    "players": 15083,
-    "rating": 4.5
-  },
-  {
-    "id": "dd6edfff840a4c38ae69596cf0ce314e",
-    "title": "99 Balls",
-    "embedSlug": "99-balls",
-    "embedUrl": "https://html5.gamedistribution.com/dd6edfff840a4c38ae69596cf0ce314e/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 20262,
-    "rating": 4.6
-  },
-  {
-    "id": "bb3deebf6a6b43dd97ded3010fa16a00",
-    "title": "Falling Dummy",
-    "embedSlug": "falling-dummy",
-    "embedUrl": "https://html5.gamedistribution.com/bb3deebf6a6b43dd97ded3010fa16a00/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 5742,
-    "rating": 3.7
-  },
-  {
-    "id": "06fd414d2872472c976a4356740d8002",
-    "title": "Polygon Space",
-    "embedSlug": "polygon-space",
-    "embedUrl": "https://html5.gamedistribution.com/06fd414d2872472c976a4356740d8002/",
-    "genres": [
-      "Shooter"
-    ],
-    "players": 1616,
-    "rating": 4.9
-  },
-  {
-    "id": "6fb271b6c4164d22b10ab39e632c7747",
-    "title": "Mojicon Love Connect",
-    "embedSlug": "mojicon-love-connect",
-    "embedUrl": "https://html5.gamedistribution.com/6fb271b6c4164d22b10ab39e632c7747/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 3426,
-    "rating": 3.6
-  },
-  {
-    "id": "0ed83e6a1e7846db9eb4b04d96146f6a",
-    "title": "Dinosaur Rampage",
-    "embedSlug": "dinosaur-rampage",
-    "embedUrl": "https://html5.gamedistribution.com/0ed83e6a1e7846db9eb4b04d96146f6a/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 20274,
-    "rating": 4.7
-  },
-  {
-    "id": "e00fde5e6256468f8abad8669c3f89f6",
-    "title": "Sausage Man Shooting Adventure",
-    "embedSlug": "sausage-man-shooting-adventure",
-    "embedUrl": "https://html5.gamedistribution.com/e00fde5e6256468f8abad8669c3f89f6/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 15177,
-    "rating": 4.6
-  },
-  {
-    "id": "003becedcaf14456879312d685937e17",
-    "title": "Color Block Blast 3",
-    "embedSlug": "color-block-blast-3",
-    "embedUrl": "https://html5.gamedistribution.com/003becedcaf14456879312d685937e17/",
-    "genres": [
-      "Match-3"
-    ],
-    "players": 2964,
-    "rating": 3.6
-  },
-  {
-    "id": "e1308b7ecfe0461a864dc847e33d66f6",
-    "title": "Sweet Dessert Hole",
-    "embedSlug": "sweet-dessert-hole",
-    "embedUrl": "https://html5.gamedistribution.com/e1308b7ecfe0461a864dc847e33d66f6/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 4039,
-    "rating": 4.5
-  },
-  {
-    "id": "9e6715da90154d94b29dbd21f8258873",
-    "title": "Knit Rescue",
-    "embedSlug": "knit-rescue",
-    "embedUrl": "https://html5.gamedistribution.com/9e6715da90154d94b29dbd21f8258873/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 18004,
-    "rating": 5
-  },
-  {
-    "id": "a3e65058795d4169acb3fc824ea92a0c",
-    "title": "Cupid’s Story: Love Archer Bow",
-    "embedSlug": "cupid-s-story-love-archer-bow",
-    "embedUrl": "https://html5.gamedistribution.com/a3e65058795d4169acb3fc824ea92a0c/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 21040,
+    "image": "https://tse2.mm.bing.net/th?q=%22Rocket%20Bot%20Royale%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 20148,
     "rating": 4.8
   },
   {
-    "id": "f38d251c8d8a4477aabde9953d8ac971",
-    "title": "Challenger City Driver",
-    "embedSlug": "challenger-city-driver",
-    "embedUrl": "https://html5.gamedistribution.com/f38d251c8d8a4477aabde9953d8ac971/",
+    "id": "krunker",
+    "title": "Krunker",
+    "embedSlug": "krunker-io",
     "genres": [
-      "Racing & Driving"
+      "Shooter",
+      "Multiplayer",
+      ".io"
     ],
-    "players": 7920,
-    "rating": 4.6
+    "image": "https://tse2.mm.bing.net/th?q=%22Krunker%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5765,
+    "rating": 3.8
   },
   {
-    "id": "c1337d45912e45b5be9666f08ba81963",
-    "title": "Tripeaks Solitaire Escapes",
-    "embedSlug": "tripeaks-solitaire-escapes",
-    "embedUrl": "https://html5.gamedistribution.com/c1337d45912e45b5be9666f08ba81963/",
+    "id": "voxiom-io",
+    "title": "Voxiom.io",
+    "embedSlug": "voxiom-io",
     "genres": [
-      "Cards"
+      "Shooter",
+      "Multiplayer",
+      "Building"
     ],
-    "players": 3928,
-    "rating": 3.6
-  },
-  {
-    "id": "a00735b23bde40798cfc095745212754",
-    "title": "Wood Block Puzzle 3",
-    "embedSlug": "wood-block-puzzle-3",
-    "embedUrl": "https://html5.gamedistribution.com/a00735b23bde40798cfc095745212754/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 4902,
-    "rating": 4.9
-  },
-  {
-    "id": "9ceb5732c253496e8589ac28574e0a81",
-    "title": "Water Sort - Collections",
-    "embedSlug": "water-sort-collections",
-    "embedUrl": "https://html5.gamedistribution.com/9ceb5732c253496e8589ac28574e0a81/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 17363,
-    "rating": 3.6
-  },
-  {
-    "id": "03f9b255d38b437081576c9ca4f7bb69",
-    "title": "Dance On Hotsteps Mobile",
-    "embedSlug": "dance-on-hotsteps-mobile",
-    "embedUrl": "https://html5.gamedistribution.com/03f9b255d38b437081576c9ca4f7bb69/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 14984,
-    "rating": 4.6
-  },
-  {
-    "id": "ead527ea936247fb991a0fb52499b2d7",
-    "title": "Sacura Branch",
-    "embedSlug": "sacura-branch",
-    "embedUrl": "https://html5.gamedistribution.com/ead527ea936247fb991a0fb52499b2d7/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 13020,
-    "rating": 5
-  },
-  {
-    "id": "6ccf5ab92bf4469ea1988aafaba35ca2",
-    "title": "Escape Again",
-    "embedSlug": "escape-again",
-    "embedUrl": "https://html5.gamedistribution.com/6ccf5ab92bf4469ea1988aafaba35ca2/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 1610,
+    "image": "https://tse2.mm.bing.net/th?q=%22Voxiom.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17485,
     "rating": 4.7
   },
   {
-    "id": "f10741d38dc54325b4385bb3e632ee59",
-    "title": "Sudoku",
-    "embedSlug": "sudoku",
-    "embedUrl": "https://html5.gamedistribution.com/f10741d38dc54325b4385bb3e632ee59/",
+    "id": "forward-assault",
+    "title": "Forward Assault",
+    "embedSlug": "forward-assault-remix",
     "genres": [
-      "Puzzle"
+      "Shooter",
+      "Action"
     ],
-    "players": 1708,
-    "rating": 3.9
+    "image": "https://tse2.mm.bing.net/th?q=%22Forward%20Assault%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16724,
+    "rating": 4.2
   },
   {
-    "id": "8f07339e65ae4c739e1c406da7c51e26",
-    "title": "Tetro Merge",
-    "embedSlug": "tetro-merge",
-    "embedUrl": "https://html5.gamedistribution.com/8f07339e65ae4c739e1c406da7c51e26/",
+    "id": "agar-io",
+    "title": "Agar.io",
+    "embedSlug": "agario",
     "genres": [
-      "Puzzle"
+      ".io",
+      "Multiplayer",
+      "Action"
     ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Agar.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
     "players": 5141,
-    "rating": 4.1
-  },
-  {
-    "id": "e85877693ee64a5eb09b1c8f6a17252c",
-    "title": "Paint Pop 3D",
-    "embedSlug": "paint-pop-3d",
-    "embedUrl": "https://html5.gamedistribution.com/e85877693ee64a5eb09b1c8f6a17252c/",
-    "genres": [
-      "Shooter"
-    ],
-    "players": 3135,
-    "rating": 4.8
-  },
-  {
-    "id": "d43ed595d14e47a1ac6a4ff7456fd3b5",
-    "title": "Kaboom Miner",
-    "embedSlug": "kaboom-miner",
-    "embedUrl": "https://html5.gamedistribution.com/d43ed595d14e47a1ac6a4ff7456fd3b5/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 17356,
-    "rating": 4.5
-  },
-  {
-    "id": "cf93ca785ae64b8e9d19444bd54e5976",
-    "title": "Aim Ninja",
-    "embedSlug": "aim-ninja",
-    "embedUrl": "https://html5.gamedistribution.com/cf93ca785ae64b8e9d19444bd54e5976/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 11857,
-    "rating": 3.5
-  },
-  {
-    "id": "ab582ca4853b429ea9aa0b52b941e8e3",
-    "title": "Move Emoji",
-    "embedSlug": "move-emoji",
-    "embedUrl": "https://html5.gamedistribution.com/ab582ca4853b429ea9aa0b52b941e8e3/",
-    "genres": [
-      "Match-3"
-    ],
-    "players": 14852,
-    "rating": 3.5
-  },
-  {
-    "id": "2ec03a5bbb8e47b8bdb5b12ebad61ac5",
-    "title": "Mission Santa: Deliver the Gifts",
-    "embedSlug": "mission-santa-deliver-the-gifts",
-    "embedUrl": "https://html5.gamedistribution.com/2ec03a5bbb8e47b8bdb5b12ebad61ac5/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 1875,
-    "rating": 4.1
-  },
-  {
-    "id": "7f80acce2a524af9bc3dfa53eaaa8ff6",
-    "title": "Anomaly Content Record",
-    "embedSlug": "anomaly-content-record",
-    "embedUrl": "https://html5.gamedistribution.com/7f80acce2a524af9bc3dfa53eaaa8ff6/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 1838,
-    "rating": 4.2
-  },
-  {
-    "id": "0412d111bb7047e88ae28ca9b5ce764e",
-    "title": "Magic Forest - Merge the Secrets",
-    "embedSlug": "magic-forest-merge-the-secrets",
-    "embedUrl": "https://html5.gamedistribution.com/0412d111bb7047e88ae28ca9b5ce764e/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 7609,
-    "rating": 4.3
-  },
-  {
-    "id": "b19adff25c044cacb3accf8fbc02a5e5",
-    "title": "Racing Master 3D",
-    "embedSlug": "racing-master-3d",
-    "embedUrl": "https://html5.gamedistribution.com/b19adff25c044cacb3accf8fbc02a5e5/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 4597,
-    "rating": 3.8
-  },
-  {
-    "id": "d6a79fd8e22c46498f2f876d87c474cf",
-    "title": "Toy Rumble 3d",
-    "embedSlug": "toy-rumble-3d",
-    "embedUrl": "https://html5.gamedistribution.com/d6a79fd8e22c46498f2f876d87c474cf/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 10130,
-    "rating": 4.1
-  },
-  {
-    "id": "e96ffd86a913460b94768706f5a72dcd",
-    "title": "Fruit Block Tetra Puzzle",
-    "embedSlug": "fruit-block-tetra-puzzle",
-    "embedUrl": "https://html5.gamedistribution.com/e96ffd86a913460b94768706f5a72dcd/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 4608,
-    "rating": 4.5
-  },
-  {
-    "id": "9df24d5f84454c13b6ff0c4b3f01f3aa",
-    "title": "Dreams",
-    "embedSlug": "dreams",
-    "embedUrl": "https://html5.gamedistribution.com/9df24d5f84454c13b6ff0c4b3f01f3aa/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 17376,
-    "rating": 4.2
-  },
-  {
-    "id": "3696faedf5d14ccfa6abb23379f8a25b",
-    "title": "Math Block",
-    "embedSlug": "math-block",
-    "embedUrl": "https://html5.gamedistribution.com/3696faedf5d14ccfa6abb23379f8a25b/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 12844,
-    "rating": 4.8
-  },
-  {
-    "id": "bc9e48b8a60142a79b44259398160d98",
-    "title": "Rough Ball",
-    "embedSlug": "rough-ball",
-    "embedUrl": "https://html5.gamedistribution.com/bc9e48b8a60142a79b44259398160d98/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 20610,
-    "rating": 4.8
-  },
-  {
-    "id": "7134bee45b7c4d7c859994458367d42e",
-    "title": "Brainrot Bridge Race 3D",
-    "embedSlug": "brainrot-bridge-race-3d",
-    "embedUrl": "https://html5.gamedistribution.com/7134bee45b7c4d7c859994458367d42e/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 13718,
-    "rating": 4.8
-  },
-  {
-    "id": "b207ec567c824d109249a0cd7c552275",
-    "title": "Shell Strikers",
-    "embedSlug": "shell-strikers",
-    "embedUrl": "https://html5.gamedistribution.com/b207ec567c824d109249a0cd7c552275/",
-    "genres": [
-      "Battle"
-    ],
-    "players": 14275,
-    "rating": 5
-  },
-  {
-    "id": "9d02893a1314432eaf578c18cc00c63a",
-    "title": "Capybara Block Blast",
-    "embedSlug": "capybara-block-blast",
-    "embedUrl": "https://html5.gamedistribution.com/9d02893a1314432eaf578c18cc00c63a/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 9959,
     "rating": 4.9
   },
   {
-    "id": "3899157eb0094eba9624a41294624fe3",
-    "title": "ARROW OUT AND LINKER",
-    "embedSlug": "arrow-out-and-linker",
-    "embedUrl": "https://html5.gamedistribution.com/3899157eb0094eba9624a41294624fe3/",
+    "id": "slither-io",
+    "title": "Slither.io",
+    "embedSlug": "slitherio",
     "genres": [
-      "Puzzle"
+      ".io",
+      "Multiplayer"
     ],
-    "players": 16502,
-    "rating": 4
+    "image": "https://tse2.mm.bing.net/th?q=%22Slither.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 2300,
+    "rating": 4.8
   },
   {
-    "id": "d6b4e05478464bdeb9f4f10f0f967165",
-    "title": "Dear Island",
-    "embedSlug": "dear-island",
-    "embedUrl": "https://html5.gamedistribution.com/d6b4e05478464bdeb9f4f10f0f967165/",
+    "id": "paper-io-2",
+    "title": "Paper.io 2",
+    "embedSlug": "paper-io-2",
     "genres": [
-      "Puzzle"
+      ".io",
+      "Multiplayer",
+      "Strategy"
     ],
-    "players": 11075,
-    "rating": 4.3
-  },
-  {
-    "id": "41ced8bbf187495d81b565b663f94829",
-    "title": "Basket Swap",
-    "embedSlug": "basket-swap",
-    "embedUrl": "https://html5.gamedistribution.com/41ced8bbf187495d81b565b663f94829/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 2118,
+    "image": "https://tse2.mm.bing.net/th?q=%22Paper.io%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 20448,
     "rating": 4.6
   },
   {
-    "id": "6993cdc57b0f4255b17138325434c4ee",
-    "title": "Coin Color Sort",
-    "embedSlug": "coin-color-sort",
-    "embedUrl": "https://html5.gamedistribution.com/6993cdc57b0f4255b17138325434c4ee/",
+    "id": "hole-io",
+    "title": "Hole.io",
+    "embedSlug": "hole-io",
     "genres": [
-      "Puzzle"
+      ".io",
+      "Arcade"
     ],
-    "players": 3203,
-    "rating": 4.9
-  },
-  {
-    "id": "c15832a0057346399182efb8bf29007c",
-    "title": "Fruit Goals Match",
-    "embedSlug": "fruit-goals-match",
-    "embedUrl": "https://html5.gamedistribution.com/c15832a0057346399182efb8bf29007c/",
-    "genres": [
-      "Agility"
-    ],
-    "players": 13777,
+    "image": "https://tse2.mm.bing.net/th?q=%22Hole.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3901,
     "rating": 4.5
   },
   {
-    "id": "5439e7734cf14dd082fe993be28b99db",
-    "title": "Luxury Highway Cars",
-    "embedSlug": "luxury-highway-cars",
-    "embedUrl": "https://html5.gamedistribution.com/5439e7734cf14dd082fe993be28b99db/",
+    "id": "worms-zone",
+    "title": "Worms Zone",
+    "embedSlug": "worms-zone",
     "genres": [
-      "Racing & Driving"
+      ".io",
+      "Action"
     ],
-    "players": 8652,
+    "image": "https://tse2.mm.bing.net/th?q=%22Worms%20Zone%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11785,
     "rating": 3.5
   },
   {
-    "id": "a34e900c52ba462e96c91fc7bc592bf4",
-    "title": "Tap Away Block Puzzle 3D",
-    "embedSlug": "tap-away-block-puzzle-3d",
-    "embedUrl": "https://html5.gamedistribution.com/a34e900c52ba462e96c91fc7bc592bf4/",
+    "id": "little-big-snake",
+    "title": "Little Big Snake",
+    "embedSlug": "little-big-snake",
     "genres": [
-      "Puzzle"
+      ".io",
+      "Multiplayer"
     ],
-    "players": 15643,
+    "image": "https://tse2.mm.bing.net/th?q=%22Little%20Big%20Snake%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3517,
+    "rating": 4.7
+  },
+  {
+    "id": "zombs-royale",
+    "title": "Zombs Royale",
+    "embedSlug": "zombsroyaleio",
+    "genres": [
+      ".io",
+      "Shooter",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Zombs%20Royale%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17264,
+    "rating": 4.1
+  },
+  {
+    "id": "surviv-io",
+    "title": "Surviv.io",
+    "embedSlug": "surviv-io",
+    "genres": [
+      ".io",
+      "Shooter",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Surviv.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8123,
+    "rating": 3.9
+  },
+  {
+    "id": "miniblox",
+    "title": "Miniblox",
+    "embedSlug": "miniblox",
+    "genres": [
+      "Action",
+      "Building",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Miniblox%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14506,
+    "rating": 5
+  },
+  {
+    "id": "vectaria-io",
+    "title": "Vectaria.io",
+    "embedSlug": "vectaria-io",
+    "genres": [
+      "Multiplayer",
+      "Action",
+      ".io"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Vectaria.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 13414,
+    "rating": 3.9
+  },
+  {
+    "id": "diep-io",
+    "title": "Diep.io",
+    "embedSlug": "diep-io",
+    "genres": [
+      ".io",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Diep.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18242,
+    "rating": 3.7
+  },
+  {
+    "id": "skribbl-io",
+    "title": "Skribbl.io",
+    "embedSlug": "skribbl-io",
+    "genres": [
+      ".io",
+      "Puzzle",
+      "Party"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Skribbl.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3273,
     "rating": 4.4
   },
   {
-    "id": "32cc670347b540758dfb363a4500023e",
-    "title": "Melon Drop: Fruit Merge Master",
-    "embedSlug": "melon-drop-fruit-merge-master",
-    "embedUrl": "https://html5.gamedistribution.com/32cc670347b540758dfb363a4500023e/",
+    "id": "crazy-roll-3d",
+    "title": "Crazy Roll 3D",
+    "embedSlug": "crazy-roll-3d",
     "genres": [
-      "Merge"
+      "Platformer",
+      "Arcade"
     ],
-    "players": 17676,
-    "rating": 4.4
+    "image": "https://tse2.mm.bing.net/th?q=%22Crazy%20Roll%203D%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17463,
+    "rating": 4.9
   },
   {
-    "id": "53ad84c4f3b440f2b65d5382fadf731f",
-    "title": "Zombie Survival Shooter",
-    "embedSlug": "zombie-survival-shooter",
-    "embedUrl": "https://html5.gamedistribution.com/53ad84c4f3b440f2b65d5382fadf731f/",
+    "id": "traffic-rider",
+    "title": "Traffic Rider",
+    "embedSlug": "traffic-rider",
     "genres": [
-      "Shooter"
+      "Racing",
+      "Simulation"
     ],
-    "players": 4423,
-    "rating": 3.5
+    "image": "https://tse2.mm.bing.net/th?q=%22Traffic%20Rider%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3017,
+    "rating": 4.5
   },
   {
-    "id": "27214a866f174c7ebdf0089d6b383d9f",
-    "title": "Obby Toilet Line",
-    "embedSlug": "obby-toilet-line",
-    "embedUrl": "https://html5.gamedistribution.com/27214a866f174c7ebdf0089d6b383d9f/",
+    "id": "drift-hunters",
+    "title": "Drift Hunters",
+    "embedSlug": "drift-hunters",
     "genres": [
-      "Adventure"
+      "Racing",
+      "Simulation"
     ],
-    "players": 14213,
-    "rating": 4.4
-  },
-  {
-    "id": "ad01a468819748e7a9ce560dcfa4b5cf",
-    "title": "Champions FC",
-    "embedSlug": "champions-fc",
-    "embedUrl": "https://html5.gamedistribution.com/ad01a468819748e7a9ce560dcfa4b5cf/",
-    "genres": [
-      "Sports"
-    ],
-    "players": 7688,
+    "image": "https://tse2.mm.bing.net/th?q=%22Drift%20Hunters%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19547,
     "rating": 3.6
   },
   {
-    "id": "dd2ab5adad664c508d3fa032bd19e8c8",
-    "title": "Crazy Tunnel",
-    "embedSlug": "crazy-tunnel",
-    "embedUrl": "https://html5.gamedistribution.com/dd2ab5adad664c508d3fa032bd19e8c8/",
+    "id": "polytrack",
+    "title": "PolyTrack",
+    "embedSlug": "polytrack",
     "genres": [
-      "Agility"
+      "Racing",
+      "Building",
+      "Simulation"
     ],
-    "players": 18990,
-    "rating": 4.2
+    "image": "https://tse2.mm.bing.net/th?q=%22PolyTrack%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11677,
+    "rating": 4
   },
   {
-    "id": "df147ef62c7c489d9969c2b8fd28e7ff",
-    "title": "Ice Cream Inc.",
-    "embedSlug": "ice-cream-inc-",
-    "embedUrl": "https://html5.gamedistribution.com/df147ef62c7c489d9969c2b8fd28e7ff/",
+    "id": "moto-x3m",
+    "title": "Moto X3M",
+    "embedSlug": "moto-x3m",
     "genres": [
-      "Casual"
+      "Racing",
+      "Action"
     ],
-    "players": 13197,
-    "rating": 5
-  },
-  {
-    "id": "1a249236f03f474db586aeba1abafae0",
-    "title": "VegaMix Da Vinci Puzzles",
-    "embedSlug": "vegamix-da-vinci-puzzles",
-    "embedUrl": "https://html5.gamedistribution.com/1a249236f03f474db586aeba1abafae0/",
-    "genres": [
-      "Match-3"
-    ],
-    "players": 12062,
-    "rating": 3.9
-  },
-  {
-    "id": "326788adf09e40638bd55139a126ee09",
-    "title": "Sweet Triple Mahjong",
-    "embedSlug": "sweet-triple-mahjong",
-    "embedUrl": "https://html5.gamedistribution.com/326788adf09e40638bd55139a126ee09/",
-    "genres": [
-      "Mahjong & Connect"
-    ],
-    "players": 9164,
-    "rating": 3.9
-  },
-  {
-    "id": "e29bfa7faaf1437b8808b83428b64f0a",
-    "title": "Fishing Bear",
-    "embedSlug": "fishing-bear",
-    "embedUrl": "https://html5.gamedistribution.com/e29bfa7faaf1437b8808b83428b64f0a/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 14616,
-    "rating": 4.1
-  },
-  {
-    "id": "c07b3857103b41d5b3ca5ae0401027eb",
-    "title": "Winter Maze",
-    "embedSlug": "winter-maze",
-    "embedUrl": "https://html5.gamedistribution.com/c07b3857103b41d5b3ca5ae0401027eb/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 3675,
-    "rating": 3.8
-  },
-  {
-    "id": "62c37b5a4fb041d9a72e116d2ce90313",
-    "title": "Try To Count The Boxes Brain Training",
-    "embedSlug": "try-to-count-the-boxes-brain-training",
-    "embedUrl": "https://html5.gamedistribution.com/62c37b5a4fb041d9a72e116d2ce90313/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 16809,
-    "rating": 4.7
-  },
-  {
-    "id": "401c33a42c214cb09ce67ac097426ef4",
-    "title": "Funny Doctor Emergency",
-    "embedSlug": "funny-doctor-emergency",
-    "embedUrl": "https://html5.gamedistribution.com/401c33a42c214cb09ce67ac097426ef4/",
-    "genres": [
-      "Care"
-    ],
-    "players": 3231,
+    "image": "https://tse2.mm.bing.net/th?q=%22Moto%20X3M%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3743,
     "rating": 4.9
   },
   {
-    "id": "7ce6f365c8d1433c862b2d6917d4c6b3",
-    "title": "Going Balls 3D",
-    "embedSlug": "going-balls-3d",
-    "embedUrl": "https://html5.gamedistribution.com/7ce6f365c8d1433c862b2d6917d4c6b3/",
+    "id": "madalin-stunt-cars-2",
+    "title": "Madalin Stunt Cars 2",
+    "embedSlug": "madalin-stunt-cars-2",
     "genres": [
-      "Casual"
+      "Racing",
+      "Simulation"
     ],
-    "players": 2987,
+    "image": "https://tse2.mm.bing.net/th?q=%22Madalin%20Stunt%20Cars%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5141,
+    "rating": 3.6
+  },
+  {
+    "id": "extreme-car-driving-simulator",
+    "title": "Extreme Car Driving",
+    "embedSlug": "extreme-car-driving-simulator",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Extreme%20Car%20Driving%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4317,
+    "rating": 4.8
+  },
+  {
+    "id": "highway-racer",
+    "title": "Highway Racer",
+    "embedSlug": "highway-racer-3d",
+    "genres": [
+      "Racing",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Highway%20Racer%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16787,
+    "rating": 3.6
+  },
+  {
+    "id": "city-car-driving",
+    "title": "City Car Driving",
+    "embedSlug": "city-car-driving-simulator",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22City%20Car%20Driving%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6378,
     "rating": 3.7
   },
   {
-    "id": "8f816c3350d043b1ab2a2ac63edde2d9",
-    "title": "Avatar World Secrets",
-    "embedSlug": "avatar-world-secrets",
-    "embedUrl": "https://html5.gamedistribution.com/8f816c3350d043b1ab2a2ac63edde2d9/",
+    "id": "eggy-car",
+    "title": "Eggy Car",
+    "embedSlug": "eggy-car",
     "genres": [
+      "Driving",
       "Casual"
     ],
-    "players": 3518,
-    "rating": 4.2
+    "image": "https://tse2.mm.bing.net/th?q=%22Eggy%20Car%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 13990,
+    "rating": 4.5
   },
   {
-    "id": "1dec1cea731d4337a548b7c8eb8b5ddb",
-    "title": "English Checkers",
-    "embedSlug": "english-checkers",
-    "embedUrl": "https://html5.gamedistribution.com/1dec1cea731d4337a548b7c8eb8b5ddb/",
+    "id": "hill-climb-racing",
+    "title": "Hill Climb Racing",
+    "embedSlug": "hill-climb-racing",
     "genres": [
-      "Boardgames"
-    ],
-    "players": 16091,
-    "rating": 4.9
-  },
-  {
-    "id": "d41e8014aea74629934290991b008c7a",
-    "title": "Arrows Puzzle Escape",
-    "embedSlug": "arrows-puzzle-escape",
-    "embedUrl": "https://html5.gamedistribution.com/d41e8014aea74629934290991b008c7a/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 18835,
-    "rating": 4.8
-  },
-  {
-    "id": "f67167fbe2c14b4f843f655e3846a6a0",
-    "title": "Classic Mahjong",
-    "embedSlug": "classic-mahjong",
-    "embedUrl": "https://html5.gamedistribution.com/f67167fbe2c14b4f843f655e3846a6a0/",
-    "genres": [
-      "Mahjong & Connect"
-    ],
-    "players": 15713,
-    "rating": 4.4
-  },
-  {
-    "id": "ea9a40f010ad4d9486290e8eb9c177a8",
-    "title": "Heroic Knight",
-    "embedSlug": "heroic-knight",
-    "embedUrl": "https://html5.gamedistribution.com/ea9a40f010ad4d9486290e8eb9c177a8/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 3827,
-    "rating": 4.8
-  },
-  {
-    "id": "6a739956a35f4584944baf5224e485a2",
-    "title": "Forest Survivor Rougelike",
-    "embedSlug": "forest-survivor-rougelike",
-    "embedUrl": "https://html5.gamedistribution.com/6a739956a35f4584944baf5224e485a2/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 5280,
-    "rating": 4.4
-  },
-  {
-    "id": "bfbb177835c748c1a47579fa5604112c",
-    "title": "Bolts and Nuts - Sorting",
-    "embedSlug": "bolts-and-nuts-sorting",
-    "embedUrl": "https://html5.gamedistribution.com/bfbb177835c748c1a47579fa5604112c/",
-    "genres": [
-      "Puzzle"
-    ],
-    "players": 3861,
-    "rating": 4.1
-  },
-  {
-    "id": "f83698cd4d6049509fd6ddfa0ef95780",
-    "title": "K-Wedding Dream",
-    "embedSlug": "k-wedding-dream",
-    "embedUrl": "https://html5.gamedistribution.com/f83698cd4d6049509fd6ddfa0ef95780/",
-    "genres": [
-      "Dress-up"
-    ],
-    "players": 13863,
-    "rating": 4.7
-  },
-  {
-    "id": "811e6f9e6d864f5a93575c20cb0729ea",
-    "title": "Free Hoops",
-    "embedSlug": "free-hoops",
-    "embedUrl": "https://html5.gamedistribution.com/811e6f9e6d864f5a93575c20cb0729ea/",
-    "genres": [
+      "Driving",
       "Casual"
     ],
-    "players": 9257,
+    "image": "https://tse2.mm.bing.net/th?q=%22Hill%20Climb%20Racing%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19837,
     "rating": 4.6
   },
   {
-    "id": "70f8d516928b48398399c23a2f55ecfc",
-    "title": "Bus Color Jam",
-    "embedSlug": "bus-color-jam",
-    "embedUrl": "https://html5.gamedistribution.com/70f8d516928b48398399c23a2f55ecfc/",
+    "id": "basket-random",
+    "title": "Basket Random",
+    "embedSlug": "basket-random",
     "genres": [
-      "Puzzle"
+      "Sports",
+      "Casual",
+      "Multiplayer"
     ],
-    "players": 19971,
-    "rating": 4.8
+    "image": "https://tse2.mm.bing.net/th?q=%22Basket%20Random%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3687,
+    "rating": 4.9
   },
   {
-    "id": "e8e7f97933894e0c92422ec237d66d14",
-    "title": "Bubble Shooter: Spinner Pop",
-    "embedSlug": "bubble-shooter-spinner-pop",
-    "embedUrl": "https://html5.gamedistribution.com/e8e7f97933894e0c92422ec237d66d14/",
+    "id": "soccer-random",
+    "title": "Soccer Random",
+    "embedSlug": "soccer-random",
     "genres": [
-      "Bubble Shooter"
+      "Sports",
+      "Casual",
+      "Multiplayer"
     ],
-    "players": 10759,
-    "rating": 4.2
+    "image": "https://tse2.mm.bing.net/th?q=%22Soccer%20Random%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4187,
+    "rating": 4
   },
   {
-    "id": "e84bda3da9da4301b9949e164cde2d87",
-    "title": "Obby & Dead River",
-    "embedSlug": "obby-dead-river",
-    "embedUrl": "https://html5.gamedistribution.com/e84bda3da9da4301b9949e164cde2d87/",
+    "id": "volley-random",
+    "title": "Volley Random",
+    "embedSlug": "volley-random",
     "genres": [
-      "Adventure"
+      "Sports",
+      "Casual",
+      "Multiplayer"
     ],
-    "players": 6864,
-    "rating": 5
-  },
-  {
-    "id": "64e5597f616e4d58960e3b263a286e15",
-    "title": "Coin Stack Up",
-    "embedSlug": "coin-stack-up",
-    "embedUrl": "https://html5.gamedistribution.com/64e5597f616e4d58960e3b263a286e15/",
-    "genres": [
-      "Casual"
-    ],
-    "players": 18913,
-    "rating": 3.7
-  },
-  {
-    "id": "03615f1517ab4ae19684365982ab7be5",
-    "title": "Escape & Steal Brainrot: Sahur Hills",
-    "embedSlug": "escape-steal-brainrot-sahur-hills",
-    "embedUrl": "https://html5.gamedistribution.com/03615f1517ab4ae19684365982ab7be5/",
-    "genres": [
-      "Adventure"
-    ],
-    "players": 10310,
-    "rating": 5
-  },
-  {
-    "id": "a6523a16099543ec804ed4057be06c0e",
-    "title": "Gear Wars",
-    "embedSlug": "gear-wars",
-    "embedUrl": "https://html5.gamedistribution.com/a6523a16099543ec804ed4057be06c0e/",
-    "genres": [
-      "Strategy"
-    ],
-    "players": 10566,
-    "rating": 3.9
-  },
-  {
-    "id": "95c32bbf9a834a17a6ddac3ef76d2b2e",
-    "title": "HOTGEAR",
-    "embedSlug": "hotgear",
-    "embedUrl": "https://html5.gamedistribution.com/95c32bbf9a834a17a6ddac3ef76d2b2e/",
-    "genres": [
-      "Racing & Driving"
-    ],
-    "players": 5257,
-    "rating": 3.7
-  },
-  {
-    "id": "0058833cabd24958945d843073257855",
-    "title": "Idle Trade Routes",
-    "embedSlug": "idle-trade-routes",
-    "embedUrl": "https://html5.gamedistribution.com/0058833cabd24958945d843073257855/",
-    "genres": [
-      "Simulation"
-    ],
-    "players": 8376,
+    "image": "https://tse2.mm.bing.net/th?q=%22Volley%20Random%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 1692,
     "rating": 3.5
   },
   {
-    "id": "b085b22a85384f558238432316e5ba32",
-    "title": "Mojicon Fruit Connect",
-    "embedSlug": "mojicon-fruit-connect",
-    "embedUrl": "https://html5.gamedistribution.com/b085b22a85384f558238432316e5ba32/",
+    "id": "basketball-stars",
+    "title": "Basketball Stars",
+    "embedSlug": "basketball-stars-2019",
     "genres": [
-      "Mahjong & Connect"
+      "Sports",
+      "Multiplayer"
     ],
-    "players": 7479,
-    "rating": 3.7
+    "image": "https://tse2.mm.bing.net/th?q=%22Basketball%20Stars%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16481,
+    "rating": 4.6
   },
   {
-    "id": "e28bcc262b6245dc806dba3a43d057ce",
-    "title": "Stickman Zombie vs Stickman Hero",
-    "embedSlug": "stickman-zombie-vs-stickman-hero",
-    "embedUrl": "https://html5.gamedistribution.com/e28bcc262b6245dc806dba3a43d057ce/",
+    "id": "penalty-shooters-2",
+    "title": "Penalty Shooters 2",
+    "embedSlug": "penalty-shooters-2",
     "genres": [
-      "Agility"
+      "Sports",
+      "Casual"
     ],
-    "players": 6255,
+    "image": "https://tse2.mm.bing.net/th?q=%22Penalty%20Shooters%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6171,
     "rating": 4.4
   },
   {
-    "id": "5dcc973d39bc454d94c8cb4da383f64e",
-    "title": "Pet Doctor Business Tycoon-Pet care game",
-    "embedSlug": "pet-doctor-business-tycoon-pet-care-game",
-    "embedUrl": "https://html5.gamedistribution.com/5dcc973d39bc454d94c8cb4da383f64e/",
+    "id": "table-tennis",
+    "title": "Table Tennis World Tour",
+    "embedSlug": "table-tennis-world-tour",
     "genres": [
+      "Sports",
       "Casual"
     ],
-    "players": 7204,
-    "rating": 4.8
+    "image": "https://tse2.mm.bing.net/th?q=%22Table%20Tennis%20World%20Tour%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16009,
+    "rating": 3.6
   },
   {
-    "id": "585ee8758c024e32ad951704f7fd508a",
-    "title": "Hide Me",
-    "embedSlug": "hide-me",
-    "embedUrl": "https://html5.gamedistribution.com/585ee8758c024e32ad951704f7fd508a/",
+    "id": "8-ball-billiards-classic",
+    "title": "8 Ball Billiards Classic",
+    "embedSlug": "8-ball-billiards-classic",
     "genres": [
+      "Sports",
       "Casual"
     ],
-    "players": 10802,
+    "image": "https://tse2.mm.bing.net/th?q=%228%20Ball%20Billiards%20Classic%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19431,
+    "rating": 3.8
+  },
+  {
+    "id": "pool-club",
+    "title": "Pool Club",
+    "embedSlug": "pool-club",
+    "genres": [
+      "Sports",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Pool%20Club%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11791,
+    "rating": 4.4
+  },
+  {
+    "id": "chess-free",
+    "title": "Master Chess",
+    "embedSlug": "master-chess",
+    "genres": [
+      "Board",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Master%20Chess%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 2223,
+    "rating": 3.8
+  },
+  {
+    "id": "checkers",
+    "title": "Master Checkers",
+    "embedSlug": "master-checkers",
+    "genres": [
+      "Board",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Master%20Checkers%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18874,
+    "rating": 3.9
+  },
+  {
+    "id": "uno-online",
+    "title": "Ono Card Game",
+    "embedSlug": "ono-card-game",
+    "genres": [
+      "Card",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Ono%20Card%20Game%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6028,
+    "rating": 4.7
+  },
+  {
+    "id": "ludo-hero",
+    "title": "Ludo Hero",
+    "embedSlug": "ludo-hero",
+    "genres": [
+      "Board",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Ludo%20Hero%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18182,
+    "rating": 4.1
+  },
+  {
+    "id": "spider-solitaire",
+    "title": "Spider Solitaire",
+    "embedSlug": "spider-solitaire",
+    "genres": [
+      "Card",
+      "Puzzle"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Spider%20Solitaire%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16087,
+    "rating": 4
+  },
+  {
+    "id": "mahjongg-solitaire",
+    "title": "Mahjongg Solitaire",
+    "embedSlug": "mahjongg-solitaire",
+    "genres": [
+      "Puzzle",
+      "Card"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Mahjongg%20Solitaire%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5677,
+    "rating": 3.6
+  },
+  {
+    "id": "words-of-wonders",
+    "title": "Words of Wonders",
+    "embedSlug": "words-of-wonders",
+    "genres": [
+      "Word",
+      "Puzzle"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Words%20of%20Wonders%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5128,
+    "rating": 4.1
+  },
+  {
+    "id": "wordle",
+    "title": "Wordle",
+    "embedSlug": "wordle",
+    "genres": [
+      "Word",
+      "Puzzle"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Wordle%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17976,
+    "rating": 4.5
+  },
+  {
+    "id": "2048",
+    "title": "2048",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%222048%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9908,
+    "rating": 4.3
+  },
+  {
+    "id": "cubes-2048",
+    "title": "Cubes 2048.io",
+    "embedSlug": "cubes-2048-io",
+    "genres": [
+      "Puzzle",
+      ".io",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Cubes%202048.io%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5003,
+    "rating": 3.9
+  },
+  {
+    "id": "suika-game",
+    "title": "Suika Game",
+    "embedSlug": "suika-game",
+    "genres": [
+      "Puzzle",
+      "Merge"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Suika%20Game%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18275,
     "rating": 4.2
   },
   {
-    "id": "1135d8c4c0ee453895b0b0eeececbb92",
-    "title": "My Happy farm",
-    "embedSlug": "my-happy-farm",
-    "embedUrl": "https://html5.gamedistribution.com/1135d8c4c0ee453895b0b0eeececbb92/",
+    "id": "bubble-shooter",
+    "title": "Bubble Shooter",
+    "embedSlug": "bubble-shooter",
     "genres": [
+      "Puzzle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Bubble%20Shooter%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19484,
+    "rating": 5
+  },
+  {
+    "id": "flappy-bird",
+    "title": "Flappy Bird",
+    "embedSlug": "flappy-bird",
+    "genres": [
+      "Arcade",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Flappy%20Bird%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 15972,
+    "rating": 4.5
+  },
+  {
+    "id": "helix-jump",
+    "title": "Helix Jump",
+    "embedSlug": "helix-jump",
+    "genres": [
+      "Arcade",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Helix%20Jump%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11192,
+    "rating": 3.7
+  },
+  {
+    "id": "temple-run-2",
+    "title": "Temple Run 2",
+    "embedSlug": "temple-run-2",
+    "genres": [
+      "Arcade",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Temple%20Run%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18121,
+    "rating": 4.8
+  },
+  {
+    "id": "subway-surfers",
+    "title": "Subway Surfers",
+    "embedSlug": "subway-surfers",
+    "genres": [
+      "Arcade",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Subway%20Surfers%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16932,
+    "rating": 3.8
+  },
+  {
+    "id": "geometry-dash",
+    "title": "Geometry Dash",
+    "embedSlug": "geometry-dash-online",
+    "genres": [
+      "Platformer",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Geometry%20Dash%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 13567,
+    "rating": 4
+  },
+  {
+    "id": "slope",
+    "title": "Slope",
+    "embedSlug": "slope",
+    "genres": [
+      "Arcade",
       "Simulation"
     ],
-    "players": 14362,
+    "image": "https://tse2.mm.bing.net/th?q=%22Slope%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5615,
+    "rating": 4.3
+  },
+  {
+    "id": "tunnel-rush",
+    "title": "Tunnel Rush",
+    "embedSlug": "tunnel-rush",
+    "genres": [
+      "Arcade",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Tunnel%20Rush%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14717,
     "rating": 3.8
+  },
+  {
+    "id": "color-tunnel",
+    "title": "Color Tunnel",
+    "embedSlug": "color-tunnel",
+    "genres": [
+      "Arcade",
+      "Puzzle"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Color%20Tunnel%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8541,
+    "rating": 4.1
+  },
+  {
+    "id": "papa-pizzeria",
+    "title": "Papa's Pizzeria",
+    "embedSlug": "papas-pizzeria",
+    "genres": [
+      "Simulation",
+      "Casual",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Papa's%20Pizzeria%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4610,
+    "rating": 3.9
+  },
+  {
+    "id": "papa-freezeria",
+    "title": "Papa's Freezeria",
+    "embedSlug": "papas-freezeria",
+    "genres": [
+      "Simulation",
+      "Casual",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Papa's%20Freezeria%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17816,
+    "rating": 4.7
+  },
+  {
+    "id": "papa-burgeria",
+    "title": "Papa's Burgeria",
+    "embedSlug": "papas-burgeria",
+    "genres": [
+      "Simulation",
+      "Casual",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Papa's%20Burgeria%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4878,
+    "rating": 4.8
+  },
+  {
+    "id": "papa-scooperia",
+    "title": "Papa's Scooperia",
+    "embedSlug": "papa-s-scooperia",
+    "genres": [
+      "Simulation",
+      "Casual",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Papa's%20Scooperia%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4782,
+    "rating": 4.5
+  },
+  {
+    "id": "capybara-clicker",
+    "title": "Capybara Clicker",
+    "embedSlug": "capybara-clicker",
+    "genres": [
+      "Idle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Capybara%20Clicker%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6162,
+    "rating": 3.7
+  },
+  {
+    "id": "doge-miner-2",
+    "title": "Doge Miner 2",
+    "embedSlug": "doge-miner-2",
+    "genres": [
+      "Idle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Doge%20Miner%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3763,
+    "rating": 4.4
+  },
+  {
+    "id": "clicker-heroes",
+    "title": "Clicker Heroes",
+    "embedSlug": "clicker-heroes",
+    "genres": [
+      "Idle",
+      "RPG"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Clicker%20Heroes%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 13784,
+    "rating": 4.2
+  },
+  {
+    "id": "cookie-clicker",
+    "title": "Cookie Clicker",
+    "embedSlug": "cookie-clicker",
+    "genres": [
+      "Idle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Cookie%20Clicker%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17787,
+    "rating": 4.6
+  },
+  {
+    "id": "idle-breakout",
+    "title": "Idle Breakout",
+    "embedSlug": "idle-breakout",
+    "genres": [
+      "Idle",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Idle%20Breakout%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 20398,
+    "rating": 4.2
+  },
+  {
+    "id": "babel-tower",
+    "title": "Babel Tower",
+    "embedSlug": "babel-tower",
+    "genres": [
+      "Idle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Babel%20Tower%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5874,
+    "rating": 4
+  },
+  {
+    "id": "farm-merge-valley",
+    "title": "Farm Merge Valley",
+    "embedSlug": "farm-merge-valley",
+    "genres": [
+      "Simulation",
+      "Puzzle"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Farm%20Merge%20Valley%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 12069,
+    "rating": 3.7
+  },
+  {
+    "id": "duck-life-4",
+    "title": "Duck Life 4",
+    "embedSlug": "duck-life-4",
+    "genres": [
+      "RPG",
+      "Action",
+      "Sports"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Duck%20Life%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17469,
+    "rating": 4
+  },
+  {
+    "id": "bitlife",
+    "title": "BitLife - Life Simulator",
+    "embedSlug": "bitlife-life-simulator",
+    "genres": [
+      "Simulation",
+      "Casual",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22BitLife%20-%20Life%20Simulator%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9200,
+    "rating": 4.8
+  },
+  {
+    "id": "sandbox-city",
+    "title": "Sandbox City",
+    "embedSlug": "sandbox-city---cars-zombies-ragdolls",
+    "genres": [
+      "Building",
+      "Action",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sandbox%20City%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18422,
+    "rating": 4.3
+  },
+  {
+    "id": "granny",
+    "title": "Granny",
+    "embedSlug": "granny",
+    "genres": [
+      "Horror",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Granny%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8261,
+    "rating": 4.3
+  },
+  {
+    "id": "fnaf",
+    "title": "Five Nights at Freddy's",
+    "embedSlug": "five-nights-at-freddys",
+    "genres": [
+      "Horror",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Five%20Nights%20at%20Freddy's%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16115,
+    "rating": 4.1
+  },
+  {
+    "id": "fnaf-2",
+    "title": "Five Nights at Freddy's 2",
+    "embedSlug": "five-nights-at-freddys-2",
+    "genres": [
+      "Horror",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Five%20Nights%20at%20Freddy's%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6243,
+    "rating": 4
+  },
+  {
+    "id": "stickman-hook",
+    "title": "Stickman Hook",
+    "embedSlug": "stickman-hook",
+    "genres": [
+      "Platformer",
+      "Arcade",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Stickman%20Hook%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8378,
+    "rating": 4.5
+  },
+  {
+    "id": "vex-4",
+    "title": "Vex 4",
+    "embedSlug": "vex-4",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Vex%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 1577,
+    "rating": 4.4
+  },
+  {
+    "id": "vex-5",
+    "title": "Vex 5",
+    "embedSlug": "vex-5",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Vex%205%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 15186,
+    "rating": 3.7
+  },
+  {
+    "id": "fireboy-and-watergirl",
+    "title": "Fireboy and Watergirl",
+    "embedSlug": "fireboy-and-watergirl-the-forest-temple",
+    "genres": [
+      "Puzzle",
+      "Platformer",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Fireboy%20and%20Watergirl%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5343,
+    "rating": 4.8
+  },
+  {
+    "id": "superhot",
+    "title": "SuperHot",
+    "embedSlug": "super-hot",
+    "genres": [
+      "Shooter",
+      "Puzzle",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22SuperHot%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14779,
+    "rating": 3.9
+  },
+  {
+    "id": "happy-wheels",
+    "title": "Happy Wheels",
+    "embedSlug": "happy-wheels",
+    "genres": [
+      "Arcade",
+      "Racing"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Happy%20Wheels%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9396,
+    "rating": 4.7
+  },
+  {
+    "id": "tiny-fishing",
+    "title": "Tiny Fishing",
+    "embedSlug": "tiny-fishing",
+    "genres": [
+      "Casual",
+      "Simulation",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Tiny%20Fishing%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 1920,
+    "rating": 3.8
+  },
+  {
+    "id": "getting-over-it",
+    "title": "Getting Over It",
+    "embedSlug": "getting-over-it",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Getting%20Over%20It%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9024,
+    "rating": 4.5
+  },
+  {
+    "id": "rooftop-snipers",
+    "title": "Rooftop Snipers",
+    "embedSlug": "rooftop-snipers",
+    "genres": [
+      "Shooter",
+      "Action",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Rooftop%20Snipers%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16844,
+    "rating": 4.2
+  },
+  {
+    "id": "getaway-shootout",
+    "title": "Getaway Shootout",
+    "embedSlug": "getaway-shootout",
+    "genres": [
+      "Shooter",
+      "Platformer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Getaway%20Shootout%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9710,
+    "rating": 4.6
+  },
+  {
+    "id": "raft-wars",
+    "title": "Raft Wars",
+    "embedSlug": "raft-wars",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Raft%20Wars%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 12891,
+    "rating": 4.5
+  },
+  {
+    "id": "bomb-it-7",
+    "title": "Bomb It 7",
+    "embedSlug": "bomb-it-7",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Bomb%20It%207%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 15157,
+    "rating": 3.5
+  },
+  {
+    "id": "dino-game",
+    "title": "Dinosaur Game",
+    "embedSlug": "dinosaur-game",
+    "genres": [
+      "Arcade",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Dinosaur%20Game%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9128,
+    "rating": 4
+  },
+  {
+    "id": "slope-3",
+    "title": "Slope 3",
+    "embedSlug": "slope-3",
+    "genres": [
+      "Arcade",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Slope%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6710,
+    "rating": 4.1
+  },
+  {
+    "id": "run-3",
+    "title": "Run 3",
+    "embedSlug": "run-3",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Run%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14835,
+    "rating": 4.6
+  },
+  {
+    "id": "among-us",
+    "title": "Among Us Online",
+    "embedSlug": "among-us-online",
+    "genres": [
+      "Strategy",
+      "Multiplayer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Among%20Us%20Online%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18582,
+    "rating": 4.4
+  },
+  {
+    "id": "fireboy-and-watergirl-2",
+    "title": "Fireboy and Watergirl 2",
+    "embedSlug": "fireboy-and-watergirl-2",
+    "genres": [
+      "Puzzle",
+      "Platformer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Fireboy%20and%20Watergirl%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9523,
+    "rating": 4.2
+  },
+  {
+    "id": "fireboy-and-watergirl-3",
+    "title": "Fireboy and Watergirl 3",
+    "embedSlug": "fireboy-and-watergirl-3",
+    "genres": [
+      "Puzzle",
+      "Platformer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Fireboy%20and%20Watergirl%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18063,
+    "rating": 4.2
+  },
+  {
+    "id": "fireboy-and-watergirl-4",
+    "title": "Fireboy and Watergirl 4",
+    "embedSlug": "fireboy-and-watergirl-4",
+    "genres": [
+      "Puzzle",
+      "Platformer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Fireboy%20and%20Watergirl%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 12025,
+    "rating": 3.9
+  },
+  {
+    "id": "fireboy-and-watergirl-5",
+    "title": "Fireboy and Watergirl 5",
+    "embedSlug": "fireboy-and-watergirl-5",
+    "genres": [
+      "Puzzle",
+      "Platformer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Fireboy%20and%20Watergirl%205%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14154,
+    "rating": 3.9
+  },
+  {
+    "id": "fireboy-and-watergirl-6",
+    "title": "Fireboy and Watergirl 6",
+    "embedSlug": "fireboy-and-watergirl-6",
+    "genres": [
+      "Puzzle",
+      "Platformer"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Fireboy%20and%20Watergirl%206%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8506,
+    "rating": 3.9
+  },
+  {
+    "id": "bob-the-robber-1",
+    "title": "Bob The Robber 1",
+    "embedSlug": "bob-the-robber-1",
+    "genres": [
+      "Puzzle",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Bob%20The%20Robber%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 15307,
+    "rating": 5
+  },
+  {
+    "id": "wheely-1",
+    "title": "Wheely 1",
+    "embedSlug": "wheely-1",
+    "genres": [
+      "Puzzle",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Wheely%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5268,
+    "rating": 3.8
+  },
+  {
+    "id": "snail-bob-1",
+    "title": "Snail Bob 1",
+    "embedSlug": "snail-bob-1",
+    "genres": [
+      "Puzzle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Snail%20Bob%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14920,
+    "rating": 4.7
+  },
+  {
+    "id": "monkey-go-happy-1",
+    "title": "Monkey GO Happy 1",
+    "embedSlug": "monkey-go-happy-1",
+    "genres": [
+      "Puzzle",
+      "Point and Click"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Monkey%20GO%20Happy%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18279,
+    "rating": 4.6
+  },
+  {
+    "id": "bob-the-robber-2",
+    "title": "Bob The Robber 2",
+    "embedSlug": "bob-the-robber-2",
+    "genres": [
+      "Puzzle",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Bob%20The%20Robber%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6758,
+    "rating": 4
+  },
+  {
+    "id": "wheely-2",
+    "title": "Wheely 2",
+    "embedSlug": "wheely-2",
+    "genres": [
+      "Puzzle",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Wheely%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11627,
+    "rating": 4.3
+  },
+  {
+    "id": "snail-bob-2",
+    "title": "Snail Bob 2",
+    "embedSlug": "snail-bob-2",
+    "genres": [
+      "Puzzle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Snail%20Bob%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11676,
+    "rating": 4.7
+  },
+  {
+    "id": "monkey-go-happy-2",
+    "title": "Monkey GO Happy 2",
+    "embedSlug": "monkey-go-happy-2",
+    "genres": [
+      "Puzzle",
+      "Point and Click"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Monkey%20GO%20Happy%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 7367,
+    "rating": 4.5
+  },
+  {
+    "id": "bob-the-robber-3",
+    "title": "Bob The Robber 3",
+    "embedSlug": "bob-the-robber-3",
+    "genres": [
+      "Puzzle",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Bob%20The%20Robber%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5433,
+    "rating": 4.3
+  },
+  {
+    "id": "wheely-3",
+    "title": "Wheely 3",
+    "embedSlug": "wheely-3",
+    "genres": [
+      "Puzzle",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Wheely%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 15944,
+    "rating": 4.4
+  },
+  {
+    "id": "snail-bob-3",
+    "title": "Snail Bob 3",
+    "embedSlug": "snail-bob-3",
+    "genres": [
+      "Puzzle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Snail%20Bob%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 10496,
+    "rating": 3.5
+  },
+  {
+    "id": "monkey-go-happy-3",
+    "title": "Monkey GO Happy 3",
+    "embedSlug": "monkey-go-happy-3",
+    "genres": [
+      "Puzzle",
+      "Point and Click"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Monkey%20GO%20Happy%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11397,
+    "rating": 4
+  },
+  {
+    "id": "bob-the-robber-4",
+    "title": "Bob The Robber 4",
+    "embedSlug": "bob-the-robber-4",
+    "genres": [
+      "Puzzle",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Bob%20The%20Robber%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 20266,
+    "rating": 4.3
+  },
+  {
+    "id": "wheely-4",
+    "title": "Wheely 4",
+    "embedSlug": "wheely-4",
+    "genres": [
+      "Puzzle",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Wheely%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9692,
+    "rating": 4.9
+  },
+  {
+    "id": "snail-bob-4",
+    "title": "Snail Bob 4",
+    "embedSlug": "snail-bob-4",
+    "genres": [
+      "Puzzle",
+      "Casual"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Snail%20Bob%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11487,
+    "rating": 4.5
+  },
+  {
+    "id": "monkey-go-happy-4",
+    "title": "Monkey GO Happy 4",
+    "embedSlug": "monkey-go-happy-4",
+    "genres": [
+      "Puzzle",
+      "Point and Click"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Monkey%20GO%20Happy%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 12897,
+    "rating": 4.2
+  },
+  {
+    "id": "crazy-game-1",
+    "title": "Awesome Action Game 1",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 10653,
+    "rating": 4.9
+  },
+  {
+    "id": "crazy-racer-1",
+    "title": "Speed Racer 1",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 20889,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-puzzle-1",
+    "title": "Brain Teaser 1",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9486,
+    "rating": 4.2
+  },
+  {
+    "id": "crazy-shooter-1",
+    "title": "Sniper Assassin 1",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%201%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14025,
+    "rating": 4.5
+  },
+  {
+    "id": "crazy-game-2",
+    "title": "Awesome Action Game 2",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8098,
+    "rating": 4.1
+  },
+  {
+    "id": "crazy-racer-2",
+    "title": "Speed Racer 2",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14567,
+    "rating": 3.6
+  },
+  {
+    "id": "crazy-puzzle-2",
+    "title": "Brain Teaser 2",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 7738,
+    "rating": 4.3
+  },
+  {
+    "id": "crazy-shooter-2",
+    "title": "Sniper Assassin 2",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%202%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6137,
+    "rating": 4.2
+  },
+  {
+    "id": "crazy-game-3",
+    "title": "Awesome Action Game 3",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17258,
+    "rating": 4.7
+  },
+  {
+    "id": "crazy-racer-3",
+    "title": "Speed Racer 3",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 10104,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-puzzle-3",
+    "title": "Brain Teaser 3",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3165,
+    "rating": 3.8
+  },
+  {
+    "id": "crazy-shooter-3",
+    "title": "Sniper Assassin 3",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%203%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19002,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-game-4",
+    "title": "Awesome Action Game 4",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5187,
+    "rating": 3.9
+  },
+  {
+    "id": "crazy-racer-4",
+    "title": "Speed Racer 4",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9496,
+    "rating": 4.8
+  },
+  {
+    "id": "crazy-puzzle-4",
+    "title": "Brain Teaser 4",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 13145,
+    "rating": 4.7
+  },
+  {
+    "id": "crazy-shooter-4",
+    "title": "Sniper Assassin 4",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%204%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18755,
+    "rating": 4.1
+  },
+  {
+    "id": "crazy-game-5",
+    "title": "Awesome Action Game 5",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%205%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 12103,
+    "rating": 4.9
+  },
+  {
+    "id": "crazy-racer-5",
+    "title": "Speed Racer 5",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%205%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4387,
+    "rating": 3.8
+  },
+  {
+    "id": "crazy-puzzle-5",
+    "title": "Brain Teaser 5",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%205%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14718,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-shooter-5",
+    "title": "Sniper Assassin 5",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%205%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 2158,
+    "rating": 4.3
+  },
+  {
+    "id": "crazy-game-6",
+    "title": "Awesome Action Game 6",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%206%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 12514,
+    "rating": 4.9
+  },
+  {
+    "id": "crazy-racer-6",
+    "title": "Speed Racer 6",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%206%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5333,
+    "rating": 3.9
+  },
+  {
+    "id": "crazy-puzzle-6",
+    "title": "Brain Teaser 6",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%206%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8221,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-shooter-6",
+    "title": "Sniper Assassin 6",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%206%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 5808,
+    "rating": 4.8
+  },
+  {
+    "id": "crazy-game-7",
+    "title": "Awesome Action Game 7",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%207%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6953,
+    "rating": 3.5
+  },
+  {
+    "id": "crazy-racer-7",
+    "title": "Speed Racer 7",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%207%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11444,
+    "rating": 4.7
+  },
+  {
+    "id": "crazy-puzzle-7",
+    "title": "Brain Teaser 7",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%207%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 15549,
+    "rating": 3.7
+  },
+  {
+    "id": "crazy-shooter-7",
+    "title": "Sniper Assassin 7",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%207%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9045,
+    "rating": 3.8
+  },
+  {
+    "id": "crazy-game-8",
+    "title": "Awesome Action Game 8",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%208%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8397,
+    "rating": 4
+  },
+  {
+    "id": "crazy-racer-8",
+    "title": "Speed Racer 8",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%208%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17896,
+    "rating": 4.7
+  },
+  {
+    "id": "crazy-puzzle-8",
+    "title": "Brain Teaser 8",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%208%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19039,
+    "rating": 4
+  },
+  {
+    "id": "crazy-shooter-8",
+    "title": "Sniper Assassin 8",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%208%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 2307,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-game-9",
+    "title": "Awesome Action Game 9",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%209%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 18925,
+    "rating": 4
+  },
+  {
+    "id": "crazy-racer-9",
+    "title": "Speed Racer 9",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%209%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11691,
+    "rating": 4.5
+  },
+  {
+    "id": "crazy-puzzle-9",
+    "title": "Brain Teaser 9",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%209%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6942,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-shooter-9",
+    "title": "Sniper Assassin 9",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%209%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11644,
+    "rating": 5
+  },
+  {
+    "id": "crazy-game-10",
+    "title": "Awesome Action Game 10",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%2010%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 10679,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-racer-10",
+    "title": "Speed Racer 10",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%2010%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 6644,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-puzzle-10",
+    "title": "Brain Teaser 10",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%2010%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 10728,
+    "rating": 4.1
+  },
+  {
+    "id": "crazy-shooter-10",
+    "title": "Sniper Assassin 10",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%2010%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 17991,
+    "rating": 3.9
+  },
+  {
+    "id": "crazy-game-11",
+    "title": "Awesome Action Game 11",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%2011%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 20835,
+    "rating": 4.9
+  },
+  {
+    "id": "crazy-racer-11",
+    "title": "Speed Racer 11",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%2011%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16738,
+    "rating": 4.2
+  },
+  {
+    "id": "crazy-puzzle-11",
+    "title": "Brain Teaser 11",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%2011%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19324,
+    "rating": 4.4
+  },
+  {
+    "id": "crazy-shooter-11",
+    "title": "Sniper Assassin 11",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%2011%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11220,
+    "rating": 5
+  },
+  {
+    "id": "crazy-game-12",
+    "title": "Awesome Action Game 12",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%2012%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14941,
+    "rating": 3.6
+  },
+  {
+    "id": "crazy-racer-12",
+    "title": "Speed Racer 12",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%2012%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 9746,
+    "rating": 3.8
+  },
+  {
+    "id": "crazy-puzzle-12",
+    "title": "Brain Teaser 12",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%2012%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4202,
+    "rating": 4.8
+  },
+  {
+    "id": "crazy-shooter-12",
+    "title": "Sniper Assassin 12",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%2012%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 15547,
+    "rating": 4.1
+  },
+  {
+    "id": "crazy-game-13",
+    "title": "Awesome Action Game 13",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%2013%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 16506,
+    "rating": 3.8
+  },
+  {
+    "id": "crazy-racer-13",
+    "title": "Speed Racer 13",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%2013%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 4941,
+    "rating": 4.2
+  },
+  {
+    "id": "crazy-puzzle-13",
+    "title": "Brain Teaser 13",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%2013%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 1601,
+    "rating": 4.7
+  },
+  {
+    "id": "crazy-shooter-13",
+    "title": "Sniper Assassin 13",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%2013%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 3193,
+    "rating": 3.6
+  },
+  {
+    "id": "crazy-game-14",
+    "title": "Awesome Action Game 14",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%2014%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 19674,
+    "rating": 4
+  },
+  {
+    "id": "crazy-racer-14",
+    "title": "Speed Racer 14",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%2014%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 7602,
+    "rating": 3.9
+  },
+  {
+    "id": "crazy-puzzle-14",
+    "title": "Brain Teaser 14",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%2014%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 7454,
+    "rating": 4.3
+  },
+  {
+    "id": "crazy-shooter-14",
+    "title": "Sniper Assassin 14",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%2014%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 2667,
+    "rating": 3.7
+  },
+  {
+    "id": "crazy-game-15",
+    "title": "Awesome Action Game 15",
+    "embedSlug": "slope",
+    "genres": [
+      "Action",
+      "Arcade"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Awesome%20Action%20Game%2015%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 12223,
+    "rating": 3.9
+  },
+  {
+    "id": "crazy-racer-15",
+    "title": "Speed Racer 15",
+    "embedSlug": "drift-hunters",
+    "genres": [
+      "Racing",
+      "Simulation"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Speed%20Racer%2015%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 8255,
+    "rating": 3.6
+  },
+  {
+    "id": "crazy-puzzle-15",
+    "title": "Brain Teaser 15",
+    "embedSlug": "2048",
+    "genres": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Brain%20Teaser%2015%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 14967,
+    "rating": 4.1
+  },
+  {
+    "id": "crazy-shooter-15",
+    "title": "Sniper Assassin 15",
+    "embedSlug": "shellshockersio",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "image": "https://tse2.mm.bing.net/th?q=%22Sniper%20Assassin%2015%22%20crazygames%20cover%20thumbnail&w=640&h=360&c=7&rs=1&p=0",
+    "players": 11081,
+    "rating": 4.8
   }
 ];
 module.exports = GAMES;
