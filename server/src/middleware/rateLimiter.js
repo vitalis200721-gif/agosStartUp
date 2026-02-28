@@ -12,7 +12,7 @@ const apiLimiter = rateLimit({
 // Auth endpoints (stricter)
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 15,
+  max: 100,
   message: { error: 'Too many auth attempts. Please wait 15 minutes.' },
   standardHeaders: true,
   legacyHeaders: false,
