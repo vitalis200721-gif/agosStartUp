@@ -16,7 +16,7 @@ export default function Register() {
     const err = searchParams.get('error');
     if (token) {
       setToken(token);
-      fetchMe().then(() => {
+      fetchMe(token).then(() => {
         window.history.replaceState({}, '', '/register');
         navigate('/');
       });

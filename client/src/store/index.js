@@ -40,12 +40,15 @@ export const useAuthStore = create((set, get) => ({
 
   fetchMe: async (overrideToken) => {
     const currentToken = overrideToken || get().token;
+    console.log('[AuthStore] fetchMe called. Token present:', !!currentToken, 'Override:', !!overrideToken);
     if (!currentToken) return;
     try {
       const config = overrideToken ? { headers: { Authorization: `Bearer ${overrideToken}` } } : {};
       const { data } = await api.get('/auth/me', config);
+      console.log('[AuthStore] fetchMe success! User:', data.user.email);
       set({ user: data.user, token: currentToken });
-    } catch { 
+    } catch (err) { 
+      console.error('[AuthStore] fetchMe FAILED:', err.message, err.response?.data);
       set({ user: null, token: null }); 
       localStorage.removeItem('agos_token'); 
     }
