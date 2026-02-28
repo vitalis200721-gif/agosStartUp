@@ -1,4 +1,5 @@
 const { purchaseItem, getMarketplace, useItem } = require('../services/economyEngine');
+const { createNotification } = require('./notificationController');
 
 exports.getMarketplace = async (req, res, next) => {
   try {
@@ -17,6 +18,14 @@ exports.purchase = async (req, res, next) => {
       spent: result.totalCost,
       remainingCoins: result.user.coins
     });
+
+    // Notify the user asynchronously
+    createNotification(
+      req.user._id,
+      'system',
+      'Item Purchased',
+      `You successfully bought ${quantity || 1}x ${result.item.name} for ${result.totalCost} coins.`
+    ).catch(err => console.error('Failed to create purchase notification:', err));
   } catch (err) { next(err); }
 };
 

@@ -74,6 +74,15 @@ userSchema.methods.addXP = async function(amount) {
     // Check level achievements
     const { checkAchievements } = require('../services/achievementEngine');
     checkAchievements(this._id, 'level_reached', this.level).catch(console.error);
+
+    // Notify user of level up
+    const { createNotification } = require('../controllers/notificationController');
+    createNotification(
+      this._id,
+      'system',
+      'Level Up! 🎉',
+      `Congratulations! You have reached Level ${this.level}. You earned ${(this.level - oldLevel) * 2} Skill Points.`
+    ).catch(console.error);
   }
   return this.save();
 };

@@ -1,5 +1,6 @@
 const Achievement = require('../models/Achievement');
 const User = require('../models/User');
+const { createNotification } = require('../controllers/notificationController');
 
 /**
  * Core engine to evaluate and unlock achievements.
@@ -37,6 +38,17 @@ exports.checkAchievements = async (userId, actionType, actionValue) => {
 
     if (newlyUnlocked.length > 0) {
       await user.save();
+      
+      // Send notifications for each unlocked achievement
+      for (const ach of newlyUnlocked) {
+        await createNotification(
+          user._id,
+          'achievement',
+          'Achievement Unlocked!',
+          `You unlocked "${ach.name}" and earned ${ach.xpReward || 0} XP.`
+        );
+      }
+      
       // Future scope: Emit a Socket.io event here so the frontend can show a toast
       // e.g. req.app.get('io').to(userId.toString()).emit('achievement_unlocked', newlyUnlocked);
       return newlyUnlocked;
