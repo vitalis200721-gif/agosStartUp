@@ -1,60 +1,209 @@
 const unblockedGames = [
-  { id: "slope", title: "Slope", embedSlug: "https://v6p9d9t4.ssl.hwcdn.net/html/33134/" },
-  { id: "1v1-lol", title: "1v1.LOL", embedSlug: "https://1v1.lol/" },
-  { id: "bitlife", title: "BitLife", embedSlug: "https://bitlifeonline.github.io/bitlife/" },
-  { id: "cookie-clicker", title: "Cookie Clicker", embedSlug: "https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc/index.html" },
-  { id: "run-3", title: "Run 3", embedSlug: "https://run3unblocked.github.io/run-3/" },
-  { id: "retro-bowl", title: "Retro Bowl", embedSlug: "https://game316009.konggames.com/game/316009/0000/index.html" },
-  { id: "subway-surfers", title: "Subway Surfers", embedSlug: "https://unblocked-games.s3.amazonaws.com/subway-surfers.html" },
-  { id: "smash-karts", title: "Smash Karts", embedSlug: "https://smashkarts.io/" },
-  { id: "shell-shockers", title: "Shell Shockers", embedSlug: "https://shellshock.io/" },
-  { id: "krunker", title: "Krunker.io", embedSlug: "https://krunker.io/" },
-  { id: "paper-io-2", title: "Paper.io 2", embedSlug: "https://paper-io.com/" },
-  { id: "hole-io", title: "Hole.io", embedSlug: "https://hole-io.com/" },
-  { id: "agario", title: "Agar.io", embedSlug: "https://agar.io/" },
-  { id: "slitherio", title: "Slither.io", embedSlug: "http://slither.io/" },
-  { id: "surviv-io", title: "Surviv.io", embedSlug: "https://resurviv.io/" },
-  { id: "skribbl-io", title: "Skribbl.io", embedSlug: "https://skribbl.io/" },
-  { id: "minecraft-classic", title: "Minecraft Classic", embedSlug: "https://classic.minecraft.net/" },
-  { id: "friday-night-funkin", title: "Friday Night Funkin'", embedSlug: "https://w8.snokido.com/games/html5/friday-night-funkin/028/index.html" },
-  { id: "geometry-dash", title: "Geometry Dash", embedSlug: "https://cdn.enjoy-music.ru/games/geometry-dash/index.html" },
-  { id: "drift-boss", title: "Drift Boss", embedSlug: "https://mathnook.com/mathnook-games/drift-boss/index.html" },
-  { id: "moto-x3m", title: "Moto X3M", embedSlug: "https://v6p9d9t4.ssl.hwcdn.net/html/1429824/index.html" },
-  { id: "doodle-jump", title: "Doodle Jump", embedSlug: "https://doodle-jump.github.io/doodle-jump/" },
-  { id: "temple-run-2", title: "Temple Run 2", embedSlug: "https://w8.snokido.com/games/html5/temple-run-2/index.html" },
-  { id: "pacman", title: "Google Pac-Man", embedSlug: "https://www.google.com/logos/2010/pacman10-i.html" },
-  { id: "flappy-bird", title: "Flappy Bird", embedSlug: "https://flappybird.io/" },
-  { id: "crossy-road", title: "Crossy Road", embedSlug: "https://poki.com/en/g/crossy-road" },
-  { id: "duck-life-4", title: "Duck Life 4", embedSlug: "https://w8.snokido.com/games/unity-webgl/duck-life-4/index.html" },
-  { id: "basketball-stars", title: "Basketball Stars", embedSlug: "https://w8.snokido.com/games/html5/basketball-stars/index.html" },
-  { id: "getaway-shootout", title: "Getaway Shootout", embedSlug: "https://w8.snokido.com/games/unity-webgl/getaway-shootout/index.html" },
-  { id: "rooftop-snipers", title: "Rooftop Snipers", embedSlug: "https://w8.snokido.com/games/unity-webgl/rooftop-snipers/index.html" },
-  { id: "basket-bros", title: "BasketBros", embedSlug: "https://basketbros.io/" },
-  { id: "zombs-royale", title: "Zombs Royale", embedSlug: "https://zombsroyale.io/" },
-  { id: "ev-io", title: "Ev.io", embedSlug: "https://ev.io/" },
-  { id: "voxiom-io", title: "Voxiom.io", embedSlug: "https://voxiom.io/" },
-  { id: "venge-io", title: "Venge.io", embedSlug: "https://venge.io/" },
-  { id: "kour-io", title: "Kour.io", embedSlug: "https://kour.io/" },
-  { id: "narrow-one", title: "Narrow.One", embedSlug: "https://narrow.one/" },
-  { id: "build-and-crush", title: "Build & Crush", embedSlug: "https://w8.snokido.com/games/unity-webgl/build-and-crush/index.html" },
-  { id: "time-shooter-2", title: "Time Shooter 2", embedSlug: "https://w8.snokido.com/games/unity-webgl/time-shooter-2/index.html" },
-  { id: "funny-shooter-2", title: "Funny Shooter 2", embedSlug: "https://w8.snokido.com/games/unity-webgl/funny-shooter-2/index.html" },
-  { id: "bullet-force", title: "Bullet Force", embedSlug: "https://w8.snokido.com/games/unity-webgl/bullet-force/index.html" },
-  { id: "combat-reloaded", title: "Combat Reloaded", embedSlug: "https://w8.snokido.com/games/unity-webgl/combat-reloaded/index.html" },
-  { id: "blocky-cars", title: "Blocky Cars", embedSlug: "https://w8.snokido.com/games/unity-webgl/blocky-cars/index.html" },
-  { id: "drive-mad", title: "Drive Mad", embedSlug: "https://w8.snokido.com/games/html5/drive-mad/index.html" },
-  { id: "eggy-car", title: "Eggy Car", embedSlug: "https://eggycar.org/eggycar/index.html" },
-  { id: "madalin-stunt-cars-2", title: "Madalin Stunt Cars 2", embedSlug: "https://game316009.konggames.com/game/316009/0000/index.html" },
-  { id: "city-car-driving", title: "City Car Driving", embedSlug: "https://w8.snokido.com/games/unity-webgl/city-car-driving/index.html" },
-  { id: "mr-mine", title: "Mr. Mine", embedSlug: "https://mrmine.com/" },
-  { id: "grindcraft", title: "Grindcraft", embedSlug: "https://w8.snokido.com/games/html5/grindcraft/index.html" },
-  { id: "doge-miner-2", title: "Doge Miner 2", embedSlug: "https://w8.snokido.com/games/html5/doge-miner-2/index.html" },
-  { id: "bloons-tower-defense-4", title: "Bloons TD 4", embedSlug: "https://w8.snokido.com/games/flash/btd4/index.html" },
-  { id: "age-of-war", title: "Age of War", embedSlug: "https://w8.snokido.com/games/html5/age-of-war/index.html" },
-  { id: "stick-war", title: "Stick War", embedSlug: "https://w8.snokido.com/games/flash/stick-war/index.html" },
-  { id: "papass-pizzeria", title: "Papa's Pizzeria", embedSlug: "https://w8.snokido.com/games/flash/papas-pizzeria/index.html" },
-  { id: "papass-freezeria", title: "Papa's Freezeria", embedSlug: "https://w8.snokido.com/games/flash/papas-freezeria/index.html" },
-  { id: "learn-to-fly-2", title: "Learn to Fly 2", embedSlug: "https://w8.snokido.com/games/flash/learn-to-fly-2/index.html" }
+  {
+    "id": "smash-karts",
+    "title": "Smash Karts",
+    "embedSlug": "https://games.crazygames.com/en_US/smash-karts/index.html"
+  },
+  {
+    "id": "krunker-io",
+    "title": "Krunker Io",
+    "embedSlug": "https://games.crazygames.com/en_US/krunker-io/index.html"
+  },
+  {
+    "id": "paper-io-2",
+    "title": "Paper Io 2",
+    "embedSlug": "https://games.crazygames.com/en_US/paper-io-2/index.html"
+  },
+  {
+    "id": "hole-io",
+    "title": "Hole Io",
+    "embedSlug": "https://games.crazygames.com/en_US/hole-io/index.html"
+  },
+  {
+    "id": "slope",
+    "title": "Slope",
+    "embedSlug": "https://games.crazygames.com/en_US/slope/index.html"
+  },
+  {
+    "id": "bloxdhop-io",
+    "title": "Bloxdhop Io",
+    "embedSlug": "https://games.crazygames.com/en_US/bloxdhop-io/index.html"
+  },
+  {
+    "id": "bullet-force-multiplayer",
+    "title": "Bullet Force Multiplayer",
+    "embedSlug": "https://games.crazygames.com/en_US/bullet-force-multiplayer/index.html"
+  },
+  {
+    "id": "shellshockersio",
+    "title": "Shellshockersio",
+    "embedSlug": "https://games.crazygames.com/en_US/shellshockersio/index.html"
+  },
+  {
+    "id": "1v1-lol",
+    "title": "1v1 Lol",
+    "embedSlug": "https://games.crazygames.com/en_US/1v1-lol/index.html"
+  },
+  {
+    "id": "voxiom-io",
+    "title": "Voxiom Io",
+    "embedSlug": "https://games.crazygames.com/en_US/voxiom-io/index.html"
+  },
+  {
+    "id": "venge-io",
+    "title": "Venge Io",
+    "embedSlug": "https://games.crazygames.com/en_US/venge-io/index.html"
+  },
+  {
+    "id": "retro-bowl",
+    "title": "Retro Bowl",
+    "embedSlug": "https://games.crazygames.com/en_US/retro-bowl/index.html"
+  },
+  {
+    "id": "basketball-stars-2019",
+    "title": "Basketball Stars 2019",
+    "embedSlug": "https://games.crazygames.com/en_US/basketball-stars-2019/index.html"
+  },
+  {
+    "id": "getaway-shootout",
+    "title": "Getaway Shootout",
+    "embedSlug": "https://games.crazygames.com/en_US/getaway-shootout/index.html"
+  },
+  {
+    "id": "rooftop-snipers",
+    "title": "Rooftop Snipers",
+    "embedSlug": "https://games.crazygames.com/en_US/rooftop-snipers/index.html"
+  },
+  {
+    "id": "ev-io",
+    "title": "Ev Io",
+    "embedSlug": "https://games.crazygames.com/en_US/ev-io/index.html"
+  },
+  {
+    "id": "kour-io",
+    "title": "Kour Io",
+    "embedSlug": "https://games.crazygames.com/en_US/kour-io/index.html"
+  },
+  {
+    "id": "narrow-one",
+    "title": "Narrow One",
+    "embedSlug": "https://games.crazygames.com/en_US/narrow-one/index.html"
+  },
+  {
+    "id": "time-shooter-2",
+    "title": "Time Shooter 2",
+    "embedSlug": "https://games.crazygames.com/en_US/time-shooter-2/index.html"
+  },
+  {
+    "id": "funny-shooter-2",
+    "title": "Funny Shooter 2",
+    "embedSlug": "https://games.crazygames.com/en_US/funny-shooter-2/index.html"
+  },
+  {
+    "id": "combat-reloaded",
+    "title": "Combat Reloaded",
+    "embedSlug": "https://games.crazygames.com/en_US/combat-reloaded/index.html"
+  },
+  {
+    "id": "eggy-car",
+    "title": "Eggy Car",
+    "embedSlug": "https://games.crazygames.com/en_US/eggy-car/index.html"
+  },
+  {
+    "id": "city-car-driving-simulator",
+    "title": "City Car Driving Simulator",
+    "embedSlug": "https://games.crazygames.com/en_US/city-car-driving-simulator/index.html"
+  },
+  {
+    "id": "grindcraft",
+    "title": "Grindcraft",
+    "embedSlug": "https://games.crazygames.com/en_US/grindcraft/index.html"
+  },
+  {
+    "id": "doge-miner-2",
+    "title": "Doge Miner 2",
+    "embedSlug": "https://games.crazygames.com/en_US/doge-miner-2/index.html"
+  },
+  {
+    "id": "age-of-war",
+    "title": "Age Of War",
+    "embedSlug": "https://games.crazygames.com/en_US/age-of-war/index.html"
+  },
+  {
+    "id": "stick-war",
+    "title": "Stick War",
+    "embedSlug": "https://games.crazygames.com/en_US/stick-war/index.html"
+  },
+  {
+    "id": "papas-pizzeria",
+    "title": "Papas Pizzeria",
+    "embedSlug": "https://games.crazygames.com/en_US/papas-pizzeria/index.html"
+  },
+  {
+    "id": "subway-surfers",
+    "title": "Subway Surfers",
+    "embedSlug": "https://games.crazygames.com/en_US/subway-surfers/index.html"
+  },
+  {
+    "id": "doodle-jump",
+    "title": "Doodle Jump",
+    "embedSlug": "https://games.crazygames.com/en_US/doodle-jump/index.html"
+  },
+  {
+    "id": "temple-run-2",
+    "title": "Temple Run 2",
+    "embedSlug": "https://games.crazygames.com/en_US/temple-run-2/index.html"
+  },
+  {
+    "id": "pacman",
+    "title": "Pacman",
+    "embedSlug": "https://games.crazygames.com/en_US/pacman/index.html"
+  },
+  {
+    "id": "crossy-road",
+    "title": "Crossy Road",
+    "embedSlug": "https://games.crazygames.com/en_US/crossy-road/index.html"
+  },
+  {
+    "id": "drift-boss",
+    "title": "Drift Boss",
+    "embedSlug": "https://games.crazygames.com/en_US/drift-boss/index.html"
+  },
+  {
+    "id": "moto-x3m",
+    "title": "Moto X3m",
+    "embedSlug": "https://games.crazygames.com/en_US/moto-x3m/index.html"
+  },
+  {
+    "id": "slitherio",
+    "title": "Slitherio",
+    "embedSlug": "https://games.crazygames.com/en_US/slitherio/index.html"
+  },
+  {
+    "id": "minecraft-classic",
+    "title": "Minecraft Classic",
+    "embedSlug": "https://games.crazygames.com/en_US/minecraft-classic/index.html"
+  },
+  {
+    "id": "terraria",
+    "title": "Terraria",
+    "embedSlug": "https://games.crazygames.com/en_US/terraria/index.html"
+  },
+  {
+    "id": "real-warships",
+    "title": "Real Warships",
+    "embedSlug": "https://games.crazygames.com/en_US/real-warships/index.html"
+  },
+  {
+    "id": "veck-io",
+    "title": "Veck Io",
+    "embedSlug": "https://games.crazygames.com/en_US/veck-io/index.html"
+  },
+  {
+    "id": "fortnite",
+    "title": "Fortnite",
+    "embedSlug": "https://games.crazygames.com/en_US/fortnite/index.html"
+  }
 ];
 
 const genresList = ['Action', 'Shooter', 'Racing', 'Puzzle', 'Strategy', 'Multiplayer', '.io', 'Arcade', 'Simulation', 'Casual', 'RPG'];
