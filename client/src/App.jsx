@@ -22,6 +22,7 @@ const AdminPanel = lazy(() => import('./pages/AdminPanel'));
 const HackingGame = lazy(() => import('./pages/HackingGame'));
 const PremiumStore = lazy(() => import('./pages/PremiumStore'));
 const Leaderboard = lazy(() => import('./pages/Leaderboard'));
+const Friends = lazy(() => import('./pages/Friends'));
 const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -94,6 +95,7 @@ export default function App() {
                 {isEnabled('hacking') && <Route path="hacking" element={<HackingGame />} />}
                 {isEnabled('premium') && <Route path="premium" element={<PremiumStore />} />}
                 {isEnabled('leaderboard') && <Route path="leaderboard" element={<Leaderboard />} />}
+                {isEnabled('friends') && <Route path="friends" element={<Friends />} />}
                 <Route path="about" element={<About />} />
                 {isEnabled('admin') && <Route path="admin" element={<AdminDashboard />} />}
                 <Route path="admin-panel" element={<AdminPanel />} />

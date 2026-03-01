@@ -69,6 +69,7 @@ app.use('/api/leaderboard', require('./routes/leaderboard'));
 app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/achievements', require('./routes/achievements'));
+app.use('/api/friends', require('./routes/friends'));
 
 // Health check
 app.get('/api/health', (req, res) => {

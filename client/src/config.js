@@ -25,6 +25,7 @@ export const FEATURES = {
   leaderboard: true,
   admin: true,
   notifications: true,
+  friends: true,
 };
 
 // Helper to check feature

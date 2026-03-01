@@ -17,6 +17,7 @@ const NAV = [
   { to: '/hacking', icon: '🔓', label: 'Hacking', feature: 'hacking' },
   { to: '/premium', icon: '👑', label: 'Premium', feature: 'premium' },
   { to: '/leaderboard', icon: '🏆', label: 'Leaderboard', feature: 'leaderboard' },
+  { to: '/friends', icon: '👥', label: 'Friends', feature: 'friends' },
   { to: '/profile', icon: '🧬', label: 'Profile', feature: 'profile' },
 ];
 
