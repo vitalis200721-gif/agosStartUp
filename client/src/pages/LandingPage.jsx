@@ -5,16 +5,77 @@ export default function LandingPage() {
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
 
+  // High-quality game covers for the background
+  const bgGames = [
+    "bloxd-io", "firestone-idle-rpg", "night-city-racing", "evowarsio",
+    "starblastio", "space-wars-battleground", "powerline-guardians", 
+    "cyberdino-t-rex-vs-robots", "pixel-shooter", "trap-lords",
+    "crazy-kitchen-multiplayer", "tram-simulator", "hero-battle---fantasy-arena",
+    "sokoban", "gods-of-defense", "minigiants-io", "runic-curse"
+  ];
+
   useEffect(() => { setVisible(true); }, []);
 
   const goReg = () => navigate('/register');
 
   return (
-    <div className="min-h-screen bg-[#05050f] text-white overflow-x-hidden" style={{ fontFamily: '"Inter", system-ui, sans-serif' }}>
+    <div className="min-h-screen bg-[#05050f] text-white overflow-x-hidden relative" style={{ fontFamily: '"Inter", system-ui, sans-serif' }}>
+      
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes scroll-diagonal {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(-50%, -50%); }
+        }
+        .bg-scroll-track {
+          display: flex;
+          width: max-content;
+          animation: scroll-diagonal 60s linear infinite;
+        }
+        .bg-scroll-grid {
+          display: grid;
+          grid-template-columns: repeat(5, 300px);
+          gap: 20px;
+          padding: 10px;
+          transform: rotate(-15deg) scale(1.2);
+        }
+      `}} />
 
-      {/* Animated background grid */}
-      <div className="fixed inset-0 pointer-events-none z-0" style={{
-        backgroundImage: 'linear-gradient(rgba(139,92,246,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.03) 1px, transparent 1px)',
+      {/* Animated Game Wall Background */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-[0.15]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#05050f] via-transparent to-[#05050f] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#05050f] via-transparent to-[#05050f] z-10" />
+        
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="bg-scroll-grid">
+            <div className="bg-scroll-track">
+              {/* Duplicate array for seamless infinite scroll */}
+              {[...bgGames, ...bgGames, ...bgGames].map((slug, i) => (
+                <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
+                  <img src={`https://images.crazygames.com/${slug}/cover/16x9/0_0.webp`} className="w-full h-full object-cover" alt="" />
+                </div>
+              ))}
+            </div>
+            <div className="bg-scroll-track" style={{ animationDuration: '75s', animationDirection: 'reverse' }}>
+              {[...bgGames].reverse().concat([...bgGames].reverse()).concat([...bgGames].reverse()).map((slug, i) => (
+                <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
+                  <img src={`https://images.crazygames.com/${slug}/cover/16x9/0_0.webp`} className="w-full h-full object-cover" alt="" />
+                </div>
+              ))}
+            </div>
+            <div className="bg-scroll-track" style={{ animationDuration: '90s' }}>
+              {[...bgGames.slice(5), ...bgGames.slice(0, 5), ...bgGames.slice(5), ...bgGames.slice(0, 5)].map((slug, i) => (
+                <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
+                  <img src={`https://images.crazygames.com/${slug}/cover/16x9/0_0.webp`} className="w-full h-full object-cover" alt="" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Base dark grid grid */}
+      <div className="fixed inset-0 pointer-events-none z-0 mix-blend-overlay opacity-30" style={{
+        backgroundImage: 'linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)',
         backgroundSize: '60px 60px'
       }} />
 
