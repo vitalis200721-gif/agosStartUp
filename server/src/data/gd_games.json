@@ -1,4 +1,4 @@
-const unblockedGames = [
+[
   {
     "id": "energy-factory-idle",
     "title": "Energy Factory Idle",
@@ -744,38 +744,4 @@ const unblockedGames = [
       "Casual"
     ]
   }
-];
-
-const genresList = ['Action', 'Shooter', 'Racing', 'Puzzle', 'Strategy', 'Multiplayer', '.io', 'Arcade', 'Simulation', 'Casual', 'RPG'];
-
-const GAMES = unblockedGames.map((game, idx) => {
-    const g = game.tags && game.tags.length > 0 ? game.tags : [...new Set([
-        genresList[Math.floor(Math.random() * genresList.length)],
-        genresList[Math.floor(Math.random() * genresList.length)]
-    ])];
-    
-    return {
-        id: game.id,
-        title: game.title,
-        embedSlug: game.embedSlug,
-        genres: g,
-        image: game.image || `https://tse2.mm.bing.net/th?q=${encodeURIComponent(`"${game.title}" video game screenshot`)}&w=640&h=360&c=7&rs=1&p=0`,
-        players: Math.floor(Math.random() * 20000) + 1200,
-        rating: +(Math.random() * (5.0 - 3.8) + 3.8).toFixed(1)
-    };
-});
-
-// Expand to 230 games securely
-const expandedGames = [...GAMES];
-GAMES.forEach(game => {
-    const query2 = encodeURIComponent(`"${game.title}" game art cover`);
-    expandedGames.push({
-        ...game,
-        id: game.id + '-v2',
-        title: game.title + ' 2',
-        image: `https://tse2.mm.bing.net/th?q=${query2}&w=640&h=360&c=7&rs=1&p=0`,
-        rating: +(Math.random() * (5.0 - 3.8) + 3.8).toFixed(1)
-    });
-});
-
-module.exports = expandedGames;
+]
