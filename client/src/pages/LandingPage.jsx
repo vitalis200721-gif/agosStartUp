@@ -13,7 +13,9 @@ export default function LandingPage() {
     "CSGO 2", "Dota 2", "Genshin Impact", "Red Dead Redemption 2",
     "The Witcher 3", "Baldur's Gate 3", "Hollow Knight", "Terraria",
     "Stardew Valley", "Rainbow Six Siege", "Destiny 2", "Rust",
-    "CyberDino", "Turnfight", "Real Warships", "VECK.IO"
+    "CyberDino", "Turnfight", "Real Warships", "VECK.IO", "Super Mario Odyssey",
+    "God of War", "Spider-Man", "Halo Infinite", "Forza Horizon 5",
+    "Fall Guys", "Among Us", "Phasmophobia", "Dead by Daylight"
   ];
 
   // Helper to generate a reliable thumbnail URL
@@ -40,8 +42,8 @@ export default function LandingPage() {
           animation: scroll-diagonal 60s linear infinite;
         }
         .bg-scroll-grid {
-          display: grid;
-          grid-template-columns: repeat(5, 300px);
+          display: flex;
+          flex-direction: column;
           gap: 20px;
           padding: 10px;
           transform: rotate(-15deg) scale(1.2);
@@ -72,6 +74,13 @@ export default function LandingPage() {
             </div>
             <div className="bg-scroll-track" style={{ animationDuration: '90s' }}>
               {[...bgGames.slice(8), ...bgGames.slice(0, 8), ...bgGames.slice(8), ...bgGames.slice(0, 8)].map((title, i) => (
+                <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
+                  <img src={getImageUrl(title)} className="w-full h-full object-cover" alt="" loading="lazy" />
+                </div>
+              ))}
+            </div>
+            <div className="bg-scroll-track" style={{ animationDuration: '82s', animationDirection: 'reverse' }}>
+              {[...bgGames.slice(15), ...bgGames.slice(0, 15), ...bgGames.slice(15), ...bgGames.slice(0, 15)].map((title, i) => (
                 <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
                   <img src={getImageUrl(title)} className="w-full h-full object-cover" alt="" loading="lazy" />
                 </div>
