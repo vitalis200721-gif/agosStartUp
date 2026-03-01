@@ -7,12 +7,20 @@ export default function LandingPage() {
 
   // High-quality game covers for the background
   const bgGames = [
-    "bloxd-io", "firestone-idle-rpg", "night-city-racing", "evowarsio",
-    "starblastio", "space-wars-battleground", "powerline-guardians", 
-    "cyberdino-t-rex-vs-robots", "pixel-shooter", "trap-lords",
-    "crazy-kitchen-multiplayer", "tram-simulator", "hero-battle---fantasy-arena",
-    "sokoban", "gods-of-defense", "minigiants-io", "runic-curse"
+    "Cyberpunk 2077", "Valorant", "Minecraft", "League of Legends",
+    "Apex Legends", "Grand Theft Auto V", "Elden Ring", "Overwatch 2",
+    "Call of Duty Warzone", "World of Warcraft", "Rocket League", "Fortnite",
+    "CSGO 2", "Dota 2", "Genshin Impact", "Red Dead Redemption 2",
+    "The Witcher 3", "Baldur's Gate 3", "Hollow Knight", "Terraria",
+    "Stardew Valley", "Rainbow Six Siege", "Destiny 2", "Rust",
+    "CyberDino", "Turnfight", "Real Warships", "VECK.IO"
   ];
+
+  // Helper to generate a reliable thumbnail URL
+  const getImageUrl = (title) => {
+    const query = encodeURIComponent(`"${title}" game art cover`);
+    return `https://tse2.mm.bing.net/th?q=${query}&w=640&h=360&c=7&rs=1&p=0`;
+  };
 
   useEffect(() => { setVisible(true); }, []);
 
@@ -49,23 +57,23 @@ export default function LandingPage() {
           <div className="bg-scroll-grid">
             <div className="bg-scroll-track">
               {/* Duplicate array for seamless infinite scroll */}
-              {[...bgGames, ...bgGames, ...bgGames].map((slug, i) => (
+              {[...bgGames, ...bgGames].map((title, i) => (
                 <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
-                  <img src={`https://images.crazygames.com/${slug}/cover/16x9/0_0.webp`} className="w-full h-full object-cover" alt="" />
+                  <img src={getImageUrl(title)} className="w-full h-full object-cover" alt="" loading="lazy" />
                 </div>
               ))}
             </div>
             <div className="bg-scroll-track" style={{ animationDuration: '75s', animationDirection: 'reverse' }}>
-              {[...bgGames].reverse().concat([...bgGames].reverse()).concat([...bgGames].reverse()).map((slug, i) => (
+              {[...bgGames].reverse().concat([...bgGames].reverse()).map((title, i) => (
                 <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
-                  <img src={`https://images.crazygames.com/${slug}/cover/16x9/0_0.webp`} className="w-full h-full object-cover" alt="" />
+                  <img src={getImageUrl(title)} className="w-full h-full object-cover" alt="" loading="lazy" />
                 </div>
               ))}
             </div>
             <div className="bg-scroll-track" style={{ animationDuration: '90s' }}>
-              {[...bgGames.slice(5), ...bgGames.slice(0, 5), ...bgGames.slice(5), ...bgGames.slice(0, 5)].map((slug, i) => (
+              {[...bgGames.slice(8), ...bgGames.slice(0, 8), ...bgGames.slice(8), ...bgGames.slice(0, 8)].map((title, i) => (
                 <div key={i} className="w-[300px] h-[170px] rounded-xl overflow-hidden shadow-2xl mr-5 shrink-0 opacity-80">
-                  <img src={`https://images.crazygames.com/${slug}/cover/16x9/0_0.webp`} className="w-full h-full object-cover" alt="" />
+                  <img src={getImageUrl(title)} className="w-full h-full object-cover" alt="" loading="lazy" />
                 </div>
               ))}
             </div>
